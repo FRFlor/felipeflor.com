@@ -1,0 +1,43 @@
+@import './variables.scss';
+
+html, body {
+  margin: 0;
+  font-size: $mobile-font-size;
+  background: $far-background-color;
+}
+
+.container {
+  background: $container-color;
+}
+
+
+h2 {
+  font-size: $font-size-xl;
+}
+
+h3 {
+  font-size: $font-size-l;
+}
+
+p, span, div {
+  font-size: $font-size-m;
+}
+
+
+@media only screen and (min-width: 768px) {
+  html{
+    font-size: $tablet-font-size;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  html{
+    font-size: $desktop-font-size;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  html{
+    font-size: $four-k-font-size;
+  }
+}
