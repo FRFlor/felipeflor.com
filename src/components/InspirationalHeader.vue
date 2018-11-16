@@ -1,6 +1,6 @@
 <template>
     <header class="site-header"
-            :style="{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${this.backgroundImageUrl})`}">
+            :style="injectedShadedBackground">
         <div class="text-container">
             <div class="large-header-text" v-text="message">
             </div>
@@ -54,6 +54,12 @@
                 const newSize: ImageSize = this.backgroundImageEffectiveSize;
 
                 return `${src.rootUrl}/c_scale,f_auto,q_auto,h_${newSize.height},w_${newSize.width}/${src.endUrl}`;
+            }
+
+            private get injectedShadedBackground(): object {
+                const gradient: string = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))';
+
+                return {backgroundImage: `${gradient}, url(${this.backgroundImageUrl})`};
             }
         }
 </script>
