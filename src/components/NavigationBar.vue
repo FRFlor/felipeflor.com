@@ -5,7 +5,7 @@
                 <span class="font-weight-light"><router-link to="/" class="my-name theme--light grey--text text--darken-4">Felipe Flor</router-link></span>
             </v-toolbar-title>
             <v-spacer></v-spacer>
-            <span class="hidden-xs-only font-weight-light subheading text-uppercase">Fullstack Web Developer</span>
+            <span class="hidden-xs-only font-weight-light subheading text-uppercase">Lorem ipsum dolor sit amet</span>
             <v-spacer></v-spacer>
             <v-toolbar-items class="hidden-sm-and-down">
                 <v-btn v-for="(link, index) in NAVIGATION_LINKS"
