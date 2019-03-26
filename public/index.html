@@ -9,12 +9,31 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style>
+      .no-script-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .no-script-container > img {
+        margin: 1rem 0;
+      }
+      .no-script-container > h5 {
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but felipeflor.com-vuetify doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <div class="no-script-container">
+        <h5>Javascript is required</h5>
+        <img src="https://res.cloudinary.com/felipeflor/image/upload/c_limit,f_auto,h_100,q_auto,w_206/v1541727841/SadVue.png">
+        <div>This site runs on VueJs</div>
+        <div>Please enable Javascript :(</div>
+      </div>
     </noscript>
     <div id="app"></div>
-    <!-- built files will be auto injected -->
   </body>
 </html>
