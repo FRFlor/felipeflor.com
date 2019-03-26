@@ -34,7 +34,6 @@
         <v-navigation-drawer
                 class="navigation-drawer"
                 v-model="expandSideNavigation"
-                absolute
                 temporary
                 app
         >
