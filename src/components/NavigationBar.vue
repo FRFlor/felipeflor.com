@@ -5,9 +5,7 @@
                 <span class="font-weight-light"><router-link to="/" class="my-name theme--light grey--text text--darken-4">Felipe Flor</router-link></span>
             </v-toolbar-title>
             <v-spacer></v-spacer>
-            <span class="hidden-xs-only font-weight-light subheading text-uppercase">Lorem ipsum dolor sit amet</span>
-            <v-spacer></v-spacer>
-            <v-toolbar-items class="hidden-sm-and-down">
+            <v-toolbar-items class="hidden-xs-only">
                 <v-btn v-for="(link, index) in NAVIGATION_LINKS"
                        class="mr-2"
                        :key="index"
@@ -15,7 +13,17 @@
                     {{ link.title }}
                 </v-btn>
             </v-toolbar-items>
-            <v-toolbar-side-icon right class="hidden-md-and-up" @click="expandSideNavigation = !expandSideNavigation"></v-toolbar-side-icon>
+            <v-toolbar-side-icon right class="hidden-sm-and-up" @click="expandSideNavigation = !expandSideNavigation"></v-toolbar-side-icon>
+            <section aria-describedby="social-media" class="hidden-xs-only ml-5">
+                <v-btn v-for="socialMediaLink in SOCIALMEDIA_LINKS"
+                       :key="socialMediaLink.icon"
+                       :href="socialMediaLink.url"
+                       target="_blank"
+                       class="grey--text text--darken-4"
+                       icon>
+                    <v-icon size="24px">{{ socialMediaLink.icon }}</v-icon>
+                </v-btn>
+            </section>
         </v-toolbar>
 
         <v-navigation-drawer
@@ -55,11 +63,16 @@
 </template>
 
 <script lang="ts">
-    import {Component, Prop, Vue} from 'vue-property-decorator';
+    import {Component, Vue} from 'vue-property-decorator';
 
     interface NavigationLink {
         route: string;
         title: string;
+    }
+
+    interface SocialMediaLink {
+        icon: string;
+        url: string;
     }
 
     @Component
@@ -79,6 +92,19 @@
                 {
                     route: '/contact',
                     title: 'Contact',
+                },
+            ];
+        }
+
+        private get SOCIALMEDIA_LINKS(): SocialMediaLink[] {
+            return [
+                {
+                    icon: 'fab fa-linkedin',
+                    url: 'https://www.linkedin.com/in/felipe-flor/',
+                },
+                {
+                    icon: 'fab fa-github',
+                    url: 'https://github.com/FRFlor',
                 },
             ];
         }
