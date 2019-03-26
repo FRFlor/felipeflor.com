@@ -2,7 +2,11 @@
     <div>
         <v-toolbar app>
             <v-toolbar-title class="headline text-uppercase">
-                <span class="font-weight-light"><router-link to="/" class="my-name theme--light grey--text text--darken-4">Felipe Flor</router-link></span>
+                <span class="font-weight-light">
+                    <router-link to="/" class="my-name theme--light grey--text text--darken-4">
+                        Felipe Flor
+                    </router-link>
+                </span>
             </v-toolbar-title>
             <v-spacer></v-spacer>
             <v-toolbar-items class="hidden-xs-only">
@@ -13,7 +17,8 @@
                     {{ link.title }}
                 </v-btn>
             </v-toolbar-items>
-            <v-toolbar-side-icon right class="hidden-sm-and-up" @click="expandSideNavigation = !expandSideNavigation"></v-toolbar-side-icon>
+            <v-toolbar-side-icon right class="hidden-sm-and-up"
+                                 @click="expandSideNavigation = !expandSideNavigation"/>
             <section aria-describedby="social-media" class="hidden-xs-only ml-5">
                 <v-btn v-for="socialMediaLink in SOCIALMEDIA_LINKS"
                        :key="socialMediaLink.icon"
