@@ -38,8 +38,8 @@
             imageAlt: 'Art of girl catching a balloon',
             title: 'Balloon Story',
             description: `
-               Artistic Animation that <strong class="blue--text text--darken-2"> won 1st place</strong>
-               in the VueConf US 2019! </br></br>
+               Animation that <strong class="blue--text text--darken-2"> won 1st place</strong>
+               in the Art Submission Contest of VueConf US 2019! </br></br>
                Background and object movement are randomly generated; the app also demonstrates collision physics
                between the snow flakes and the balloon. Everything was made from scratch using canvas.
             `,
