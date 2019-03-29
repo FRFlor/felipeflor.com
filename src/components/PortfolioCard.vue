@@ -15,7 +15,7 @@
         <div class="project-description" v-html="data.description">
         </div>
 
-        <v-layout class="keywords-container" row wrap>
+        <v-layout class="keywords-container" row wrap align-center justify-center>
             <v-chip outline color="primary" v-for="(keyword, i) in data.keywords" :key="i">{{keyword}}</v-chip>
         </v-layout>
 
