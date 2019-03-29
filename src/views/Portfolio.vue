@@ -56,7 +56,7 @@
             `,
             keywords: ['Vue', 'Vuetify', 'Typescript'],
             website: 'https://www.felipeflor.com/',
-            source: 'https://codepen.io/frflor/pen/QoRmRq',
+            source: 'https://github.com/FRFlor/felipeflor.com',
         };
     }
 </script>
