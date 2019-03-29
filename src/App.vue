@@ -20,7 +20,9 @@
     };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+    @import '/assets/fonts.css';
+
     .app-content {
         overflow-x: hidden;
     }
