@@ -12,9 +12,11 @@
 
         <v-container>
             <section aria-describedby='Who am I?'>
-                <h2 class='display-2 font-weight-thin my-5'>Who am I?</h2>
-
                 <v-layout row wrap>
+                    <v-flex xs 12 sm9 offset-sm3>
+                        <h2 class='display-2 font-weight-thin my-5'>Who am I?</h2>
+                    </v-flex>
+
                     <v-flex shrink xs12 sm3 align-center
                             :class="$vuetify.breakpoint.xsOnly ? 'mb-5' : 'mb-2'">
                         <v-avatar size='150' class='d-flex mx-auto'>
@@ -39,9 +41,7 @@
                             is,
                             Programming.
                         </p>
-                    </v-flex>
 
-                    <v-flex xs12>
                         <p>
                             I am more experienced with backend development, specially PHP, but front-end is also pretty
                             fun.
