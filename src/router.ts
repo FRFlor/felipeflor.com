@@ -18,5 +18,10 @@ export default new Router({
       name: 'portfolio',
       component: () => import('@/views/Portfolio.vue'),
     },
+    {
+      path: '/posts',
+      name: 'posts',
+      component: () => import('@/views/Posts.vue'),
+    },
   ],
 });

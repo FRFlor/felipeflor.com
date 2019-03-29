@@ -5,7 +5,7 @@
                     src='https://res.cloudinary.com/felipeflor/image/upload/c_crop,g_south_west,h_400,x_0,y_0/v1553539328/computer.jpg'
                     dark>
             <v-layout align-center column justify-center>
-                <h1 class='display-1 font-weight-thin mb-3 text-xs-center'>Full Stack Developer at Vehikl</h1>
+                <div class='display-1 font-weight-thin mb-3 text-xs-center'>Full Stack Developer at Vehikl</div>
                 <span class='subheading'>Design. Develop. Deliver.</span>
             </v-layout>
         </v-parallax>

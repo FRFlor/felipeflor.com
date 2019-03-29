@@ -1,10 +1,10 @@
 <template>
     <div>
         <v-toolbar app>
-            <v-toolbar-title class="headline text-uppercase">
+            <v-toolbar-title>
                 <span class="font-weight-light">
                     <router-link to="/" class="my-name theme--light grey--text text--darken-4">
-                        Felipe Flor
+                        <h1 class="headline font-weight-light">Felipe Flor</h1>
                     </router-link>
                 </span>
             </v-toolbar-title>
