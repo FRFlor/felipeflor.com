@@ -3,6 +3,7 @@
         <v-container>
             <portfolio-card :data='catMousePorfolio' class='my-5'/>
             <portfolio-card :data='balloonStory' class='my-5'/>
+            <portfolio-card :data='musicGame' class='my-5'/>
             <portfolio-card :data='felipeFlorDotCom' class='my-5'/>
         </v-container>
     </div>
@@ -45,14 +46,31 @@
             source: 'https://codepen.io/frflor/pen/QoRmRq',
         };
 
+        private musicGame: PortfolioCardData = {
+            imageSrc: 'https://res.cloudinary.com/felipeflor/image/upload/v1553845714/The%20MusicGame.png',
+            imageAlt: 'Screenshot of webapp showing ariel (Little Mermaid) singing \"Part of Your World\"',
+            title: 'Disney Music Game!',
+            description: `
+               I'm a big fan of Disney Songs in general, so this project had to happen eventually! </br></br>
+               Can you guess the song? This WebApp will randomly select a certain Disney song and, by using
+               YouTube's API, play random parts of that song at random speeds (super slow or super fast).</br></br>
+               You have a few seconds to guess, once the time is up, the answer is revealed with a video playing
+               an iconic part of that song.
+            `,
+            keywords: ['Vue', 'Vuetify', 'Youtube', 'Laravel', 'MySql'],
+            website: 'https://musicgame.felipeflor.com/',
+            source: 'https://github.com/FRFlor/music-game',
+        };
+
         private felipeFlorDotCom: PortfolioCardData = {
             imageSrc: 'https://res.cloudinary.com/felipeflor/image/upload/v1553837166/recursion_meme.png',
             imageAlt: 'Meme about recursion',
             title: 'FelipeFlor.com',
             description: `
                My personal website. You're looking at it right now!</br></br>
-               It was made with Vue using Vuetify components. The server was prepared by myself,
-               it is a typical LEMP stack server; SSL was achieved with Let's Encrypt (free SSL).
+               It was made with Vue using Vuetify components. The server was prepared by me,
+               by installing the required resources for a typical LEMP stack server;
+               SSL was achieved with Let's Encrypt (free SSL).
             `,
             keywords: ['Vue', 'Vuetify', 'Typescript'],
             website: 'https://www.felipeflor.com/',

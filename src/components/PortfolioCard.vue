@@ -48,7 +48,7 @@
             'grid-template-areas': `"image title"
                                     "image description"
                                     "image skills"
-                                    "image links"`,
+                                    ". links"`,
         };
 
         get window() {
@@ -72,6 +72,7 @@
 
         .project-image {
             transition: all 350ms ease;
+            border: gainsboro 1px solid;
 
             &:hover {
                 cursor: pointer;
