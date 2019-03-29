@@ -1,10 +1,12 @@
 <template>
     <div class='portfolio'>
         <v-container>
-            <portfolio-card :data='catMousePorfolio' class='my-5'/>
-            <portfolio-card :data='balloonStory' class='my-5'/>
-            <portfolio-card :data='musicGame' class='my-5'/>
-            <portfolio-card :data='felipeFlorDotCom' class='my-5'/>
+            <v-layout row wrap align-center justify-center>
+                <portfolio-card :data='catMousePorfolio' class='ma-5'/>
+                <portfolio-card :data='balloonStory' class='ma-5'/>
+                <portfolio-card :data='musicGame' class='ma-5'/>
+                <portfolio-card :data='felipeFlorDotCom' class='ma-5'/>
+            </v-layout>
         </v-container>
     </div>
 </template>

@@ -69,6 +69,7 @@
         border: cadetblue 1px solid;
         border-radius: 20px;
         padding: 20px;
+        max-width: 45rem;
 
         .project-image {
             transition: all 350ms ease;
