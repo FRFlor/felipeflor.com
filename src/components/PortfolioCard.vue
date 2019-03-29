@@ -1,21 +1,27 @@
 <template>
     <div class="project-card elevation-3" :style="gridAreas">
-        <img class="project-image"
-             :alt="data.imageAlt"
-             :src="data.imageSrc">
+        <v-hover>
+            <img class="project-image"
+                 slot-scope="{ hover }"
+                 :class="{'elevation-5 bigger' : hover}"
+                 :alt="data.imageAlt"
+                 :src="data.imageSrc"
+                 @click="window.open(imageDestination, '_blank')"
+            >
+        </v-hover>
 
         <h2 class='project-title display-2 font-weight-thin' v-text="data.title"></h2>
 
         <p class="project-description" v-text="data.description">
         </p>
 
-        <v-layout class="skills-container" row wrap>
-            <v-chip outline color="primary" v-for="(skill, i) in data.skills" :key="i">{{skill}}</v-chip>
+        <v-layout class="keywords-container" row wrap>
+            <v-chip outline color="primary" v-for="(keyword, i) in data.keywords" :key="i">{{keyword}}</v-chip>
         </v-layout>
 
         <v-layout class="links-container" row wrap>
-            <v-btn class="primary" small>Visit Website</v-btn>
-            <v-btn class="secondary" small>See Source Code</v-btn>
+            <v-btn class="primary" v-if="data.website" :href="data.website" target="_blank" small>Visit Website</v-btn>
+            <v-btn class="secondary" v-if="data.source"  :href="data.source" target="_blank" small>See Source Code</v-btn>
         </v-layout>
     </div>
 </template>
@@ -28,7 +34,7 @@
         imageAlt: string;
         title: string;
         description: string;
-        skills: string[];
+        keywords: string[];
         website?: string;
         source?: string;
     }
@@ -36,6 +42,14 @@
     @Component
     export default class PortfolioCard extends Vue {
         @Prop() data!: PortfolioCardData;
+
+        get window() {
+            return window;
+        };
+
+        get imageDestination() {
+            return this.data.website ? this.data.website : this.data.source;
+        }
 
         get gridAreas() {
             if (this.$vuetify.breakpoint.xsOnly) {
@@ -56,6 +70,13 @@
         padding: 20px;
 
         .project-image {
+            transition: all 350ms ease;
+            &:hover {
+                cursor: pointer;
+            }
+            &.bigger {
+                transform: scale(1.025);
+            }
             height: 200px;
             width: auto;
             grid-area: image;
@@ -73,7 +94,7 @@
             justify-self: center;
         }
 
-        .skills-container {
+        .keywords-container {
             grid-area: skills;
             justify-self: center;
         }
