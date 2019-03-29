@@ -12,8 +12,8 @@
 
         <h2 class='project-title display-2 font-weight-thin' v-text="data.title"></h2>
 
-        <p class="project-description" v-text="data.description">
-        </p>
+        <div class="project-description" v-html="data.description">
+        </div>
 
         <v-layout class="keywords-container" row wrap>
             <v-chip outline color="primary" v-for="(keyword, i) in data.keywords" :key="i">{{keyword}}</v-chip>

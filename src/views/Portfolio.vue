@@ -21,7 +21,7 @@
             imageAlt: 'Screencap of Cat & Mouse app',
             title: 'Cat Mouse',
             description: `
-               A Path Finding exercise! It explores the traveling salesman problem.
+               A Path Finding exercise! It explores the traveling salesman problem.</br>
             This app allows you to create a maze with rewards (milk and mouse), the cat
             will get all the rewards it can with the least amount of movements.
             `,
@@ -35,11 +35,12 @@
             imageAlt: 'Art of girl catching a balloon',
             title: 'Balloon Story',
             description: `
-               Artistic Animation that won 1st place in the VueConf US 2019!
-               Background and object movement is randomly generated, the app also demonstrates collision physics
+               Artistic Animation that <strong class="blue--text text--darken-2"> won 1st place</strong>
+               in the VueConf US 2019! </br></br>
+               Background and object movement are randomly generated; the app also demonstrates collision physics
                between the snow flakes and the balloon. Everything was made from scratch using canvas.
             `,
-            keywords: ['Vue', 'Javascript', 'VueConf', '1st Place Winner'],
+            keywords: ['Vue', 'Javascript', 'VueConf 2019', '1st Place Winner'],
             website: '',
             source: 'https://codepen.io/frflor/pen/QoRmRq',
         };
@@ -49,7 +50,7 @@
             imageAlt: 'Meme about recursion',
             title: 'FelipeFlor.com',
             description: `
-               My personal website. You're looking at it right now!
+               My personal website. You're looking at it right now!</br></br>
                It was made with Vue using Vuetify components. The server was prepared by myself,
                it is a typical LEMP stack server; SSL was achieved with Let's Encrypt (free SSL).
             `,
