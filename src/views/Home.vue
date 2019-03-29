@@ -94,11 +94,11 @@
     @Component
     export default class Home extends Vue {
         private carouselPictures: string[] = [
-            `${CLOUDINARY}/c_scale,w_820/v1553579347/Chicopee_March_12.jpg`,
-            `${CLOUDINARY}/c_scale,w_820/v1553825050/vueconf2019%20-%20Vuenicorn!.jpg`,
-            `${CLOUDINARY}/c_crop,g_xy_center,h_400,w_777,x_0,y_600/v1553580466/working_at_vehikl.jpg`,
-            `${CLOUDINARY}/c_crop,g_south_west,h_953,w_1406/v1553579773/ice_skating.jpg`,
             `${CLOUDINARY}/c_scale,w_820/v1553825353/vueconf2019-3.jpg`,
+            `${CLOUDINARY}/c_crop,g_xy_center,h_400,w_777,x_0,y_600/v1553580466/working_at_vehikl.jpg`,
+            `${CLOUDINARY}/c_scale,w_820/v1553825050/vueconf2019%20-%20Vuenicorn!.jpg`,
+            `${CLOUDINARY}/c_scale,w_820/v1553579347/Chicopee_March_12.jpg`,
+            `${CLOUDINARY}/c_crop,g_south_west,h_953,w_1406/v1553579773/ice_skating.jpg`,
         ];
     }
 </script>
