@@ -1,7 +1,7 @@
 <template>
     <v-app>
         <navigation-bar></navigation-bar>
-        <v-content>
+        <v-content class="app-content">
             <transition name="slide" mode="out-in">
                 <router-view/>
             </transition>
@@ -21,6 +21,9 @@
 </script>
 
 <style lang="scss" scoped>
+    .app-content {
+        overflow-x: hidden;
+    }
     .slide-leave-active, .slide-enter-active {
         transition: 0.35s;
     }
