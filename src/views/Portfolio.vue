@@ -1,11 +1,11 @@
 <template>
     <div class='portfolio'>
         <v-container>
-            <v-layout row wrap align-center justify-center>
-                <portfolio-card :data='catMousePorfolio' class='ma-5'/>
-                <portfolio-card :data='balloonStory' class='ma-5'/>
-                <portfolio-card :data='musicGame' class='ma-5'/>
-                <portfolio-card :data='felipeFlorDotCom' class='ma-5'/>
+            <v-layout row wrap justify-center>
+                <portfolio-card :data='catMousePorfolio' :class="$vuetify.breakpoint.xsOnly ? 'my-5' : 'ma-5'"/>
+                <portfolio-card :data='balloonStory' :class="$vuetify.breakpoint.xsOnly ? 'my-5' : 'ma-5'"/>
+                <portfolio-card :data='musicGame' :class="$vuetify.breakpoint.xsOnly ? 'my-5' : 'ma-5'"/>
+                <portfolio-card :data='felipeFlorDotCom' :class="$vuetify.breakpoint.xsOnly ? 'my-5' : 'ma-5'"/>
             </v-layout>
         </v-container>
     </div>
