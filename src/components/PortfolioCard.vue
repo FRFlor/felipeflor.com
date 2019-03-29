@@ -1,5 +1,5 @@
 <template>
-    <div class="project-card elevation-3" :style="gridAreas">
+    <div class="project-card elevation-3" :style="$vuetify.breakpoint.smAndUp ? desktopGridTemplateArea : ''">
         <v-hover>
             <img class="project-image"
                  slot-scope="{ hover }"
@@ -21,7 +21,8 @@
 
         <v-layout class="links-container" row wrap>
             <v-btn class="primary" v-if="data.website" :href="data.website" target="_blank" small>Visit Website</v-btn>
-            <v-btn class="secondary" v-if="data.source"  :href="data.source" target="_blank" small>See Source Code</v-btn>
+            <v-btn class="secondary" v-if="data.source" :href="data.source" target="_blank" small>See Source Code
+            </v-btn>
         </v-layout>
     </div>
 </template>
@@ -43,25 +44,19 @@
     export default class PortfolioCard extends Vue {
         @Prop() private data!: PortfolioCardData;
 
+        private desktopGridTemplateArea = {
+            'grid-template-areas': `"image title"
+                                    "image description"
+                                    "image skills"
+                                    "image links"`,
+        };
+
         get window() {
             return window;
         }
 
         get imageDestination() {
             return this.data.website ? this.data.website : this.data.source;
-        }
-
-        get vuetifyBreakpoint() {
-            // @ts-ignore
-            return this.$vuetify.breakpoint;
-        }
-
-        get gridAreas() {
-            if (this.vuetifyBreakpoint.xsOnly) {
-                return {'grid-template-areas': '\"title\" \"image\" \"description\" \"skills\" \"links\"'};
-            }
-
-            return {'grid-template-areas': '\"image title\" \"image description\" \"image skills\" \"image links\"'};
         }
     }
 </script>
@@ -70,18 +65,22 @@
     .project-card {
         display: grid;
         grid-gap: 20px;
+        grid-template-areas: "title" "image" "description" "skills" "links";
         border: cadetblue 1px solid;
         border-radius: 20px;
         padding: 20px;
 
         .project-image {
             transition: all 350ms ease;
+
             &:hover {
                 cursor: pointer;
             }
+
             &.bigger {
                 transform: scale(1.025);
             }
+
             height: 200px;
             width: auto;
             grid-area: image;
