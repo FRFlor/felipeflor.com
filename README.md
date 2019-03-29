@@ -1,34 +1,12 @@
-# felipeflor.com-vuetify
+# FelipeFlor.com
 
-## Project setup
-```
-npm install
-```
+My personal Website 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Visit it here:  
 
-### Compiles and minifies for production
-```
-npm run build
-```
+https://www.felipeflor.com
 
-### Run your tests
+#### Setup
 ```
-npm run test
+npm i && npm run serve
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
