@@ -41,22 +41,27 @@
 
     @Component
     export default class PortfolioCard extends Vue {
-        @Prop() data!: PortfolioCardData;
+        @Prop() private data!: PortfolioCardData;
 
         get window() {
             return window;
-        };
+        }
 
         get imageDestination() {
             return this.data.website ? this.data.website : this.data.source;
         }
 
+        get vuetifyBreakpoint() {
+            // @ts-ignore
+            return this.$vuetify.breakpoint;
+        }
+
         get gridAreas() {
-            if (this.$vuetify.breakpoint.xsOnly) {
-                return {'grid-template-areas': "\"title\" \"image\" \"description\" \"skills\" \"links\""}
+            if (this.vuetifyBreakpoint.xsOnly) {
+                return {'grid-template-areas': '\"title\" \"image\" \"description\" \"skills\" \"links\"'};
             }
 
-            return {'grid-template-areas': "\"image title\" \"image description\" \"image skills\" \"image links\""};
+            return {'grid-template-areas': '\"image title\" \"image description\" \"image skills\" \"image links\"'};
         }
     }
 </script>
