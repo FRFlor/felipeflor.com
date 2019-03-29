@@ -6,7 +6,7 @@
                     dark>
             <v-layout align-center column justify-center>
                 <div class='display-1 font-weight-thin mb-3 text-xs-center'>Full Stack Developer at Vehikl</div>
-                <span class='subheading'>Design. Develop. Deliver.</span>
+                <span class='subheading'>"Design. Develop. Deliver."</span>
             </v-layout>
         </v-parallax>
 
@@ -55,7 +55,7 @@
 
 
             <section aria-describedby='Life in Canada'>
-                <h2 class='display-2 font-weight-thin my-5'>Working at Vehikl</h2>
+                <h2 class='display-2 font-weight-thin my-5'>Vehikl</h2>
 
                 <v-layout row wrap>
                     <v-flex xs12>
@@ -63,7 +63,7 @@
                             Working at Vehikl has been a dream come true. We are a consultancy company, which means we
                             work with multiple clients with completely different apps, this offers amazing opportunities to
                             learn new technologies. On top of that, we have a very strong culture of collaboration, team work and sharing
-                            knowledge.
+                            knowledge. If you're interested in knowing more, <a class="font-weight-bold" href="https://vehikl.com" target="_blank">visit our website!</a>
                         </p>
                         <p>
                             I'm very thankful to be working with some of the most talented and friendly people I have
@@ -103,5 +103,8 @@
     }
 </script>
 
-<style>
+<style lang="scss" scoped>
+    a {
+        text-decoration: none;
+    }
 </style>

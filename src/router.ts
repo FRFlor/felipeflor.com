@@ -5,23 +5,27 @@ import Home from '@/views/Home.vue';
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home,
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: Home,
+        },
+        {
+            path: '/portfolio',
+            name: 'portfolio',
+            component: () => import('@/views/Portfolio.vue'),
+        },
+        {
+            path: '/posts',
+            name: 'posts',
+            component: () => import('@/views/Posts.vue'),
+        },
+    ],
+    scrollBehavior(to, from, savedPosition) {
+        setTimeout(() => window.scroll(0, 0), 350);
+
     },
-    {
-      path: '/portfolio',
-      name: 'portfolio',
-      component: () => import('@/views/Portfolio.vue'),
-    },
-    {
-      path: '/posts',
-      name: 'posts',
-      component: () => import('@/views/Posts.vue'),
-    },
-  ],
 });
