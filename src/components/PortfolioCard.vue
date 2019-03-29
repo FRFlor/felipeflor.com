@@ -10,7 +10,7 @@
             >
         </v-hover>
 
-        <h2 class='project-title display-2 font-weight-thin' v-text="data.title"></h2>
+        <h2 class='project-title headline font-weight-thin' v-text="data.title"></h2>
 
         <div class="project-description" v-html="data.description">
         </div>
@@ -19,7 +19,7 @@
             <v-chip outline color="primary" v-for="(keyword, i) in data.keywords" :key="i">{{keyword}}</v-chip>
         </v-layout>
 
-        <v-layout class="links-container" row wrap>
+        <v-layout class="links-container" row wrap align-center justify-center>
             <v-btn class="primary" v-if="data.website" :href="data.website" target="_blank" small>Visit Website</v-btn>
             <v-btn class="secondary" v-if="data.source" :href="data.source" target="_blank" small>See Source Code
             </v-btn>
@@ -82,7 +82,7 @@
             }
 
             height: 200px;
-            width: auto;
+            max-width: 225px;
             grid-area: image;
             justify-self: center;
             align-self: center;
