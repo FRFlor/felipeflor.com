@@ -15,7 +15,7 @@
     import {Component, Vue} from 'vue-property-decorator';
     import PortfolioCard, {PortfolioCardData} from '@/components/PortfolioCard.vue';
 
-    @Component({ components: {PortfolioCard} })
+    @Component({components: {PortfolioCard}})
     export default class Portfolio extends Vue {
         private catMousePorfolio: PortfolioCardData = {
             imageSrc: 'https://camo.githubusercontent.com/cab2013dfd5c75db71fedba72738e41597d848c6/68747470733a2f2f7' +
@@ -24,11 +24,12 @@
             imageAlt: 'Screencap of Cat & Mouse app',
             title: 'Cat Mouse',
             description: `
-               A Path Finding exercise! It explores the traveling salesman problem.</br>
-            This app allows you to create a maze with rewards (milk and mouse), the cat
-            will get all the rewards it can with the least amount of movements.
+               This project started because I wanted to learn Graph Theory and Path Finding Algorithms. </br></br>
+            It demonstrates the <strong class="blue--text text--darken-2">Traveling Salesman Problem.</strong></br></br>
+            This app allows you to create a maze with some rewards for the cat (milk and mouse), the cat
+            will calculate the optimal path to get the milk and the mouse.
             `,
-            keywords: ['Breadth First Search', 'Vue', 'Typescript', 'Mocha', 'Vue Test Utils'],
+            keywords: ['Breadth First Search', 'Graph Theory', 'Vue', 'Typescript', 'Mocha', 'Vue Test Utils'],
             website: 'https://catmouse.felipeflor.com/',
             source: 'https://github.com/FRFlor/cat-mouse',
         };
