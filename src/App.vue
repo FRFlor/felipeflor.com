@@ -23,6 +23,7 @@
 <style lang="scss">
     @import '/assets/fonts.css';
     @import '~material-design-icons/iconfont/material-icons.css';
+    @import '~@fortawesome/fontawesome-free/css/all.min.css';
 
     .app-content {
         overflow-x: hidden;
