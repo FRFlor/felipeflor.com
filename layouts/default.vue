@@ -1,16 +1,18 @@
 <template>
     <v-app>
-        <navigation-bar></navigation-bar>
+        <navigation-bar/>
         <v-content>
             <nuxt/>
         </v-content>
+        <app-footer/>
     </v-app>
 </template>
 
 <script lang="ts">
     import NavigationBar from "~/components/NavigationBar.vue";
+    import AppFooter from "~/components/AppFooter.vue";
 
     export default {
-        components: {NavigationBar}
+        components: {AppFooter, NavigationBar}
     }
 </script>
