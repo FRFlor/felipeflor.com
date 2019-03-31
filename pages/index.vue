@@ -61,13 +61,18 @@
                     <v-flex xs12>
                         <p>
                             Working at Vehikl has been a dream come true. We are a consultancy company, which means we
-                            work with multiple clients with completely different apps, this offers amazing opportunities to
-                            learn new technologies. On top of that, we have a very strong culture of collaboration, team work and sharing
-                            knowledge. If you're interested in knowing more, <a class="font-weight-bold" href="https://vehikl.com" target="_blank">visit our website!</a>
+                            work with multiple clients with completely different apps, this offers amazing opportunities
+                            to
+                            learn new technologies. On top of that, we have a very strong culture of collaboration, team
+                            work and sharing
+                            knowledge. If you're interested in knowing more, <a class="font-weight-bold"
+                                                                                href="https://vehikl.com"
+                                                                                target="_blank">visit our website!</a>
                         </p>
                         <p>
                             I'm very thankful to be working with some of the most talented and friendly people I have
-                            ever seen. I wish everyone could have an awesome job like this. It truly doesn't feel like work,
+                            ever seen. I wish everyone could have an awesome job like this. It truly doesn't feel like
+                            work,
                             it feels like family, but with paychecks!
                         </p>
                     </v-flex>
@@ -91,6 +96,7 @@
 
 <script lang='ts'>
     import {Component, Vue} from 'vue-property-decorator';
+
     const CLOUDINARY: string = 'https://res.cloudinary.com/felipeflor/image/upload';
 
     @Component({
