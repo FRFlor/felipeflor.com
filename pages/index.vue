@@ -1,14 +1,10 @@
 <template>
-  <section>
-    <h1 class="header">Nuxt TypeScript Starter</h1>
-    <div class="cards">
-      <Card
-        v-for="person in people"
-        :key="person.id"
-        :person="person"
-      ></Card>
-    </div>
-  </section>
+  <v-app>
+    <navigation-bar/>
+    <v-content>
+      <h1 class="header">Nuxt TypeScript Starter</h1>
+    </v-content>
+  </v-app>
 </template>
 
 <script lang="ts">
@@ -19,9 +15,11 @@ import {
 import { State } from "vuex-class"
 import { Person } from "~/types";
 import Card from "~/components/Card.vue"
+import NavigationBar from "~/components/NavigationBar.vue";
 
 @Component({
   components: {
+    NavigationBar,
     Card
   }
 })
