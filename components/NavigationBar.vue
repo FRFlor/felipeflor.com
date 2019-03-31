@@ -82,9 +82,9 @@
 
     @Component
     export default class NavigationBar extends Vue {
-        private expandSideNavigation: boolean = false;
+        protected expandSideNavigation: boolean = false;
 
-        private get NAVIGATION_LINKS(): NavigationLink[] {
+        protected get NAVIGATION_LINKS(): NavigationLink[] {
             return [
                 {
                     route: '/',
@@ -101,7 +101,7 @@
             ];
         }
 
-        private get SOCIALMEDIA_LINKS(): SocialMediaLink[] {
+        protected get SOCIALMEDIA_LINKS(): SocialMediaLink[] {
             return [
                 {
                     icon: 'fab fa-linkedin',
