@@ -74,11 +74,11 @@
             title: 'FelipeFlor.com',
             description: `
                My personal website. You're looking at it right now!</br></br>
-               It was made with Vue using Vuetify components. The server was prepared by me,
-               by installing the required resources for a typical LEMP stack server;
+               It was made with Nuxt (server-side rendering), Typescript and Vuetify components.
+               The server was prepared by me, by installing the required resources for a typical LEMP stack server;
                SSL was achieved with Let's Encrypt (free SSL).
             `,
-            keywords: ['Vue', 'Vuetify', 'Typescript'],
+            keywords: ['Nuxt', 'Vue', 'Vuetify', 'Typescript'],
             website: 'https://www.felipeflor.com/',
             source: 'https://github.com/FRFlor/felipeflor.com',
         };
