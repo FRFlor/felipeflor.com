@@ -71,8 +71,10 @@
                             it feels like family, but with paychecks!
                         </p>
                     </v-flex>
+                </v-layout>
 
-                    <v-flex xs12 sm8 offset-sm2 class="mt-4 mb-5">
+                <v-layout justify-center>
+                    <v-flex xs12 sm8 md6 class="mt-4 mb-5">
                         <v-carousel hide-delimiters height='300'>
                             <v-carousel-item v-for='(pictureUrl,index) in carouselPictures'
                                              :key='index'
