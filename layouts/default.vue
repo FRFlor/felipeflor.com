@@ -16,3 +16,9 @@
         components: {AppFooter, NavigationBar}
     }
 </script>
+
+<style lang="scss">
+    .app-content {
+        overflow-x: hidden;
+    }
+</style>

@@ -36,5 +36,11 @@ export default {
         "@nuxtjs/axios",
         "@nuxtjs/vuetify",
     ],
-    axios: {}
+    axios: {},
+    router: {
+        // @ts-ignore
+        scrollBehavior(to, from, savedPosition) {
+            setTimeout(() => window.scroll(0, 0), 350);
+        },
+    },
 }

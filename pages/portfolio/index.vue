@@ -15,7 +15,10 @@
   import {Component, Vue} from 'nuxt-property-decorator';
   import PortfolioCard, {PortfolioCardData} from '~/components/PortfolioCard.vue';
 
-  @Component({components: {PortfolioCard}})
+  @Component({
+    components: {PortfolioCard},
+    transition: 'slide',
+  })
   export default class PortfolioPage extends Vue {
     protected catMousePorfolio: PortfolioCardData = {
       imageSrc: 'https://camo.githubusercontent.com/cab2013dfd5c75db71fedba72738e41597d848c6/68747470733a2f2f7' +

@@ -93,7 +93,7 @@
     import {Component, Vue} from 'vue-property-decorator';
     const CLOUDINARY: string = 'https://res.cloudinary.com/felipeflor/image/upload';
 
-    @Component
+    @Component({ transition: 'slide' })
     export default class Home extends Vue {
         protected carouselPictures: string[] = [
             `${CLOUDINARY}/c_scale,w_820/v1553825353/vueconf2019-3.jpg`,
