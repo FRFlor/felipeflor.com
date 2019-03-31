@@ -3,9 +3,9 @@
         <v-toolbar app>
             <v-toolbar-title>
                 <span class="font-weight-light">
-                    <router-link to="/" class="my-name theme--light grey--text text--darken-4">
+                    <nuxt-link to="/" class="my-name theme--light grey--text text--darken-4">
                         <h1 class="headline font-weight-light">Felipe Flor</h1>
-                    </router-link>
+                    </nuxt-link>
                 </span>
             </v-toolbar-title>
             <v-spacer></v-spacer>
