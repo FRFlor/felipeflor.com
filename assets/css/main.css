@@ -1,11 +1,19 @@
-.slide-leave-active, .slide-enter-active {
+.slide-left-leave-active, .slide-left-enter-active, .slide-right-leave-active, .slide-right-enter-active {
     transition: 0.35s;
 }
 
-.slide-enter {
+.slide-left-enter {
     transform: translate(100%, 0);
 }
 
-.slide-leave-to {
+.slide-left-leave-to {
     transform: translate(-100%, 0);
+}
+
+.slide-right-enter {
+    transform: translate(-100%, 0);
+}
+
+.slide-right-leave-to {
+    transform: translate(100%, 0);
 }
