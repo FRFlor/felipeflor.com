@@ -1,22 +1,22 @@
-# felipeflor.com
+# FelipeFlor.com
 
-> Personal Website
+My personal Website 
 
-## Build Setup
+### Visit it here:  
 
-``` bash
-# install dependencies
-$ npm install # Or yarn install
+https://www.felipeflor.com
 
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
+#### Setup
+```
+npm i && npm run dev
 ```
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+#### build for production and launch server
+```
+npm run build && npm start
+```
+
+#### generate static
+```
+npm run generate
+```
