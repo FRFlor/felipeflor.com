@@ -13,24 +13,13 @@ export default {
         ],
         link: [
             {rel: "icon", type: "image/x-icon", href: "/favicon.ico"},
-            {
-                rel: "stylesheet",
-                href: "https://use.fontawesome.com/releases/v5.8.1/css/all.css",
-                integrity: "sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf",
-                crossorigin: "anonymous"
-            },
-            {
-                rel: "stylesheet",
-                href: "https://fonts.googleapis.com/css?family=Material+Icons"
-            },
-            {
-                rel: "stylesheet",
-                href: "https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
-            }
         ]
     },
     loading: {color: "#3B8070"},
-    css: ["~/assets/css/main.css"],
+    css: [
+        "~/assets/css/main.css",
+        { src: '@fortawesome/fontawesome-free/css/all.min.css', lang: 'css'},
+    ],
     build: {},
     modules: [
         "@nuxtjs/axios",

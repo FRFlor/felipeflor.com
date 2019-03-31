@@ -4,6 +4,7 @@
   "version": "2.4.5",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.1",
     "@nuxtjs/axios": "5.4.1",
     "@nuxtjs/vuetify": "^0.5.5",
     "nuxt-property-decorator": "2.1.3",
