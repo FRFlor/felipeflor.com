@@ -1,18 +1,21 @@
 export default {
     env: {},
     head: {
-        title: "felipeflor.com",
+        title: "Felipe Flor - WebDeveloper - Vue, Laravel and Typescript",
         meta: [
             {charset: "utf-8"},
             {name: "viewport", content: "width=device-width, initial-scale=1"},
             {
                 hid: "description",
                 name: "description",
-                content: "Felipe Flor - WebDeveloper - Experience with Vue, Laravel and Typescript"
+                content: "I am Felipe Flor, a FullStack WebDeveloper from Ontario - Canada, mostly experienced with " +
+                    "Vue, Laravel and Typescript. This website contains my personal Portfolio and contact information," +
+                    " come take a look!",
             }
         ],
         link: [
             {rel: "icon", type: "image/x-icon", href: "/favicon.ico"},
+            {rel:"canonical", href:"https://www.felipeflor.com/"}
         ]
     },
     loading: {color: "#3B8070"},

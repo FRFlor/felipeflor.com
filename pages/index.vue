@@ -2,6 +2,7 @@
     <div class='home'>
         <v-parallax class='elevation-5'
                     height='300'
+                    alt="Mac and Keyboard slightly blurred"
                     src='https://res.cloudinary.com/felipeflor/image/upload/c_crop,g_south_west,h_400,x_0,y_0/v1553539328/computer.jpg'
                     dark>
             <v-layout align-center column justify-center>
@@ -100,7 +101,7 @@
     const CLOUDINARY: string = 'https://res.cloudinary.com/felipeflor/image/upload';
 
     @Component({
-        transition: (_, from) => !! from ? 'slide-right' : 'slide-left',
+        transition: (_, from) => !!from ? 'slide-right' : 'slide-left',
     })
     export default class Home extends Vue {
         protected carouselPictures: string[] = [
