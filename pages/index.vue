@@ -39,17 +39,23 @@
                             I will be forever grateful for the opportunities that were provided to me in my former
                             field, but I decided that my career should be
                             guided by something I am truly passionate about, something I see myself doing for fun, that
-                            is,
-                            Programming.
+                            is, Programming.
                         </p>
 
                         <p>
                             I am more experienced with backend development, specially PHP, but front-end is also pretty
                             fun.
                             This website, for example, was written with Vue (Vuetify), feel free to check the source
-                            code on
-                            my Github.
+                            code on my Github.
                         </p>
+                    </v-flex>
+
+                    <v-flex xs12 sm9 offset-sm3>
+                        <v-btn large to="portfolio" color="secondary" class="ma-0">
+                            <v-icon left dark>art_track</v-icon>
+                            Check out my portfolio
+                            <v-icon right dark>arrow_forward_ios</v-icon>
+                        </v-btn>
                     </v-flex>
                 </v-layout>
             </section>
