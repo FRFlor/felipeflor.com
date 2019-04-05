@@ -66,7 +66,7 @@
         display: grid;
         grid-gap: 20px;
         grid-template-areas: "title" "image" "description" "skills" "links";
-        border: cadetblue 1px solid;
+        border: lightskyblue 1px solid;
         border-radius: 20px;
         padding: 20px;
         max-width: 45rem;
