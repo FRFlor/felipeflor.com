@@ -41,7 +41,7 @@
                 <v-list-tile avatar>
                     <v-list-tile-avatar>
                         <img src="https://res.cloudinary.com/felipeflor/image/upload/v1553281483/felipe-flor.jpg"
-                             alt="Felipe Flor Avatar">
+                             alt="Felipe Rendeiro Flor Avatar">
                     </v-list-tile-avatar>
 
                     <v-list-tile-content>

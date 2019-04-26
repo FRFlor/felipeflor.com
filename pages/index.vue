@@ -22,7 +22,7 @@
                             :class="$vuetify.breakpoint.xsOnly ? 'mb-5' : 'mb-2'">
                         <v-avatar size='150' class='d-flex mx-auto'>
                             <img src='https://res.cloudinary.com/felipeflor/image/upload/e_improve/v1553281483/felipe-flor.jpg'
-                                 alt="Felipe Flor's profile picture">
+                                 alt="Felipe Rendeiro Flor's profile picture">
                         </v-avatar>
                     </v-flex>
 
