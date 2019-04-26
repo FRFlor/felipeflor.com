@@ -51,7 +51,7 @@
                     </v-flex>
 
                     <v-flex xs12 sm9 offset-sm3>
-                        <v-btn large to="portfolio" color="secondary" class="ma-0">
+                        <v-btn to="portfolio" color="secondary" class="ma-0">
                             <v-icon left dark>art_track</v-icon>
                             Check out my portfolio
                             <v-icon right dark>arrow_forward_ios</v-icon>

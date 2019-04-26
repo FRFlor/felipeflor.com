@@ -3,6 +3,7 @@
               inset dark app>
         <v-spacer></v-spacer>
         <v-btn class="grey darken-3 mr-5 elevation-0"
+               v-show="$vuetify.breakpoint.smAndUp"
                href="https://www.felipeflor.com"
                target="_blank"
                round>Felipe Flor
@@ -29,6 +30,15 @@
             return ALL_LINKS.filter((link: Link) => {
                 return link.type !== LinkType.PersonalWebsite;
             });
+        }
+
+        protected get shouldShowNameOnFooter(): boolean {
+            try {
+                // @ts-ignore
+                return this.$vuetify.breakpoint.smAndUp
+            } catch (e) {
+                return false;
+            }
         }
     }
 </script>
