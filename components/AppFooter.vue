@@ -21,27 +21,14 @@
 
 <script lang="ts">
     import {Component, Vue} from 'nuxt-property-decorator';
-
-    interface Link {
-        icon: string;
-        destination: string;
-    }
+    import {ALL_LINKS, Link, LinkType} from '~/assets/js/constants';
 
     @Component
     export default class AppFooter extends Vue {
-        protected links: Link[] = [
-            {
-                icon: 'fab fa-linkedin',
-                destination: 'https://www.linkedin.com/in/felipe-flor/',
-            },
-            {
-                icon: 'fab fa-github',
-                destination: 'https://github.com/FRFlor',
-            },
-            {
-                icon: 'fas fa-user-circle',
-                destination: 'https://www.felipeflor.com',
-            },
-        ];
+        protected get links(): Link[] {
+            return ALL_LINKS.filter((link: Link) => {
+                return link.type !== LinkType.PersonalWebsite;
+            });
+        }
     }
 </script>

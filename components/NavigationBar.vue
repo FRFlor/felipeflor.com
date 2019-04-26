@@ -22,7 +22,7 @@
             <section aria-describedby="social-media" class="hidden-xs-only ml-5">
                 <v-btn v-for="socialMediaLink in SOCIALMEDIA_LINKS"
                        :key="socialMediaLink.icon"
-                       :href="socialMediaLink.url"
+                       :href="socialMediaLink.destination"
                        target="_blank"
                        class="grey--text text--darken-4"
                        icon>
@@ -69,16 +69,13 @@
 
 <script lang="ts">
     import {Component, Vue} from 'nuxt-property-decorator';
+    import {ALL_LINKS, Link, LinkType} from '~/assets/js/constants';
 
     interface NavigationLink {
         route: string;
         title: string;
     }
 
-    interface SocialMediaLink {
-        icon: string;
-        url: string;
-    }
 
     @Component
     export default class NavigationBar extends Vue {
@@ -101,17 +98,10 @@
             ];
         }
 
-        protected get SOCIALMEDIA_LINKS(): SocialMediaLink[] {
-            return [
-                {
-                    icon: 'fab fa-linkedin',
-                    url: 'https://www.linkedin.com/in/felipe-flor/',
-                },
-                {
-                    icon: 'fab fa-github',
-                    url: 'https://github.com/FRFlor',
-                },
-            ];
+        protected get SOCIALMEDIA_LINKS(): Link[] {
+            return ALL_LINKS.filter((link: Link) => {
+                return [LinkType.GitHub, LinkType.LinkedIn].includes(link.type);
+            });
         }
     }
 </script>
