@@ -95,8 +95,8 @@
                     title: 'Portfolio',
                 },
                 {
-                    route: '/posts',
-                    title: 'Posts',
+                    route: '/contact',
+                    title: 'Contact',
                 },
             ];
         }
