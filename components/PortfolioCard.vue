@@ -1,5 +1,5 @@
 <template>
-    <div class="project-card elevation-3" :style="$vuetify.breakpoint.smAndUp ? desktopGridTemplateArea : ''">
+    <div class="project-card elevation-3">
         <div class="project-image">
             <media-square :src-name="data.imageSrc"
                           :alt="data.imageAlt"
@@ -43,14 +43,7 @@
     export default class PortfolioCard extends Vue {
         @Prop() private data!: PortfolioCardData;
 
-        protected desktopGridTemplateArea = {
-            'grid-template-areas': `"image title"
-                                    "image description"
-                                    "image skills"
-                                    ". links"`,
-        };
-
-        get window() {
+        protected get window() {
             return window;
         }
 
