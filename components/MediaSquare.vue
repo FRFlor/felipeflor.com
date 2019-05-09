@@ -10,19 +10,24 @@
                         type="video/webm">
             </video>
 
-            <img v-else
-                 :class="{'elevation-5 bigger' : hover}"
-                 slot-scope="{ hover }"
-                 :alt="alt"
-                 :src="src">
+            <v-lazy-image v-else
+                          :class="{'elevation-5 bigger' : hover}"
+                          slot-scope="{ hover }"
+                          :alt="alt"
+                          :src="src" />
         </v-hover>
     </div>
 </template>
 
 <script lang="ts">
     import {Component, Prop, Vue} from 'nuxt-property-decorator';
+    import VLazyImage from "v-lazy-image";
 
-    @Component
+    @Component({
+        components: {
+            VLazyImage
+        }
+    })
     export default class MediaSquare extends Vue {
         @Prop() protected src!: string;
         @Prop() protected lazySrc!: string;
