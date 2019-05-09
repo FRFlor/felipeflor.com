@@ -90,11 +90,8 @@
                         <v-carousel hide-delimiters height="300">
                             <v-carousel-item v-for='(picture,index) in carouselPictures'
                                              :key='index'
-                                             :lazy="index > 0">
-                                <v-img :lazy-src="picture.placeholder"
-                                       :src="picture.fullSizeImage"
-                                       height="300" />
-                            </v-carousel-item>
+                                             :src="picture.fullSizeImage"
+                                             :lazy="index > 0"/>
                         </v-carousel>
                     </v-flex>
                 </v-layout>
