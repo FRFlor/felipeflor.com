@@ -6,7 +6,7 @@
                    :class="{'elevation-5 bigger' : hover}"
                    slot-scope="{ hover }"
                    autoplay muted loop playsinline>
-                <source :src="src"
+                <source :src="fullSize"
                         type="video/webm">
             </video>
 
@@ -14,7 +14,8 @@
                           :class="{'elevation-5 bigger' : hover}"
                           slot-scope="{ hover }"
                           :alt="alt"
-                          :src="src" />
+                          :src-placeholder="placeholder"
+                          :src="fullSize"/>
         </v-hover>
     </div>
 </template>
@@ -23,18 +24,26 @@
     import {Component, Prop, Vue} from 'nuxt-property-decorator';
     import VLazyImage from "v-lazy-image";
 
-    @Component({
-        components: {
-            VLazyImage
-        }
-    })
+    @Component({components: {VLazyImage}})
     export default class MediaSquare extends Vue {
-        @Prop() protected src!: string;
-        @Prop() protected lazySrc!: string;
+        @Prop() protected srcName!: string;
         @Prop() protected alt!: string;
 
         protected get isVideo(): boolean {
-            return this.src.endsWith('webm');
+            return this.srcName.endsWith('webm');
+        }
+
+        protected get cloudinaryRoot(): string {
+            const mediaType: string = this.isVideo ? 'video' : 'image';
+            return `https://res.cloudinary.com/felipeflor/${mediaType}/upload`;
+        }
+
+        protected get placeholder(): string {
+            return `${this.cloudinaryRoot}/e_blur:1000,q_1,f_auto/v1556653952/${this.srcName}`;
+        }
+
+        protected get fullSize(): string {
+            return `${this.cloudinaryRoot}/v1556653952/${this.srcName}`;
         }
     }
 </script>

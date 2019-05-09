@@ -1,7 +1,7 @@
 <template>
     <div class="project-card elevation-3" :style="$vuetify.breakpoint.smAndUp ? desktopGridTemplateArea : ''">
         <div class="project-image">
-            <media-square :src="data.imageSrc"
+            <media-square :src-name="data.imageSrc"
                           :alt="data.imageAlt"
                           @click="window.open(imageDestination, '_blank')"/>
         </div>

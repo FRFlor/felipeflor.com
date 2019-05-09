@@ -21,7 +21,7 @@
     })
     export default class PortfolioPage extends Vue {
         protected catMousePorfolio: PortfolioCardData = {
-            imageSrc: 'https://res.cloudinary.com/felipeflor/video/upload/v1556653952/catmouse_-_demo.webm',
+            imageSrc: 'catmouse_-_demo.webm',
             imageAlt: 'Screencap of Cat & Mouse app',
             title: 'Cat Mouse',
             description: `
@@ -36,7 +36,7 @@
         };
 
         protected balloonStory: PortfolioCardData = {
-            imageSrc: 'https://res.cloudinary.com/felipeflor/image/upload/v1553831891/Balloon%20story.png',
+            imageSrc: 'Balloon%20story.png',
             imageAlt: 'Art of girl catching a balloon',
             title: 'Balloon Story',
             description: `
@@ -51,7 +51,7 @@
         };
 
         protected musicGame: PortfolioCardData = {
-            imageSrc: 'https://res.cloudinary.com/felipeflor/image/upload/v1553845714/The%20MusicGame.png',
+            imageSrc: 'The%20MusicGame.png',
             imageAlt: 'Screenshot of webapp showing ariel (Little Mermaid) singing \"Part of Your World\"',
             title: 'Disney Music Game!',
             description: `
@@ -67,7 +67,7 @@
         };
 
         protected felipeFlorDotCom: PortfolioCardData = {
-            imageSrc: 'https://res.cloudinary.com/felipeflor/image/upload/v1553837166/recursion_meme.png',
+            imageSrc: 'recursion_meme.png',
             imageAlt: 'Meme about recursion',
             title: 'FelipeFlor.com',
             description: `
