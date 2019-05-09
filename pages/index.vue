@@ -43,10 +43,11 @@
                         </p>
 
                         <p>
-                            I am more experienced with backend development, specially PHP, but front-end is also pretty
-                            fun.
-                            This website, for example, was written with Vue (Vuetify), feel free to check the source
-                            code on my Github.
+                            I love programming, on both front-end and back-end. Most of my works are made using PHP
+                            (Laravel) and Typescript (Vue).
+                            This website, for example, is powered by Nuxt and Vuetify, with the entire codebase written
+                            in Typescript.
+                            Feel free to check the source code on my Github.
                         </p>
                     </v-flex>
 
