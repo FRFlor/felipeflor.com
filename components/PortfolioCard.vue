@@ -47,7 +47,7 @@
             return window;
         }
 
-        get imageDestination() {
+        protected get imageDestination() {
             return this.data.website ? this.data.website : this.data.source;
         }
     }
@@ -57,11 +57,15 @@
     .project-card {
         display: grid;
         grid-gap: 20px;
-        grid-template-areas: "title" "image" "description" "skills" "links";
+        grid-template-areas: "image" "title" "description" "skills" "links";
+        grid-template-rows: 250px 35px;
         border: lightskyblue 1px solid;
         border-radius: 20px;
         padding: 20px;
-        max-width: 45rem;
+        width: 35rem;
+        & /deep/ img, video {
+            height: 250px;
+        }
 
         .project-image {
             grid-area: image;

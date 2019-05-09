@@ -1,11 +1,11 @@
 <template>
     <div class='portfolio'>
         <v-container>
-            <v-layout row wrap justify-center>
-                <portfolio-card :data='catMousePorfolio' :class="$vuetify.breakpoint.xsOnly ? 'my-5' : 'ma-5'"/>
-                <portfolio-card :data='balloonStory' :class="$vuetify.breakpoint.xsOnly ? 'my-5' : 'ma-5'"/>
-                <portfolio-card :data='musicGame' :class="$vuetify.breakpoint.xsOnly ? 'my-5' : 'ma-5'"/>
-                <portfolio-card :data='felipeFlorDotCom' :class="$vuetify.breakpoint.xsOnly ? 'my-5' : 'ma-5'"/>
+            <v-layout row wrap justify-space-around>
+                <portfolio-card v-for="(projectData, index) in projects"
+                                :key="index"
+                                :data='projectData'
+                                class="my-5"/>
             </v-layout>
         </v-container>
     </div>
@@ -80,6 +80,15 @@
             website: 'https://www.felipeflor.com/',
             source: 'https://github.com/FRFlor/felipeflor.com',
         };
+
+        protected get projects(): PortfolioCardData[] {
+            return [
+                this.catMousePorfolio,
+                this.balloonStory,
+                this.musicGame,
+                this.felipeFlorDotCom,
+            ]
+        }
     }
 </script>
 
