@@ -1,14 +1,10 @@
 <template>
     <div class="project-card elevation-3" :style="$vuetify.breakpoint.smAndUp ? desktopGridTemplateArea : ''">
-        <v-hover>
-            <img class="project-image"
-                 slot-scope="{ hover }"
-                 :class="{'elevation-5 bigger' : hover}"
-                 :alt="data.imageAlt"
-                 :src="data.imageSrc"
-                 @click="window.open(imageDestination, '_blank')"
-            >
-        </v-hover>
+        <div class="project-image">
+            <media-square :src="data.imageSrc"
+                          :alt="data.imageAlt"
+                          @click="window.open(imageDestination, '_blank')"/>
+        </div>
 
         <h2 class='project-title headline font-weight-thin' v-text="data.title"></h2>
 
@@ -29,6 +25,7 @@
 
 <script lang="ts">
     import {Component, Prop, Vue} from 'nuxt-property-decorator';
+    import MediaSquare from "~/components/MediaSquare.vue";
 
     export interface PortfolioCardData {
         imageSrc: string;
@@ -40,7 +37,9 @@
         source?: string;
     }
 
-    @Component
+    @Component({
+        components: {MediaSquare}
+    })
     export default class PortfolioCard extends Vue {
         @Prop() private data!: PortfolioCardData;
 
@@ -72,19 +71,6 @@
         max-width: 45rem;
 
         .project-image {
-            transition: all 350ms ease;
-            border: gainsboro 1px solid;
-
-            &:hover {
-                cursor: pointer;
-            }
-
-            &.bigger {
-                transform: scale(1.025);
-            }
-
-            height: 200px;
-            max-width: 225px;
             grid-area: image;
             justify-self: center;
             align-self: center;

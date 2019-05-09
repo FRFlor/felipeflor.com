@@ -21,9 +21,7 @@
     })
     export default class PortfolioPage extends Vue {
         protected catMousePorfolio: PortfolioCardData = {
-            imageSrc: 'https://camo.githubusercontent.com/cab2013dfd5c75db71fedba72738e41597d848c6/68747470733a2f2f7' +
-                '265732e636c6f7564696e6172792e636f6d2f66656c697065666c6f722f696d6167652f75706c6f61642f635f7363616c65' +
-                '2c685f3435302f76313535323732303438372f312e6a7067',
+            imageSrc: 'https://res.cloudinary.com/felipeflor/video/upload/v1556653952/catmouse_-_demo.webm',
             imageAlt: 'Screencap of Cat & Mouse app',
             title: 'Cat Mouse',
             description: `
