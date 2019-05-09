@@ -87,11 +87,14 @@
 
                 <v-layout justify-center>
                     <v-flex xs12 sm8 md6 class="mt-4 mb-5">
-                        <v-carousel hide-delimiters height='300'>
-                            <v-carousel-item v-for='(pictureUrl,index) in carouselPictures'
+                        <v-carousel hide-delimiters height="300">
+                            <v-carousel-item v-for='(picture,index) in carouselPictures'
                                              :key='index'
-                                             lazy
-                                             :src='pictureUrl'/>
+                                             :lazy="index > 0">
+                                <v-img :lazy-src="picture.placeholder"
+                                       :src="picture.fullSizeImage"
+                                       height="300" />
+                            </v-carousel-item>
                         </v-carousel>
                     </v-flex>
                 </v-layout>
@@ -106,16 +109,36 @@
 
     const CLOUDINARY: string = 'https://res.cloudinary.com/felipeflor/image/upload';
 
+    interface CarouselPicture {
+        fullSizeImage: string;
+        placeholder: string;
+    }
+
     @Component({
         transition: (_, from) => !!from ? 'slide-right' : 'slide-left',
     })
     export default class Home extends Vue {
-        protected carouselPictures: string[] = [
-            `${CLOUDINARY}/c_scale,w_820/v1553825353/vueconf2019-3.jpg`,
-            `${CLOUDINARY}/c_crop,g_xy_center,h_400,w_777,x_0,y_600/v1553580466/working_at_vehikl.jpg`,
-            `${CLOUDINARY}/c_scale,w_820/v1553825050/vueconf2019%20-%20Vuenicorn!.jpg`,
-            `${CLOUDINARY}/c_scale,w_820/v1553579347/Chicopee_March_12.jpg`,
-            `${CLOUDINARY}/c_crop,g_south_west,h_953,w_1406/v1553579773/ice_skating.jpg`,
+        protected carouselPictures: CarouselPicture[] = [
+            {
+                fullSizeImage: `${CLOUDINARY}/c_scale,w_820/v1553825353/vueconf2019-3.jpg`,
+                placeholder: `${CLOUDINARY}/e_blur:1000,q_10/v1553825353/vueconf2019-3.jpg`
+            },
+            {
+                fullSizeImage: `${CLOUDINARY}/c_crop,g_xy_center,h_400,w_777,x_0,y_600/v1553580466/working_at_vehikl.jpg`,
+                placeholder: `${CLOUDINARY}/e_blur:1000,q_10/v1553580466/working_at_vehikl.jpg`
+            },
+            {
+                fullSizeImage: `${CLOUDINARY}/c_scale,w_820/v1553825050/vueconf2019%20-%20Vuenicorn!.jpg`,
+                placeholder: `${CLOUDINARY}/e_blur:1000,q_10/v1553825050/vueconf2019%20-%20Vuenicorn!.jpg`
+            },
+            {
+                fullSizeImage: `${CLOUDINARY}/c_scale,w_820/v1553579347/Chicopee_March_12.jpg`,
+                placeholder: `${CLOUDINARY}/e_blur:1000,q_10/v1553579347/Chicopee_March_12.jpg`
+            },
+            {
+                fullSizeImage: `${CLOUDINARY}/c_crop,g_south_west,h_953,w_1406/v1553579773/ice_skating.jpg`,
+                placeholder: `${CLOUDINARY}/e_blur:1000,q_10/v1553579773/ice_skating.jpg`
+            },
         ];
     }
 </script>
