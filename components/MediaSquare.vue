@@ -3,6 +3,7 @@
          @click="$emit('click')">
         <v-hover>
             <video v-if="isVideo"
+                   :poster="placeholder"
                    :class="{'elevation-5 bigger' : hover}"
                    slot-scope="{ hover }"
                    autoplay muted loop playsinline>
@@ -33,13 +34,17 @@
             return this.srcName.endsWith('webm');
         }
 
+        protected get nameWithoutExtension(): string {
+            return this.srcName.replace(/\.[^/.]+$/, '');
+        }
+
         protected get cloudinaryRoot(): string {
             const mediaType: string = this.isVideo ? 'video' : 'image';
             return `https://res.cloudinary.com/felipeflor/${mediaType}/upload`;
         }
 
         protected get placeholder(): string {
-            return `${this.cloudinaryRoot}/e_blur:1000,q_1,f_auto/v1556653952/${this.srcName}`;
+            return `${this.cloudinaryRoot}/e_blur:200,q_20/v1556653952/${this.nameWithoutExtension}.jpg`;
         }
 
         protected get fullSize(): string {

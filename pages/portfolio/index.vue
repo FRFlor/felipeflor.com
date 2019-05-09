@@ -21,7 +21,7 @@
     })
     export default class PortfolioPage extends Vue {
         protected catMousePorfolio: PortfolioCardData = {
-            imageSrc: 'catmouse_-_demo.webm',
+            imageSrc: 'catmouse.gif',
             imageAlt: 'Screencap of Cat & Mouse app',
             title: 'Cat Mouse',
             description: `
