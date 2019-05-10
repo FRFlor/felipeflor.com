@@ -24,6 +24,7 @@ export default {
     loading: {color: "#3B8070"},
     css: [
         "~/assets/css/transitions.css",
+        "~/assets/css/accessibility.scss",
         { src: '@fortawesome/fontawesome-free/css/all.min.css', lang: 'css'},
     ],
     build: {},

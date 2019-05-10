@@ -2,7 +2,7 @@
     <v-footer class="grey darken-3"
               inset dark app>
         <v-spacer></v-spacer>
-        <v-btn class="grey darken-3 mr-5 elevation-0 hidden-xs-only"
+        <v-btn class="grey darken-3 mr-5 elevation-0 hidden-xs-only dark-button"
                href="https://www.felipeflor.com"
                target="_blank"
                round>Felipe Flor
@@ -12,7 +12,7 @@
                :key="link.icon"
                :href="link.destination"
                target="_blank"
-               class="white--text"
+               class="white--text dark-button"
                icon>
             <v-icon size="24px">{{ link.icon }}</v-icon>
         </v-btn>

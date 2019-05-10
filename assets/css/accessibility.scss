@@ -1,0 +1,8 @@
+// Small tweaks to the overall behaviour of vuetify to make it more accessible
+
+.dark-button {
+  color: hsl(0, 0%, 95%) !important;
+  &:focus, &:hover {
+    background-color: hsl(200, 100%, 40%) !important;
+  }
+}
