@@ -4,11 +4,16 @@
             <h2 class="display-2 font-weight-thin mb-5">Contact me</h2>
 
             <v-flex v-for="(link, index) in contactLinks" :key="index">
-                <v-btn icon class="ml-5" outline color="blue-grey" :href="link.destination">
+                <v-btn icon class="ml-5 light-button"
+                       color="blue-grey"
+                       :aria-label="link.text"
+                       :href="link.destination"
+                       outline>
                     <v-icon>{{link.icon}}</v-icon>
                 </v-btn>
                 <a class="text-link ml-2"
                    target="_blank"
+                   tabindex="-1"
                    v-text="link.text ? link.text : link.destination"
                    :href="link.destination"></a>
             </v-flex>
