@@ -2,18 +2,17 @@
     <div>
         <v-toolbar app>
             <v-toolbar-title>
-                <span class="font-weight-light">
-                    <nuxt-link to="/" class="my-name theme--light grey--text text--darken-4">
-                        <h1 class="headline font-weight-light">Felipe Flor</h1>
-                    </nuxt-link>
-                </span>
+                <h1 class="headline font-weight-light">Felipe Flor</h1>
             </v-toolbar-title>
             <v-spacer></v-spacer>
             <v-toolbar-items class="hidden-xs-only">
                 <v-btn v-for="(link, index) in NAVIGATION_LINKS"
                        class="mr-2"
+                       :class="{'current-route': $route.path === link.route}"
+                       :tabindex="$route.path === link.route ? '-1' : '0'"
                        :key="index"
-                       :to="link.route" flat>
+                       :to="link.route"
+                       flat>
                     {{ link.title }}
                 </v-btn>
             </v-toolbar-items>
@@ -117,5 +116,10 @@
 
     .navigation-drawer {
         max-width: 15rem;
+    }
+
+    .current-route {
+        background-color: hsl(0, 0%, 20%);
+        color: hsl(0, 0%, 90%);
     }
 </style>
