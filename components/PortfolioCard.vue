@@ -12,12 +12,23 @@
         </div>
 
         <v-layout class="keywords-container" row wrap align-center justify-center>
-            <v-chip outline color="primary" v-for="(keyword, i) in data.keywords" :key="i">{{keyword}}</v-chip>
+            <v-chip v-for="(keyword, i) in data.keywords"
+                    :key="i"
+                    tabindex="-1"
+                    color="primary"
+                    outline>{{keyword}}
+            </v-chip>
         </v-layout>
 
         <v-layout class="links-container" row wrap align-center justify-center>
-            <v-btn class="primary" v-if="data.website" :href="data.website" target="_blank" small>Visit Website</v-btn>
-            <v-btn class="secondary" v-if="data.source" :href="data.source" target="_blank" small>See Source Code
+            <v-btn class="light-button"
+                   v-if="data.website"
+                   :href="data.website"
+                   target="_blank" small>Visit Website</v-btn>
+            <v-btn class="secondary dark-button"
+                   v-if="data.source"
+                   :href="data.source"
+                   target="_blank" small>See Source Code
             </v-btn>
         </v-layout>
     </div>
@@ -63,6 +74,7 @@
         border-radius: 20px;
         padding: 20px;
         width: 35rem;
+
         & /deep/ img, video {
             height: 250px;
         }
