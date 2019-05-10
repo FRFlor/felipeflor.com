@@ -7,7 +7,7 @@
             <v-spacer></v-spacer>
             <no-ssr>
                 <v-toolbar-side-icon v-if="isSmallScreen"
-                                     class="hidden-sm-and-up"
+                                     class="hidden-sm-and-up light-button"
                                      @click="expandSideNavigation = !expandSideNavigation"
                                      right/>
                 <v-toolbar-items v-if="! isSmallScreen"
@@ -65,6 +65,7 @@
                                  :key="index">
                         <v-list-tile-content>
                             <v-btn :to="link.route"
+                                   class="light-button"
                                    :class="{'current-route': $route.path === link.route}"
                                    :tabindex="$route.path === link.route || isSidebarHidden ? '-1' : '0'"
                                    flat block round>
