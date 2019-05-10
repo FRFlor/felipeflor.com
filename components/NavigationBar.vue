@@ -13,8 +13,8 @@
                 <v-toolbar-items v-if="! isSmallScreen"
                                  class="hidden-xs-only">
                     <v-btn v-for="(link, index) in NAVIGATION_LINKS"
-                           class="mr-2 light-button"
-                           :class="{'current-route': $route.path === link.route}"
+                           class="mr-2"
+                           :class="$route.path === link.route ? 'current-route': 'light-button'"
                            :tabindex="$route.path === link.route ? '-1' : '0'"
                            :key="index"
                            :to="link.route"
@@ -65,8 +65,7 @@
                                  :key="index">
                         <v-list-tile-content>
                             <v-btn :to="link.route"
-                                   class="light-button"
-                                   :class="{'current-route': $route.path === link.route}"
+                                   :class="$route.path === link.route ? 'current-route': 'light-button'"
                                    :tabindex="$route.path === link.route || isSidebarHidden ? '-1' : '0'"
                                    flat block round>
                                 {{ link.title }}
