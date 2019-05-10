@@ -12,9 +12,8 @@
         </v-parallax>
 
         <v-container>
-            <section aria-describedby='Who am I?'>
                 <v-layout row wrap>
-                    <v-flex xs 12 sm9 offset-sm3>
+                    <v-flex xs12 sm9 offset-sm3>
                         <h2 class='display-2 font-weight-thin my-5'>Who am I?</h2>
                     </v-flex>
 
@@ -59,13 +58,12 @@
                         </v-btn>
                     </v-flex>
                 </v-layout>
-            </section>
-
-
-            <section aria-describedby='Life in Canada'>
-                <h2 class='display-2 font-weight-thin my-5'>Vehikl</h2>
 
                 <v-layout row wrap>
+                    <v-flex xs12>
+                        <h2 class='display-2 font-weight-thin my-5'>Vehikl</h2>
+                    </v-flex>
+
                     <v-flex xs12>
                         <p>
                             Working at Vehikl has been a dream come true. We are a consultancy company, which means we
@@ -95,8 +93,6 @@
                         </v-carousel>
                     </v-flex>
                 </v-layout>
-            </section>
-
         </v-container>
     </div>
 </template>

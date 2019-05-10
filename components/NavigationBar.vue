@@ -19,7 +19,7 @@
             </v-toolbar-items>
             <v-toolbar-side-icon right class="hidden-sm-and-up"
                                  @click="expandSideNavigation = !expandSideNavigation"/>
-            <section aria-describedby="social-media" class="hidden-xs-only ml-5">
+            <section class="hidden-xs-only ml-5">
                 <v-btn v-for="socialMediaLink in SOCIALMEDIA_LINKS"
                        :key="socialMediaLink.icon"
                        :href="socialMediaLink.destination"
