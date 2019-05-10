@@ -13,7 +13,7 @@
                 <v-toolbar-items v-if="! isSmallScreen"
                                  class="hidden-xs-only">
                     <v-btn v-for="(link, index) in NAVIGATION_LINKS"
-                           class="mr-2"
+                           class="mr-2 light-button"
                            :class="{'current-route': $route.path === link.route}"
                            :tabindex="$route.path === link.route ? '-1' : '0'"
                            :key="index"
@@ -29,7 +29,7 @@
                            :key="socialMediaLink.icon"
                            :href="socialMediaLink.destination"
                            target="_blank"
-                           class="grey--text text--darken-4"
+                           class="grey--text text--darken-4 light-button"
                            icon>
                         <v-icon size="24px">{{ socialMediaLink.icon }}</v-icon>
                     </v-btn>
