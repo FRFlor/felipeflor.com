@@ -2,8 +2,8 @@
     <div class='home'>
         <v-parallax class='elevation-5'
                     height='300'
-                    alt="Mac and Keyboard slightly blurred"
-                    src='https://res.cloudinary.com/felipeflor/image/upload/c_crop,g_south_west,h_400,x_0,y_0/v1553539328/computer.jpg'
+                    :alt="bannerPictureAltTag"
+                    :src='bannerPictureSrc'
                     dark>
             <v-layout align-center column justify-center>
                 <div class='display-1 font-weight-thin mb-3 text-xs-center'>Full Stack Developer at Vehikl</div>
@@ -21,8 +21,8 @@
                     <v-flex shrink xs12 sm3 align-center
                             :class="$vuetify.breakpoint.xsOnly ? 'mb-5' : 'mb-2'">
                         <v-avatar size='150' class='d-flex mx-auto'>
-                            <img src='https://res.cloudinary.com/felipeflor/image/upload/e_improve/v1553281483/felipe-flor.jpg'
-                                 alt="Felipe Rendeiro Flor's profile picture">
+                            <img :src='avatarSrc'
+                                 :alt="avatarAlt">
                         </v-avatar>
                     </v-flex>
 
@@ -80,8 +80,7 @@
                         <p>
                             I'm very thankful to be working with some of the most talented and friendly people I have
                             ever seen. I wish everyone could have an awesome job like this. It truly doesn't feel like
-                            work,
-                            it feels like family, but with paychecks!
+                            work, it feels like family, but with paychecks!
                         </p>
                     </v-flex>
                 </v-layout>
@@ -111,12 +110,18 @@
         transition: (_, from) => !!from ? 'slide-right' : 'slide-left',
     })
     export default class Home extends Vue {
+        protected bannerPictureSrc: string = `${CLOUDINARY}/f_auto,q_auto,c_crop,g_south_west,h_400,x_0,y_0/v1553825743/felipeflor.com/computer`;
+        protected bannerPictureAltTag: string = 'Mac and Keyboard slightly blurred';
+
+        protected avatarSrc: string = `${CLOUDINARY}/f_auto,q_auto,e_improve/v1553281483/felipeflor.com/felipe-flor`;
+        protected avatarAlt: string = "Felipe Rendeiro Flor's profile picture";
+
         protected carouselPictures: string[] = [
-            `${CLOUDINARY}/c_scale,w_820/v1553825353/vueconf2019-3.jpg`,
-            `${CLOUDINARY}/c_crop,g_xy_center,h_400,w_777,x_0,y_600/v1553580466/working_at_vehikl.jpg`,
-            `${CLOUDINARY}/c_scale,w_820/v1553825050/vueconf2019%20-%20Vuenicorn!.jpg`,
-            `${CLOUDINARY}/c_scale,w_820/v1553579347/Chicopee_March_12.jpg`,
-            `${CLOUDINARY}/c_crop,g_south_west,h_953,w_1406/v1553579773/ice_skating.jpg`,
+            `${CLOUDINARY}/f_auto,q_auto,c_scale,h_500/v1553825743/felipeflor.com/vueconf2019`,
+            `${CLOUDINARY}/f_auto,q_auto,c_crop,g_xy_center,h_400,w_777,x_0,y_600/v1553580466/felipeflor.com/working_at_vehikl`,
+            `${CLOUDINARY}/f_auto,q_auto,c_scale,w_820/v1553825050/felipeflor.com/vueconf2019_Vuenicorn`,
+            `${CLOUDINARY}/f_auto,q_auto,c_scale,w_820/v1553579347/felipeflor.com/Chicopee_March12_2019`,
+            `${CLOUDINARY}/f_auto,q_auto,c_crop,g_south_west,h_953,w_1406/v1553579773/felipeflor.com/ice_skating`,
         ];
     }
 </script>

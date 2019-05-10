@@ -44,11 +44,11 @@
         }
 
         protected get placeholder(): string {
-            return `${this.cloudinaryRoot}/e_blur:200,q_20/v1556653952/${this.nameWithoutExtension}.jpg`;
+            return `${this.cloudinaryRoot}/e_blur:200,q_20/v1556653952/felipeflor.com/${this.nameWithoutExtension}.webp`;
         }
 
         protected get fullSize(): string {
-            return `${this.cloudinaryRoot}/v1556653952/${this.srcName}`;
+            return `${this.cloudinaryRoot}/f_auto,q_auto/v1556653952/felipeflor.com/${this.nameWithoutExtension}`;
         }
     }
 </script>

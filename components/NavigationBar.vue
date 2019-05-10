@@ -40,8 +40,8 @@
             <v-list class="pa-1">
                 <v-list-tile avatar>
                     <v-list-tile-avatar>
-                        <img src="https://res.cloudinary.com/felipeflor/image/upload/e_improve/v1553281483/felipe-flor.jpg"
-                             alt="Felipe Rendeiro Flor Avatar">
+                        <img :src="avatarSrc"
+                             :alt="avatarAlt">
                     </v-list-tile-avatar>
 
                     <v-list-tile-content>
@@ -76,10 +76,13 @@
         title: string;
     }
 
+    const CLOUDINARY: string = 'https://res.cloudinary.com/felipeflor/image/upload';
 
     @Component
     export default class NavigationBar extends Vue {
         protected expandSideNavigation: boolean = false;
+        protected avatarSrc: string = `${CLOUDINARY}/f_auto,q_auto,e_improve/v1553281483/felipeflor.com/felipe-flor`;
+        protected avatarAlt: string = "Felipe Rendeiro Flor's profile picture";
 
         protected get NAVIGATION_LINKS(): NavigationLink[] {
             return [
