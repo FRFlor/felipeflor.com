@@ -6,9 +6,12 @@
             </v-toolbar-title>
             <v-spacer></v-spacer>
             <no-ssr>
-                <v-toolbar-side-icon right v-if="isSmallScreen" class="hidden-sm-and-up"
-                                     @click="expandSideNavigation = !expandSideNavigation"/>
-                <v-toolbar-items v-if="! isSmallScreen" class="hidden-xs-only">
+                <v-toolbar-side-icon v-if="isSmallScreen"
+                                     class="hidden-sm-and-up"
+                                     @click="expandSideNavigation = !expandSideNavigation"
+                                     right/>
+                <v-toolbar-items v-if="! isSmallScreen"
+                                 class="hidden-xs-only">
                     <v-btn v-for="(link, index) in NAVIGATION_LINKS"
                            class="mr-2"
                            :class="{'current-route': $route.path === link.route}"
@@ -19,7 +22,8 @@
                         {{ link.title }}
                     </v-btn>
                 </v-toolbar-items>
-                <section v-if="! isSmallScreen" class="hidden-xs-only ml-5">
+                <section v-if="! isSmallScreen"
+                         class="hidden-xs-only ml-5">
                     <v-btn v-for="socialMediaLink in SOCIALMEDIA_LINKS"
                            :aria-label="socialMediaLink.text"
                            :key="socialMediaLink.icon"
@@ -57,9 +61,8 @@
                 <v-list class="pt-0" dense>
                     <v-divider></v-divider>
 
-                    <v-list-tile
-                            v-for="(link, index) in NAVIGATION_LINKS"
-                            :key="index">
+                    <v-list-tile v-for="(link, index) in NAVIGATION_LINKS"
+                                 :key="index">
                         <v-list-tile-content>
                             <v-btn :to="link.route"
                                    :class="{'current-route': $route.path === link.route}"
