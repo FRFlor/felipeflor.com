@@ -48,6 +48,12 @@
                         in Typescript.
                         Feel free to check the source code on my Github.
                     </p>
+
+                    <p>
+                        Last but not least, I believe it is the responsibility of every developer to make sure their applications are
+                        as accessible as possible. I hope this Website reflects my passion for making the web accessible for all, but I realize
+                        there's always something to improve, so if you have suggestions on how to make it more accessible, please let me know!
+                    </p>
                 </v-flex>
 
                 <v-flex xs12 sm9 offset-sm3>
@@ -94,31 +100,6 @@
                                          :src="picture"
                                          :lazy="index > 0"/>
                     </v-carousel>
-                </v-flex>
-            </v-layout>
-
-            <v-layout row wrap>
-                <v-flex xs12>
-                    <h2 class='display-2 font-weight-thin my-5'>Accessibility</h2>
-                </v-flex>
-
-                <v-flex xs12>
-                    <p>
-                        I believe it is the responsibility of every developer to make sure their applications are
-                        as accessible as possible. The internet is for everyone, and for that reason, we need to
-                        try our best to make it easy to use in multiple ways.
-                    </p>
-
-                    <p>
-                        I have a deep interest in accessibility. In 2018 my team and I won first place in the
-                        4x4 Accessibility Hackathon. I have also participated in the Accessithon - Accessibility
-                        Hackathon in 2016.
-                    </p>
-
-                    <p>
-                        I hope this Website reflects my passion for making the web accessible for all, but I realize
-                        there's always something to improve, so if you have suggestions on how to make it more accessible, please let me know!
-                    </p>
                 </v-flex>
             </v-layout>
         </v-container>
