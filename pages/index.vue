@@ -85,7 +85,9 @@
 
                 <v-layout justify-center>
                     <v-flex xs12 sm8 md6 class="mt-4 mb-5">
-                        <v-carousel hide-delimiters height="300">
+                        <v-carousel hide-delimiters
+                                    hide-controls
+                                    height="300">
                             <v-carousel-item v-for='(picture,index) in carouselPictures'
                                              :key='index'
                                              :src="picture"
