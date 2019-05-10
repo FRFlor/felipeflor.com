@@ -71,7 +71,7 @@
                             to
                             learn new technologies. On top of that, we have a very strong culture of collaboration, team
                             work and sharing
-                            knowledge. If you're interested in knowing more, <a class="font-weight-bold"
+                            knowledge. If you're interested in knowing more, <a class="font-weight-bold blue--text text--darken-3"
                                                                                 href="https://vehikl.com"
                                                                                 target="_blank">visit our website!</a>
                         </p>
