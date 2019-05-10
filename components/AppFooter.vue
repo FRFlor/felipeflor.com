@@ -9,6 +9,7 @@
                round>Felipe Flor
         </v-btn>
         <v-btn v-for="link in links"
+               :aria-label="link.text"
                :key="link.icon"
                :href="link.destination"
                target="_blank"

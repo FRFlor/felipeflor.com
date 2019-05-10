@@ -21,6 +21,7 @@
                                  @click="expandSideNavigation = !expandSideNavigation"/>
             <section class="hidden-xs-only ml-5">
                 <v-btn v-for="socialMediaLink in SOCIALMEDIA_LINKS"
+                       :aria-label="socialMediaLink.text"
                        :key="socialMediaLink.icon"
                        :href="socialMediaLink.destination"
                        target="_blank"
