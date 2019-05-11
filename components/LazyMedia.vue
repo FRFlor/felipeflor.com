@@ -34,7 +34,7 @@
     import VLazyImage from "v-lazy-image";
 
     @Component({components: {VLazyImage}})
-    export default class MediaSquare extends Vue {
+    export default class LazyMedia extends Vue {
         @Prop() protected srcMain!: string;
         @Prop() protected srcPlaceholder!: string;
         @Prop() protected alt!: string;

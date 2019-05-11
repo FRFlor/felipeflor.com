@@ -1,10 +1,10 @@
 <template>
     <div class="project-card elevation-3">
         <div class="project-image">
-            <media-square :src-main="data.media.mainSource"
-                          :src-placeholder="data.media.placeHolderSource"
-                          :alt="data.media.alt"
-                          @click="window.open(imageDestination, '_blank')"/>
+            <lazy-media :src-main="data.media.mainSource"
+                        :src-placeholder="data.media.placeHolderSource"
+                        :alt="data.media.alt"
+                        @click="window.open(imageDestination, '_blank')"/>
         </div>
 
         <h2 class='project-title headline font-weight-thin' v-text="data.title"></h2>
@@ -25,7 +25,8 @@
             <v-btn class="light-button"
                    v-if="data.website"
                    :href="data.website"
-                   target="_blank" small>Visit Website</v-btn>
+                   target="_blank" small>Visit Website
+            </v-btn>
             <v-btn class="secondary dark-button"
                    v-if="data.source"
                    :href="data.source"
@@ -37,7 +38,7 @@
 
 <script lang="ts">
     import {Component, Prop, Vue} from 'nuxt-property-decorator';
-    import MediaSquare from "~/components/MediaSquare.vue";
+    import LazyMedia from "~/components/LazyMedia.vue";
     import {Media} from '~/types/index';
 
     export interface PortfolioCardData {
@@ -50,7 +51,7 @@
     }
 
     @Component({
-        components: {MediaSquare}
+        components: {LazyMedia}
     })
     export default class PortfolioCard extends Vue {
         @Prop() private data!: PortfolioCardData;
