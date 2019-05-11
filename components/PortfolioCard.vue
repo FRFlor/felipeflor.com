@@ -1,7 +1,8 @@
 <template>
     <div class="project-card elevation-3">
         <div class="project-image">
-            <media-square :src-name="data.imageSrc"
+            <media-square :src-main="data.imageSrc"
+                          :src-placeholder="data.imagePlaceholder"
                           :alt="data.imageAlt"
                           @click="window.open(imageDestination, '_blank')"/>
         </div>
@@ -40,6 +41,7 @@
 
     export interface PortfolioCardData {
         imageSrc: string;
+        imagePlaceholder: string;
         imageAlt: string;
         title: string;
         description: string;

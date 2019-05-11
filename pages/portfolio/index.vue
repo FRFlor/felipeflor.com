@@ -21,7 +21,8 @@
     })
     export default class PortfolioPage extends Vue {
         protected catMousePorfolio: PortfolioCardData = {
-            imageSrc: 'catmouse.gif',
+            imageSrc: 'catmouse.webm',
+            imagePlaceholder: 'catmouse-poster',
             imageAlt: 'Screencap of Cat & Mouse app',
             title: 'Cat Mouse',
             description: `
@@ -37,6 +38,7 @@
 
         protected balloonStory: PortfolioCardData = {
             imageSrc: 'Balloon%20story.png',
+            imagePlaceholder: '',
             imageAlt: 'Art of girl catching a balloon',
             title: 'Balloon Story',
             description: `
@@ -52,6 +54,7 @@
 
         protected musicGame: PortfolioCardData = {
             imageSrc: 'The%20MusicGame.png',
+            imagePlaceholder: '',
             imageAlt: 'Screenshot of webapp showing ariel (Little Mermaid) singing \"Part of Your World\"',
             title: 'Disney Music Game!',
             description: `
@@ -68,6 +71,7 @@
 
         protected felipeFlorDotCom: PortfolioCardData = {
             imageSrc: 'recursion_meme.png',
+            imagePlaceholder: '',
             imageAlt: 'Meme about recursion',
             title: 'FelipeFlor.com',
             description: `
