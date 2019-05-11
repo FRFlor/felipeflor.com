@@ -4,7 +4,7 @@ export class MediaCollection {
     public static get catMouse(): Media {
         return {
             mainSource: MediaCollection.cloudinarySource('felipeflor.com/catmouse.webm', 'video'),
-            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/catmouse_poster', 'image', 'f_auto,q_auto'),
+            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/catmouse.jpg', 'video'),
             alt: 'Screencap of Cat & Mouse app'
         }
     }
@@ -20,7 +20,7 @@ export class MediaCollection {
     public static get musicGame(): Media {
         return {
             mainSource: MediaCollection.cloudinarySource('felipeflor.com/music_game', 'image', 'f_auto,q_auto'),
-            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/music_game', 'image', 'e_blur:200,q_20'),
+            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/music_game', 'image', 't_media_lib_thumb'),
             alt: 'Screencap of webapp showing ariel (Little Mermaid) singing \"Part of Your World\"'
         }
     }
@@ -28,7 +28,7 @@ export class MediaCollection {
     public static get recursionMeme(): Media {
         return {
             mainSource: MediaCollection.cloudinarySource('felipeflor.com/recursion_meme', 'image', 'f_auto,q_auto'),
-            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/recursion_meme', 'image', 'e_blur:200,q_20'),
+            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/recursion_meme', 'image', 't_media_lib_thumb'),
             alt: 'Meme about recursion'
         }
     }
@@ -36,7 +36,7 @@ export class MediaCollection {
     public static get felipeAvatar(): Media {
         return {
             mainSource: MediaCollection.cloudinarySource('felipeflor.com/felipe-flor', 'image', 'f_auto,q_auto'),
-            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/felipe-flor', 'image', 'e_blur:200,q_20'),
+            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/felipe-flor', 'image', 't_media_lib_thumb'),
             alt: 'Felipe Rendeiro Flor\'s profile picture'
         }
     }
@@ -44,7 +44,7 @@ export class MediaCollection {
     public static get homepageBanner(): Media {
         return {
             mainSource: MediaCollection.cloudinarySource('felipeflor.com/computer', 'image', 'f_auto,q_auto,c_crop,g_south_west,h_400,x_0,y_0'),
-            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/computer', 'image', 'f_auto,q_auto,c_crop,g_south_west,h_400,x_0,y_0'),
+            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/computer', 'image', 't_media_lib_thumb'),
             alt: 'Mac and Keyboard slightly blurred'
         }
     }
@@ -52,7 +52,7 @@ export class MediaCollection {
     public static get vueconf2019(): Media {
         return {
             mainSource: MediaCollection.cloudinarySource('felipeflor.com/vueconf2019', 'image', 'f_auto,q_auto,c_scale,h_500'),
-            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/vueconf2019', 'image', 'f_auto,q_auto,c_scale,h_500'),
+            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/vueconf2019', 'image', 't_media_lib_thumb'),
             alt: 'Vehikl Team together at VueConf 2019'
         }
     }
@@ -60,7 +60,7 @@ export class MediaCollection {
     public static get workingAtVehikl(): Media {
         return {
             mainSource: MediaCollection.cloudinarySource('felipeflor.com/working_at_vehikl', 'image', 'f_auto,q_auto,c_crop,g_xy_center,h_400,w_777,x_0,y_600'),
-            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/working_at_vehikl', 'image', 'f_auto,q_auto,c_crop,g_xy_center,h_400,w_777,x_0,y_600'),
+            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/working_at_vehikl', 'image', 't_media_lib_thumb'),
             alt: 'Felipe and Tuan working together at Vehikl'
         }
     }
@@ -68,7 +68,7 @@ export class MediaCollection {
     public static get vuenicorn(): Media {
         return {
             mainSource: MediaCollection.cloudinarySource('felipeflor.com/vueconf2019_Vuenicorn', 'image', 'f_auto,q_auto,c_scale,w_820'),
-            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/vueconf2019_Vuenicorn', 'image', 'f_auto,q_auto,c_scale,w_820'),
+            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/vueconf2019_Vuenicorn', 'image', 't_media_lib_thumb'),
             alt: 'Vuenicorn prize from Vueconf 2019!'
         }
     }
@@ -76,7 +76,7 @@ export class MediaCollection {
     public static get skiAtChicopee(): Media {
         return {
             mainSource: MediaCollection.cloudinarySource('felipeflor.com/Chicopee_March12_2019', 'image', 'f_auto,q_auto,c_scale,w_820'),
-            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/Chicopee_March12_2019', 'image', 'f_auto,q_auto,c_scale,w_820'),
+            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/Chicopee_March12_2019', 'image', 't_media_lib_thumb'),
             alt: 'Vehikl team together at Chicopee'
         }
     }
@@ -84,7 +84,7 @@ export class MediaCollection {
     public static get iceSkating(): Media {
         return {
             mainSource: MediaCollection.cloudinarySource('felipeflor.com/ice_skating', 'image', 'f_auto,q_auto,c_crop,g_south_west,h_953,w_1406'),
-            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/ice_skating', 'image', 'f_auto,q_auto,c_crop,g_south_west,h_953,w_1406'),
+            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/ice_skating', 'image', 't_media_lib_thumb'),
             alt: 'Vehikl team ice skating together'
         }
     }
