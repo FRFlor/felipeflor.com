@@ -27,12 +27,6 @@ MEDIA_MAP.set(ExistingMedia.catMouse, {
     alt: 'Screencap of Cat & Mouse app'
 });
 
-MEDIA_MAP.set(ExistingMedia.catMouse, {
-    mainSource: cloudinarySource('felipeflor.com/catmouse.webm', 'video'),
-    placeHolderSource: cloudinarySource('felipeflor.com/catmouse-poster', 'image', 'f_auto,q_auto'),
-    alt: 'Screencap of Cat & Mouse app'
-});
-
 MEDIA_MAP.set(ExistingMedia.balloonStory, {
     mainSource: cloudinarySource('felipeflor.com/balloon_story', 'image', 'f_auto,q_auto'),
     placeHolderSource: cloudinarySource('felipeflor.com/balloon_story', 'image', 'e_blur:200,q_20'),
