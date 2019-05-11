@@ -4,15 +4,15 @@ export class MediaCollection {
     public static get catMouse(): Media {
         return {
             mainSource: MediaCollection.cloudinarySource('felipeflor.com/catmouse.webm', 'video'),
-            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/catmouse-poster', 'image', 'f_auto,q_auto'),
+            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/catmouse_poster', 'image', 'f_auto,q_auto'),
             alt: 'Screencap of Cat & Mouse app'
         }
     }
 
     public static get balloonStory(): Media {
         return {
-            mainSource: MediaCollection.cloudinarySource('felipeflor.com/balloon_story', 'image', 'f_auto,q_auto'),
-            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/balloon_story', 'image', 'e_blur:200,q_20'),
+            mainSource: MediaCollection.cloudinarySource('felipeflor.com/balloonStory.webm', 'video'),
+            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/balloonStory.jpg', 'video'),
             alt: 'Art of girl catching a balloon'
         }
     }
