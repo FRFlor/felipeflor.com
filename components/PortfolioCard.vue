@@ -1,11 +1,14 @@
 <template>
     <div class="project-card elevation-3">
-        <div class="project-image">
+        <v-hover>
             <lazy-media :src-main="data.media.mainSource"
                         :src-placeholder="data.media.placeHolderSource"
                         :alt="data.media.alt"
+                        class="project-image"
+                        :class="{'elevation-5 bigger' : hover}"
+                        slot-scope="{ hover }"
                         @click="window.open(imageDestination, '_blank')"/>
-        </div>
+        </v-hover>
 
         <h2 class='project-title headline font-weight-thin' v-text="data.title"></h2>
 
@@ -79,12 +82,17 @@
 
         & /deep/ img, video {
             height: 250px;
+            max-width: 100%;
+            outline: hsla(203, 72%, 35%, 0.4) 2px solid;
         }
 
         .project-image {
             grid-area: image;
             justify-self: center;
-            align-self: center;
+            transition: all 350ms ease;
+            &.bigger {
+                transform: scale(1.025);
+            }
         }
 
         .project-title {

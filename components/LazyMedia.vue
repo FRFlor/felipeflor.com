@@ -2,29 +2,24 @@
     <no-ssr>
         <div class="media-square"
              @click="$emit('click')">
-
             <div class="trigger-loading-area"
                  aria-hidden="true"
                  v-observe-visibility="{callback: visibilityChanged, once: true}">
             </div>
 
-            <v-hover v-if="shouldRender">
+            <div v-if="shouldRender">
                 <video v-if="isVideo"
                        :poster="srcPlaceholder"
-                       :class="{'elevation-5 bigger' : hover}"
-                       slot-scope="{ hover }"
                        autoplay muted loop playsinline>
                     <source :src="srcMain"
                             type="video/webm">
                 </video>
 
                 <v-lazy-image v-else
-                              :class="{'elevation-5 bigger' : hover}"
-                              slot-scope="{ hover }"
                               :alt="alt"
                               :src-placeholder="srcPlaceholder"
                               :src="srcMain"/>
-            </v-hover>
+            </div>
         </div>
     </no-ssr>
 </template>
@@ -56,8 +51,6 @@
 
     img, video {
         max-width: 100%;
-        outline: hsla(203, 72%, 35%, 0.4) 2px solid;
-        transition: all 350ms ease;
     }
 
     .trigger-loading-area {
@@ -76,10 +69,6 @@
 
         &:hover {
             cursor: pointer;
-        }
-
-        .bigger {
-            transform: scale(1.025);
         }
     }
 </style>
