@@ -1,6 +1,10 @@
 <template>
     <div class="media-square"
-         @click="$emit('click')">
+         @click="$emit('click')"
+         v-observe-visibility="{
+             callback: visibilityChanged,
+             once: true,
+         }">
         <v-hover>
             <video v-if="isVideo"
                    :poster="placeholder"
@@ -29,6 +33,10 @@
     export default class MediaSquare extends Vue {
         @Prop() protected srcName!: string;
         @Prop() protected alt!: string;
+
+        protected visibilityChanged(isVisible: boolean): void {
+            console.log('isVisible: ' + isVisible);
+        }
 
         protected get isVideo(): boolean {
             return this.srcName.endsWith('webm');

@@ -18,20 +18,21 @@ export default {
         ],
         link: [
             {rel: "icon", type: "image/x-icon", href: "/favicon.ico"},
-            {rel:"canonical", href:"https://www.felipeflor.com/"}
+            {rel: "canonical", href: "https://www.felipeflor.com/"}
         ]
     },
     loading: {color: "#3B8070"},
     css: [
         "~/assets/css/transitions.scss",
         "~/assets/css/accessibility.scss",
-        { src: '@fortawesome/fontawesome-free/css/all.min.css', lang: 'css'},
+        {src: '@fortawesome/fontawesome-free/css/all.min.css', lang: 'css'},
     ],
     build: {},
     modules: [
         "@nuxtjs/axios",
         "@nuxtjs/vuetify",
     ],
+    plugins: ['~/plugins/vue-observe-visibility'],
     axios: {},
     router: {
         // @ts-ignore
