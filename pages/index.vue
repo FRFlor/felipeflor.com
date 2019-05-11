@@ -2,8 +2,8 @@
     <div class='home'>
         <v-parallax class='elevation-5'
                     height='300'
-                    :alt="bannerPictureAltTag"
-                    :src='bannerPictureSrc'
+                    :src='MediaCollection.homepageBanner.mainSource'
+                    :alt="MediaCollection.homepageBanner.alt"
                     dark>
             <v-layout align-center column justify-center>
                 <div class='display-1 font-weight-thin mb-3 text-xs-center'>Full Stack Developer at Vehikl</div>
@@ -20,8 +20,8 @@
                 <v-flex shrink xs12 sm3 align-center
                         :class="$vuetify.breakpoint.xsOnly ? 'mb-5' : 'mb-2'">
                     <v-avatar size='150' class='d-flex mx-auto'>
-                        <img :src='avatarSrc'
-                             :alt="avatarAlt">
+                        <img :src='MediaCollection.felipeAvatar.mainSource'
+                             :alt="MediaCollection.felipeAvatar.alt">
                     </v-avatar>
                 </v-flex>
 
@@ -108,6 +108,7 @@
 
 <script lang='ts'>
     import {Component, Vue} from 'vue-property-decorator';
+    import {MediaCollection} from '~/store/MediaCollection';
 
     const CLOUDINARY: string = 'https://res.cloudinary.com/felipeflor/image/upload';
 
@@ -115,11 +116,7 @@
         transition: (_, from) => !!from ? 'slide-right' : 'slide-left',
     })
     export default class Home extends Vue {
-        protected bannerPictureSrc: string = `${CLOUDINARY}/f_auto,q_auto,c_crop,g_south_west,h_400,x_0,y_0/v1553825743/felipeflor.com/computer`;
-        protected bannerPictureAltTag: string = 'Mac and Keyboard slightly blurred';
-
-        protected avatarSrc: string = `${CLOUDINARY}/f_auto,q_auto,e_improve/v1553281483/felipeflor.com/felipe-flor`;
-        protected avatarAlt: string = "Felipe Rendeiro Flor's profile picture";
+        protected MediaCollection: MediaCollection = MediaCollection;
 
         protected carouselPictures: string[] = [
             `${CLOUDINARY}/f_auto,q_auto,c_scale,h_500/v1553825743/felipeflor.com/vueconf2019`,

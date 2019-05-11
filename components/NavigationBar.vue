@@ -48,8 +48,8 @@
                 <v-list class="pa-1">
                     <v-list-tile avatar>
                         <v-list-tile-avatar>
-                            <img :src="avatarSrc"
-                                 :alt="avatarAlt">
+                            <img :src="MediaCollection.felipeAvatar.mainSource"
+                                 :alt="MediaCollection.felipeAvatar.alt">
                         </v-list-tile-avatar>
 
                         <v-list-tile-content>
@@ -81,19 +81,17 @@
 <script lang="ts">
     import {Component, Vue} from 'nuxt-property-decorator';
     import {ALL_LINKS, Link, LinkType} from '~/assets/js/links';
+    import {MediaCollection} from '~/store/MediaCollection';
 
     interface NavigationLink {
         route: string;
         title: string;
     }
 
-    const CLOUDINARY: string = 'https://res.cloudinary.com/felipeflor/image/upload';
-
     @Component
     export default class NavigationBar extends Vue {
         protected expandSideNavigation: boolean = false;
-        protected avatarSrc: string = `${CLOUDINARY}/f_auto,q_auto,e_improve/v1553281483/felipeflor.com/felipe-flor`;
-        protected avatarAlt: string = "Felipe Rendeiro Flor's profile picture";
+        protected MediaCollection: MediaCollection = MediaCollection;
 
         protected get NAVIGATION_LINKS(): NavigationLink[] {
             return [

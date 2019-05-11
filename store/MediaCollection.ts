@@ -33,6 +33,21 @@ export class MediaCollection {
         }
     }
 
+    public static get felipeAvatar(): Media {
+        return {
+            mainSource: MediaCollection.cloudinarySource('felipeflor.com/felipe-flor', 'image', 'f_auto,q_auto'),
+            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/felipe-flor', 'image', 'e_blur:200,q_20'),
+            alt: 'Felipe Rendeiro Flor\'s profile picture'
+        }
+    }
+
+    public static get homepageBanner(): Media {
+        return {
+            mainSource: MediaCollection.cloudinarySource('felipeflor.com/computer', 'image', 'f_auto,q_auto,c_crop,g_south_west,h_400,x_0,y_0'),
+            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/computer', 'image', 'f_auto,q_auto,c_crop,g_south_west,h_400,x_0,y_0'),
+            alt: 'Mac and Keyboard slightly blurred'
+        }
+    }
     protected static cloudinarySource(name: string, type: string = 'image', modifiers: string = ''): string {
         let url: string = `https://res.cloudinary.com/felipeflor/${type}/upload/`;
         url += (modifiers.length === 0) ? 'v1556653952/' : `${modifiers}/v1556653952/`;
