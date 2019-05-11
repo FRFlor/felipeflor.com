@@ -8,18 +8,18 @@
                  v-observe-visibility="{callback: visibilityChanged, once: true}">
             </div>
 
+            <v-lazy-image v-if="!isVideo"
+                          :alt="alt"
+                          :src-placeholder="srcPlaceholder"
+                          :src="srcMain"/>
+
             <div v-if="shouldRender">
-                <video v-if="isVideo"
+                <video v-if="shouldRender && isVideo"
                        :poster="srcPlaceholder"
                        autoplay muted loop playsinline>
                     <source :src="srcMain"
                             type="video/webm">
                 </video>
-
-                <v-lazy-image v-else
-                              :alt="alt"
-                              :src-placeholder="srcPlaceholder"
-                              :src="srcMain"/>
             </div>
         </div>
     </no-ssr>
