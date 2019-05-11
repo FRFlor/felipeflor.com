@@ -83,12 +83,12 @@
         & /deep/ img, video {
             height: 250px;
             max-width: 100%;
-            outline: hsla(203, 72%, 35%, 0.4) 2px solid;
         }
 
         .project-image {
             grid-area: image;
             justify-self: center;
+            outline: hsla(203, 72%, 35%, 0.4) 2px solid;
             transition: all 350ms ease;
             &.bigger {
                 transform: scale(1.025);

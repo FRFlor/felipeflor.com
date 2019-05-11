@@ -2,6 +2,7 @@
     <no-ssr>
         <div class="media-square"
              @click="$emit('click')">
+
             <div class="trigger-loading-area"
                  aria-hidden="true"
                  v-observe-visibility="{callback: visibilityChanged, once: true}">
