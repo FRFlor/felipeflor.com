@@ -48,6 +48,47 @@ export class MediaCollection {
             alt: 'Mac and Keyboard slightly blurred'
         }
     }
+
+    public static get vueconf2019(): Media {
+        return {
+            mainSource: MediaCollection.cloudinarySource('felipeflor.com/vueconf2019', 'image', 'f_auto,q_auto,c_scale,h_500'),
+            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/vueconf2019', 'image', 'f_auto,q_auto,c_scale,h_500'),
+            alt: 'Vehikl Team together at VueConf 2019'
+        }
+    }
+
+    public static get workingAtVehikl(): Media {
+        return {
+            mainSource: MediaCollection.cloudinarySource('felipeflor.com/working_at_vehikl', 'image', 'f_auto,q_auto,c_crop,g_xy_center,h_400,w_777,x_0,y_600'),
+            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/working_at_vehikl', 'image', 'f_auto,q_auto,c_crop,g_xy_center,h_400,w_777,x_0,y_600'),
+            alt: 'Felipe and Tuan working together at Vehikl'
+        }
+    }
+
+    public static get vuenicorn(): Media {
+        return {
+            mainSource: MediaCollection.cloudinarySource('felipeflor.com/vueconf2019_Vuenicorn', 'image', 'f_auto,q_auto,c_scale,w_820'),
+            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/vueconf2019_Vuenicorn', 'image', 'f_auto,q_auto,c_scale,w_820'),
+            alt: 'Vuenicorn prize from Vueconf 2019!'
+        }
+    }
+
+    public static get skiAtChicopee(): Media {
+        return {
+            mainSource: MediaCollection.cloudinarySource('felipeflor.com/Chicopee_March12_2019', 'image', 'f_auto,q_auto,c_scale,w_820'),
+            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/Chicopee_March12_2019', 'image', 'f_auto,q_auto,c_scale,w_820'),
+            alt: 'Vehikl team together at Chicopee'
+        }
+    }
+
+    public static get iceSkating(): Media {
+        return {
+            mainSource: MediaCollection.cloudinarySource('felipeflor.com/ice_skating', 'image', 'f_auto,q_auto,c_crop,g_south_west,h_953,w_1406'),
+            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/ice_skating', 'image', 'f_auto,q_auto,c_crop,g_south_west,h_953,w_1406'),
+            alt: 'Vehikl team ice skating together'
+        }
+    }
+
     protected static cloudinarySource(name: string, type: string = 'image', modifiers: string = ''): string {
         let url: string = `https://res.cloudinary.com/felipeflor/${type}/upload/`;
         url += (modifiers.length === 0) ? 'v1556653952/' : `${modifiers}/v1556653952/`;

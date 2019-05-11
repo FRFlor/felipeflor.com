@@ -110,8 +110,6 @@
     import {Component, Vue} from 'vue-property-decorator';
     import {MediaCollection} from '~/store/MediaCollection';
 
-    const CLOUDINARY: string = 'https://res.cloudinary.com/felipeflor/image/upload';
-
     @Component({
         transition: (_, from) => !!from ? 'slide-right' : 'slide-left',
     })
@@ -119,12 +117,12 @@
         protected MediaCollection: MediaCollection = MediaCollection;
 
         protected carouselPictures: string[] = [
-            `${CLOUDINARY}/f_auto,q_auto,c_scale,h_500/v1553825743/felipeflor.com/vueconf2019`,
-            `${CLOUDINARY}/f_auto,q_auto,c_crop,g_xy_center,h_400,w_777,x_0,y_600/v1553580466/felipeflor.com/working_at_vehikl`,
-            `${CLOUDINARY}/f_auto,q_auto,c_scale,w_820/v1553825050/felipeflor.com/vueconf2019_Vuenicorn`,
-            `${CLOUDINARY}/f_auto,q_auto,c_scale,w_820/v1553579347/felipeflor.com/Chicopee_March12_2019`,
-            `${CLOUDINARY}/f_auto,q_auto,c_crop,g_south_west,h_953,w_1406/v1553579773/felipeflor.com/ice_skating`,
-        ];
+            MediaCollection.vueconf2019.mainSource,
+            MediaCollection.vuenicorn.mainSource,
+            MediaCollection.skiAtChicopee.mainSource,
+            MediaCollection.workingAtVehikl.mainSource,
+            MediaCollection.iceSkating.mainSource,
+        ]
     }
 </script>
 
