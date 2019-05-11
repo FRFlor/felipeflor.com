@@ -14,6 +14,7 @@
 <script lang='ts'>
     import {Component, Vue} from 'nuxt-property-decorator';
     import PortfolioCard, {PortfolioCardData} from '~/components/PortfolioCard.vue';
+    import {MEDIA_MAP, ExistingMedia} from '~/assets/js/constants';
 
     @Component({
         components: {PortfolioCard},
@@ -21,9 +22,7 @@
     })
     export default class PortfolioPage extends Vue {
         protected catMousePorfolio: PortfolioCardData = {
-            imageSrc: 'catmouse.webm',
-            imagePlaceholder: 'catmouse-poster',
-            imageAlt: 'Screencap of Cat & Mouse app',
+            media: MEDIA_MAP.get(ExistingMedia.catMouse),
             title: 'Cat Mouse',
             description: `
                This project started because I wanted to learn Graph Theory and Path Finding Algorithms. </br></br>
@@ -37,9 +36,7 @@
         };
 
         protected balloonStory: PortfolioCardData = {
-            imageSrc: 'Balloon%20story.png',
-            imagePlaceholder: '',
-            imageAlt: 'Art of girl catching a balloon',
+            media: MEDIA_MAP.get(ExistingMedia.balloonStory),
             title: 'Balloon Story',
             description: `
                Animation that <strong class="blue--text text--darken-2"> won 1st place</strong>
@@ -53,9 +50,7 @@
         };
 
         protected musicGame: PortfolioCardData = {
-            imageSrc: 'The%20MusicGame.png',
-            imagePlaceholder: '',
-            imageAlt: 'Screenshot of webapp showing ariel (Little Mermaid) singing \"Part of Your World\"',
+            media: MEDIA_MAP.get(ExistingMedia.musicGame),
             title: 'Disney Music Game!',
             description: `
                I'm a big fan of Disney Songs in general, so this project had to happen eventually! </br></br>
@@ -70,9 +65,7 @@
         };
 
         protected felipeFlorDotCom: PortfolioCardData = {
-            imageSrc: 'recursion_meme.png',
-            imagePlaceholder: '',
-            imageAlt: 'Meme about recursion',
+            media: MEDIA_MAP.get(ExistingMedia.recursionMeme),
             title: 'FelipeFlor.com',
             description: `
                My personal website. You're looking at it right now!</br></br>

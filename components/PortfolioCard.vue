@@ -1,9 +1,9 @@
 <template>
     <div class="project-card elevation-3">
         <div class="project-image">
-            <media-square :src-main="data.imageSrc"
-                          :src-placeholder="data.imagePlaceholder"
-                          :alt="data.imageAlt"
+            <media-square :src-main="data.media.mainSource"
+                          :src-placeholder="data.media.placeHolderSource"
+                          :alt="data.media.alt"
                           @click="window.open(imageDestination, '_blank')"/>
         </div>
 
@@ -38,11 +38,10 @@
 <script lang="ts">
     import {Component, Prop, Vue} from 'nuxt-property-decorator';
     import MediaSquare from "~/components/MediaSquare.vue";
+    import {Media} from '~/assets/js/constants';
 
     export interface PortfolioCardData {
-        imageSrc: string;
-        imagePlaceholder: string;
-        imageAlt: string;
+        media: Media,
         title: string;
         description: string;
         keywords: string[];
