@@ -80,7 +80,7 @@
 
 <script lang="ts">
     import {Component, Vue} from 'nuxt-property-decorator';
-    import {ALL_LINKS, Link, LinkType} from '~/assets/js/constants';
+    import {ALL_LINKS, Link, LinkType} from '~/assets/js/links';
 
     interface NavigationLink {
         route: string;

@@ -23,7 +23,7 @@
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
-    import {ALL_LINKS, Link, LinkType} from '~/assets/js/constants';
+    import {ALL_LINKS, Link, LinkType} from '~/assets/js/links';
 
     @Component({
         transition: (_, from) => ( !from || from.name === 'portfolio' ) ? 'slide-left' : 'slide-right',

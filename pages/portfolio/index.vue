@@ -14,7 +14,7 @@
 <script lang='ts'>
     import {Component, Vue} from 'nuxt-property-decorator';
     import PortfolioCard, {PortfolioCardData} from '~/components/PortfolioCard.vue';
-    import {MEDIA_MAP, ExistingMedia} from '~/assets/js/constants';
+    import {MEDIA_MAP, ExistingMedia} from '~/assets/js/medias';
 
     @Component({
         components: {PortfolioCard},

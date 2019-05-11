@@ -38,7 +38,7 @@
 <script lang="ts">
     import {Component, Prop, Vue} from 'nuxt-property-decorator';
     import MediaSquare from "~/components/MediaSquare.vue";
-    import {Media} from '~/assets/js/constants';
+    import {Media} from '~/assets/js/medias';
 
     export interface PortfolioCardData {
         media: Media,
