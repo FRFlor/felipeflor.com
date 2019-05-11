@@ -1,11 +1,13 @@
 <template>
     <no-ssr>
         <div class="media-square"
-             @click="$emit('click')"
-             v-observe-visibility="{
-             callback: visibilityChanged,
-             once: true,
-         }">
+             @click="$emit('click')">
+
+            <div class="trigger-loading-area"
+                 aria-hidden="true"
+                 v-observe-visibility="{callback: visibilityChanged, once: true}">
+            </div>
+
             <v-hover v-if="shouldRender">
                 <video v-if="isVideo"
                        :poster="placeholder"
@@ -74,13 +76,28 @@
 </script>
 
 <style lang="scss" scoped>
+    $loadingTriggerPadding: 80px;
+
     img, video {
         max-width: 100%;
         outline: hsla(203, 72%, 35%, 0.4) 2px solid;
         transition: all 350ms ease;
     }
 
+    .trigger-loading-area {
+        position: absolute;
+        background-color: hsla(0, 100%, 50%, 0.2);
+        pointer-events: none;
+        min-height: 600px;
+        min-width: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+    }
+
     .media-square {
+        position: relative;
+
         &:hover {
             cursor: pointer;
         }
