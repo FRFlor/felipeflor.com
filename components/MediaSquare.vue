@@ -62,7 +62,7 @@
 
     .trigger-loading-area {
         position: absolute;
-        background-color: hsla(0, 100%, 50%, 0.2);
+        background-color: hsla(0, 100%, 50%, 0);
         pointer-events: none;
         min-height: 600px;
         min-width: 500px;
