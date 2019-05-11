@@ -14,7 +14,7 @@
 <script lang='ts'>
     import {Component, Vue} from 'nuxt-property-decorator';
     import PortfolioCard, {PortfolioCardData} from '~/components/PortfolioCard.vue';
-    import {MEDIA_MAP, ExistingMedia} from '~/assets/js/medias';
+    import {MediaCollection} from '~/store/MediaCollection';
 
     @Component({
         components: {PortfolioCard},
@@ -22,7 +22,7 @@
     })
     export default class PortfolioPage extends Vue {
         protected catMousePorfolio: PortfolioCardData = {
-            media: MEDIA_MAP.get(ExistingMedia.catMouse),
+            media: MediaCollection.catMouse,
             title: 'Cat Mouse',
             description: `
                This project started because I wanted to learn Graph Theory and Path Finding Algorithms. </br></br>
@@ -36,7 +36,7 @@
         };
 
         protected balloonStory: PortfolioCardData = {
-            media: MEDIA_MAP.get(ExistingMedia.balloonStory),
+            media: MediaCollection.balloonStory,
             title: 'Balloon Story',
             description: `
                Animation that <strong class="blue--text text--darken-2"> won 1st place</strong>
@@ -50,7 +50,7 @@
         };
 
         protected musicGame: PortfolioCardData = {
-            media: MEDIA_MAP.get(ExistingMedia.musicGame),
+            media: MediaCollection.musicGame,
             title: 'Disney Music Game!',
             description: `
                I'm a big fan of Disney Songs in general, so this project had to happen eventually! </br></br>
@@ -65,7 +65,7 @@
         };
 
         protected felipeFlorDotCom: PortfolioCardData = {
-            media: MEDIA_MAP.get(ExistingMedia.recursionMeme),
+            media: MediaCollection.recursionMeme,
             title: 'FelipeFlor.com',
             description: `
                My personal website. You're looking at it right now!</br></br>
