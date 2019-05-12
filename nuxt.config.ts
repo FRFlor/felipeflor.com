@@ -33,6 +33,15 @@ export default {
         "@nuxtjs/vuetify",
     ],
     plugins: ['~/plugins/vue-observe-visibility'],
+    polyfill: {
+        features: [
+            {
+                require: 'intersection-observer',
+                // Detect causes the polyfill not to load if not necessary
+                detect: () => 'IntersectionObserver' in window,
+            },
+        ]
+    },
     axios: {},
     router: {
         // @ts-ignore
