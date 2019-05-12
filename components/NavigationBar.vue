@@ -5,76 +5,70 @@
                 <h1 class="headline font-weight-light">Felipe Flor</h1>
             </v-toolbar-title>
             <v-spacer></v-spacer>
-            <no-ssr>
-                <v-toolbar-side-icon v-if="isSmallScreen"
-                                     class="hidden-sm-and-up light-button"
-                                     @click="expandSideNavigation = !expandSideNavigation"
-                                     right/>
-                <v-toolbar-items v-if="! isSmallScreen"
-                                 class="hidden-xs-only">
-                    <v-btn v-for="(link, index) in NAVIGATION_LINKS"
-                           class="mr-2"
-                           :class="$route.path === link.route ? 'current-route': 'light-button'"
-                           :tabindex="$route.path === link.route ? '-1' : '0'"
-                           :key="index"
-                           :to="link.route"
-                           flat>
-                        {{ link.title }}
-                    </v-btn>
-                </v-toolbar-items>
-                <section v-if="! isSmallScreen"
-                         class="hidden-xs-only ml-5">
-                    <v-btn v-for="socialMediaLink in SOCIALMEDIA_LINKS"
-                           :aria-label="socialMediaLink.text"
-                           :key="socialMediaLink.icon"
-                           :href="socialMediaLink.destination"
-                           target="_blank"
-                           class="grey--text text--darken-4 light-button"
-                           icon>
-                        <v-icon size="24px">{{ socialMediaLink.icon }}</v-icon>
-                    </v-btn>
-                </section>
-            </no-ssr>
+            <v-toolbar-side-icon :tabindex="isSmallScreen ? '0' : '-1'"
+                                 class="hidden-sm-and-up light-button"
+                                 @click="expandSideNavigation = !expandSideNavigation"
+                                 right/>
+            <v-toolbar-items class="hidden-xs-only">
+                <v-btn v-for="(link, index) in NAVIGATION_LINKS"
+                       class="mr-2"
+                       :class="$route.path === link.route ? 'current-route': 'light-button'"
+                       :tabindex="$route.path === link.route || isSmallScreen ? '-1' : '0'"
+                       :key="index"
+                       :to="link.route"
+                       flat>
+                    {{ link.title }}
+                </v-btn>
+            </v-toolbar-items>
+            <section class="hidden-xs-only ml-5">
+                <v-btn v-for="socialMediaLink in SOCIALMEDIA_LINKS"
+                       :tabindex="isSmallScreen ? '-1' : '0'"
+                       :aria-label="socialMediaLink.text"
+                       :key="socialMediaLink.icon"
+                       :href="socialMediaLink.destination"
+                       target="_blank"
+                       class="grey--text text--darken-4 light-button"
+                       icon>
+                    <v-icon size="24px">{{ socialMediaLink.icon }}</v-icon>
+                </v-btn>
+            </section>
         </v-toolbar>
 
-        <no-ssr>
-            <v-navigation-drawer
-                    v-if="isSmallScreen"
-                    class="navigation-drawer"
-                    v-model="expandSideNavigation"
-                    temporary
-                    app
-            >
-                <v-list class="pa-1">
-                    <v-list-tile avatar>
-                        <v-list-tile-avatar>
-                            <img :src="MediaCollection.felipeAvatar.mainSource"
-                                 :alt="MediaCollection.felipeAvatar.alt">
-                        </v-list-tile-avatar>
+        <v-navigation-drawer
+                class="navigation-drawer"
+                v-model="expandSideNavigation"
+                temporary
+                app
+        >
+            <v-list class="pa-1">
+                <v-list-tile avatar>
+                    <v-list-tile-avatar>
+                        <img :src="MediaCollection.felipeAvatar.mainSource"
+                             :alt="MediaCollection.felipeAvatar.alt">
+                    </v-list-tile-avatar>
 
-                        <v-list-tile-content>
-                            <v-list-tile-title>Felipe Flor</v-list-tile-title>
-                        </v-list-tile-content>
-                    </v-list-tile>
-                </v-list>
+                    <v-list-tile-content>
+                        <v-list-tile-title>Felipe Flor</v-list-tile-title>
+                    </v-list-tile-content>
+                </v-list-tile>
+            </v-list>
 
-                <v-list class="pt-0" dense>
-                    <v-divider></v-divider>
+            <v-list class="pt-0" dense>
+                <v-divider></v-divider>
 
-                    <v-list-tile v-for="(link, index) in NAVIGATION_LINKS"
-                                 :key="index">
-                        <v-list-tile-content>
-                            <v-btn :to="link.route"
-                                   :class="$route.path === link.route ? 'current-route': 'light-button'"
-                                   :tabindex="$route.path === link.route || isSidebarHidden ? '-1' : '0'"
-                                   flat block round>
-                                {{ link.title }}
-                            </v-btn>
-                        </v-list-tile-content>
-                    </v-list-tile>
-                </v-list>
-            </v-navigation-drawer>
-        </no-ssr>
+                <v-list-tile v-for="(link, index) in NAVIGATION_LINKS"
+                             :key="index">
+                    <v-list-tile-content>
+                        <v-btn :to="link.route"
+                               :class="$route.path === link.route ? 'current-route': 'light-button'"
+                               :tabindex="$route.path === link.route || isSidebarHidden ? '-1' : '0'"
+                               flat block round>
+                            {{ link.title }}
+                        </v-btn>
+                    </v-list-tile-content>
+                </v-list-tile>
+            </v-list>
+        </v-navigation-drawer>
     </div>
 </template>
 
