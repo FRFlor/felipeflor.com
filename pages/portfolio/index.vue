@@ -59,7 +59,7 @@
                You have a few seconds to guess, once the time is up, the answer is revealed with a video playing
                an iconic part of that song.
             `,
-            keywords: ['Vue', 'Vuetify', 'Youtube', 'Laravel', 'MySql'],
+            keywords: ['Youtube API', 'Vue', 'Vuetify', 'Typescript'],
             website: 'https://musicgame.felipeflor.com/',
             source: 'https://github.com/FRFlor/music-game',
         };

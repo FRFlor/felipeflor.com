@@ -19,9 +19,9 @@ export class MediaCollection {
 
     public static get musicGame(): Media {
         return {
-            mainSource: MediaCollection.cloudinarySource('felipeflor.com/music_game', 'image', 'f_auto,q_auto'),
-            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/music_game', 'image', 't_media_lib_thumb'),
-            alt: 'Screencap of webapp showing ariel (Little Mermaid) singing \"Part of Your World\"'
+            mainSource: MediaCollection.cloudinarySource('felipeflor.com/musicgame.webm', 'video'),
+            placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/musicgame.jpg', 'video'),
+            alt: 'Game in which the user has to guess the song that is playing. In this case, The Little Mermaid singing \"Part of Your World\"'
         }
     }
 
