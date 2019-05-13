@@ -48,8 +48,6 @@
 </script>
 
 <style lang="scss" scoped>
-    $loadingTriggerPadding: 80px;
-
     img, video {
         max-width: 100%;
     }
@@ -58,8 +56,9 @@
         position: absolute;
         background-color: hsla(0, 100%, 50%, 0);
         pointer-events: none;
-        min-height: 600px;
-        min-width: 500px;
+        height: calc(100% + 300px);
+        width: calc(100% + 300px);
+        max-width: 100vw;
         top: 50%;
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
