@@ -8,18 +8,30 @@ const config: NuxtConfiguration = {
       ** Headers of the page
       */
   head: {
-    title: 'Felipe Flor - Web Developer',
+    title: 'Felipe Flor - WebDeveloper - Vue, Laravel and Typescript',
+    htmlAttrs: {
+      lang: 'en'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Felipe Flor - Web Developer - Vue, Laravel, Typescript' }
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'I am Felipe Flor, a FullStack WebDeveloper from Ontario - Canada, mostly experienced with ' +
+            'Vue, Laravel and Typescript. This website contains my personal Portfolio and contact information,' +
+            ' come take a look!'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'canonical', href: 'https://www.felipeflor.com/' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' },
       {
         rel: 'stylesheet',
-        href:
-                    'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+        href: 'https://use.fontawesome.com/releases/v5.8.2/css/all.css',
+        integrity: 'sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay',
+        crossorigin: 'anonymous'
       }
     ]
   },
@@ -33,7 +45,9 @@ const config: NuxtConfiguration = {
       ** Global CSS
       */
   css: [
-    '~/assets/style/app.styl'
+    '~/assets/style/app.styl',
+    '~/assets/css/transitions.scss',
+    '~/assets/css/accessibility.scss'
   ],
 
   /*
@@ -48,6 +62,12 @@ const config: NuxtConfiguration = {
       ** Nuxt.js modules
       */
   modules: [],
+
+  router: {
+    scrollBehavior(to, from, savedPosition) {
+      setTimeout(() => window.scroll(0, 0), 350)
+    }
+  },
 
   /*
       ** Build configuration

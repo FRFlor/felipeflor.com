@@ -92,7 +92,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import { ALL_LINKS, Link, LinkType } from '../assets/js/links'
+import { LINKS as ALL_LINKS, Link, LinkType } from '../store/Links'
 import { MediaCollection } from '../store/MediaCollection'
 
 export interface NavigationLink {
