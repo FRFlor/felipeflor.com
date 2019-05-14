@@ -148,7 +148,7 @@ export default class NavigationBar extends Vue {
         max-width: 15rem;
     }
 
-    .current-route {
+    .current-route.current-route  {
         background-color: hsl(0, 0%, 20%);
         color: hsl(0, 0%, 90%);
     }

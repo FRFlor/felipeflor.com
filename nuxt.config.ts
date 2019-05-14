@@ -46,8 +46,8 @@ const config: NuxtConfiguration = {
       */
   css: [
     '~/assets/style/app.styl',
-    '~/assets/css/transitions.scss',
-    '~/assets/css/accessibility.scss'
+    '~/assets/style/transitions.scss',
+    '~/assets/style/accessibility.scss'
   ],
 
   /*
