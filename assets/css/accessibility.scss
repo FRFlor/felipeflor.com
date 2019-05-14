@@ -1,0 +1,14 @@
+// Small tweaks to the overall behaviour of vuetify to make it more accessible
+// The !important flag is necessary for to bypass the more specific css of vuetify
+
+.dark-button {
+  &:focus, &:hover {
+    background-color: hsl(200, 100%, 40%) !important;
+  }
+}
+
+.light-button {
+  &:focus, &:hover {
+    background-color: hsl(200, 100%, 90%) !important;
+  }
+}
