@@ -82,3 +82,6 @@ dist
 
 # Service worker
 sw.*
+
+# PHPStorm Nuxt Vuetify Compatibility
+.phpstormVuetify/*
