@@ -5,8 +5,8 @@ const config: NuxtConfiguration = {
   mode: 'universal',
 
   /*
-      ** Headers of the page
-      */
+        ** Headers of the page
+        */
   head: {
     title: 'Felipe Flor - WebDeveloper - Vue, Laravel and Typescript',
     htmlAttrs: {
@@ -19,8 +19,8 @@ const config: NuxtConfiguration = {
         hid: 'description',
         name: 'description',
         content: 'I am Felipe Flor, a FullStack WebDeveloper from Ontario - Canada, mostly experienced with ' +
-            'Vue, Laravel and Typescript. This website contains my personal Portfolio and contact information,' +
-            ' come take a look!'
+                    'Vue, Laravel and Typescript. This website contains my personal Portfolio and contact information,' +
+                    ' come take a look!'
       }
     ],
     link: [
@@ -37,13 +37,13 @@ const config: NuxtConfiguration = {
   },
 
   /*
-      ** Customize the progress-bar color
-      */
+        ** Customize the progress-bar color
+        */
   loading: { color: '#fff' },
 
   /*
-      ** Global CSS
-      */
+        ** Global CSS
+        */
   css: [
     '~/assets/style/app.styl',
     '~/assets/style/transitions.scss',
@@ -51,17 +51,27 @@ const config: NuxtConfiguration = {
   ],
 
   /*
-      ** Plugins to load before mounting the App
-      */
+        ** Plugins to load before mounting the App
+        */
   plugins: [
     '@/plugins/vuetify',
     '@/plugins/vue-observe-visibility'
   ],
 
+  polyfill: {
+    features: [
+      {
+        require: 'intersection-observer',
+        // Detect causes the polyfill not to load if not necessary
+        detect: () => 'IntersectionObserver' in window
+      }
+    ]
+  },
+
   /*
       ** Nuxt.js modules
       */
-  modules: [],
+  modules: ['nuxt-polyfill'],
 
   router: {
     scrollBehavior(to, from, savedPosition) {
@@ -70,8 +80,8 @@ const config: NuxtConfiguration = {
   },
 
   /*
-      ** Build configuration
-      */
+        ** Build configuration
+        */
   build: {
     transpile: ['vuetify/lib'],
     plugins: [new VuetifyLoaderPlugin()],
@@ -81,8 +91,8 @@ const config: NuxtConfiguration = {
       }
     },
     /*
-            ** You can extend webpack config here
-            */
+                ** You can extend webpack config here
+                */
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
