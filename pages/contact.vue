@@ -32,8 +32,23 @@
 import { Component, Vue } from 'vue-property-decorator'
 import { LINKS as ALL_LINKS, Link, LinkType } from '../store/Links'
 
-    // @ts-ignore
-    @Component({ transition: (_, from) => (!from || from.name === 'portfolio') ? 'slide-left' : 'slide-right' })
+    @Component({
+      // @ts-ignore
+      transition: (_, from) => (!from || from.name === 'portfolio') ? 'slide-left' : 'slide-right',
+      head: {
+        title: 'Felipe Flor - Contact',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Felipe Flor - Contact Information - Do you want to talk to me? This page contains ' +
+                    'a list with multiple ways in which I can be reached!'
+          }
+        ],
+        link: [
+          { rel: 'canonical', href: 'https://www.felipeflor.com/contact' }
+        ]
+      } })
 export default class ContactPage extends Vue {
   protected get contactLinks(): Link[] {
     return [

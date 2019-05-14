@@ -20,8 +20,23 @@ import { MediaCollection } from '../store/MediaCollection'
 
     @Component({
       // @ts-ignore
+      transition: (_, from) => (!from || from.name === 'contact') ? 'slide-right' : 'slide-left',
       components: { PortfolioCard },
-      transition: (_, from) => (!from || from.name === 'contact') ? 'slide-right' : 'slide-left'
+      head: {
+        title: 'Felipe Flor - Portfolio',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Felipe Flor - My Portfolio - This page contains some of my personal ' +
+                        'projects with brief descriptions and links for the demos. Most of my projects are ' +
+                        'done with Vue, Typescript and Laravel.'
+          }
+        ],
+        link: [
+          { rel: 'canonical', href: 'https://www.felipeflor.com/portfolio' }
+        ]
+      }
     })
 export default class PortfolioPage extends Vue {
         protected catMousePorfolio: PortfolioCardData = {
