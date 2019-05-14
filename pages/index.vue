@@ -11,7 +11,7 @@
         <div class="display-1 font-weight-thin mb-3 text-xs-center">
           Full Stack Developer at Vehikl
         </div>
-        <span class="subheading">"Design. Develop. Deliver."</span>
+        <span class="subheading">Laravel - Vue - Typescript</span>
       </v-layout>
     </v-parallax>
 
