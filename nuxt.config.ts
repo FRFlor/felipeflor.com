@@ -5,8 +5,8 @@ const config: NuxtConfiguration = {
   mode: 'universal',
 
   /*
-  ** Headers of the page
-  */
+    ** Headers of the page
+    */
   head: {
     title: 'Felipe Flor - Web Developer',
     meta: [
@@ -19,39 +19,38 @@ const config: NuxtConfiguration = {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+                    'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
       }
     ]
   },
 
   /*
-  ** Customize the progress-bar color
-  */
+    ** Customize the progress-bar color
+    */
   loading: { color: '#fff' },
 
   /*
-  ** Global CSS
-  */
+    ** Global CSS
+    */
   css: [
     '~/assets/style/app.styl'
   ],
 
   /*
-  ** Plugins to load before mounting the App
-  */
+    ** Plugins to load before mounting the App
+    */
   plugins: [
     '@/plugins/vuetify'
   ],
 
   /*
-  ** Nuxt.js modules
-  */
-  modules: [
-  ],
+    ** Nuxt.js modules
+    */
+  modules: [],
 
   /*
-  ** Build configuration
-  */
+    ** Build configuration
+    */
   build: {
     transpile: ['vuetify/lib'],
     plugins: [new VuetifyLoaderPlugin()],
@@ -61,8 +60,8 @@ const config: NuxtConfiguration = {
       }
     },
     /*
-    ** You can extend webpack config here
-    */
+        ** You can extend webpack config here
+        */
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
