@@ -35,7 +35,7 @@ export class MediaCollection {
 
   public static get felipeAvatar(): Media {
     return {
-      mainSource: MediaCollection.cloudinarySource('felipeflor.com/felipe-flor', 'image', 'f_auto,q_auto'),
+      mainSource: MediaCollection.cloudinarySource('felipeflor.com/felipe-flor', 'image', 'f_auto,q_auto,e_improve'),
       placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/felipe-flor', 'image', 't_media_lib_thumb'),
       alt: 'Felipe Rendeiro Flor\'s profile picture'
     }
