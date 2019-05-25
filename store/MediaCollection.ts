@@ -21,7 +21,15 @@ export class MediaCollection {
     return {
       mainSource: MediaCollection.cloudinarySource('felipeflor.com/musicgame.webm', 'video'),
       placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/musicgame.jpg', 'video'),
-      alt: 'Game in which the user has to guess the song that is playing. In this case, The Little Mermaid singing \"Part of Your World\"'
+      alt: 'Game in which the user has to guess the song that is playing. In this case, The Little Mermaid singing "Part of Your World"'
+    }
+  }
+
+  public static get mobExperiment(): Media {
+    return {
+      mainSource: MediaCollection.cloudinarySource('felipeflor.com/MobExperiment.webm', 'video'),
+      placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/MobExperiment.jpg', 'video'),
+      alt: 'Simulation that demonstrates the benefits of working with Mob Programming vs. Working Individually.'
     }
   }
 

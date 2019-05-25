@@ -82,6 +82,20 @@ export default class PortfolioPage extends Vue {
           source: 'https://github.com/FRFlor/music-game'
         };
 
+        protected mobExperiment: PortfolioCardData = {
+          media: MediaCollection.mobExperiment,
+          title: 'Mob Programming Experiment',
+          description: `
+               An application that simulates a production line. </br> </br>
+               It is meant to help the user to understand the benefits of mob programming. It allows manual management by drag-and-dropping workers into any workstation. The animation speeds
+               are fully customizable via an intuitive control panel.</br> </br>
+               The production statistics are shown in the end as a bar chart.
+            `,
+          keywords: ['ChartJs', 'Vue', 'Typescript'],
+          website: 'https://mob.felipeflor.com/',
+          source: 'https://github.com/FRFlor/mob-programming-experience'
+        };
+
         protected felipeFlorDotCom: PortfolioCardData = {
           media: MediaCollection.recursionMeme,
           title: 'FelipeFlor.com',
@@ -101,6 +115,7 @@ export default class PortfolioPage extends Vue {
             this.catMousePorfolio,
             this.balloonStory,
             this.musicGame,
+            this.mobExperiment,
             this.felipeFlorDotCom
           ]
         }
