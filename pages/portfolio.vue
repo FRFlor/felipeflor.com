@@ -84,7 +84,7 @@ export default class PortfolioPage extends Vue {
 
         protected mobExperiment: PortfolioCardData = {
           media: MediaCollection.mobExperiment,
-          title: 'Mob Programming Experiment',
+          title: 'Mob Programming',
           description: `
                An application that simulates a production line. </br> </br>
                It is meant to help the user to understand the benefits of mob programming. It allows manual management by drag-and-dropping workers into any workstation. The animation speeds
