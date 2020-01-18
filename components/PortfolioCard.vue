@@ -1,6 +1,6 @@
 <template>
   <div class="project-card elevation-3">
-    <v-hover>
+    <v-hover class="media-wrapper">
       <lazy-media
         slot-scope="{ hover }"
         :src-main="data.media.mainSource"
@@ -57,74 +57,82 @@ import { Media } from '../types/index'
 import LazyMedia from './LazyMedia.vue'
 
 export interface PortfolioCardData {
-        media: Media,
-        title: string;
-        description: string;
-        keywords: string[];
-        website?: string;
-        source?: string;
+    media: Media,
+    title: string;
+    description: string;
+    keywords: string[];
+    website?: string;
+    source?: string;
+  }
+
+  @Component({
+    components: { LazyMedia }
+  })
+export default class PortfolioCard extends Vue {
+    @Prop() private data!: PortfolioCardData;
+
+    protected get window() {
+      return window
     }
 
-    @Component({
-      components: { LazyMedia }
-    })
-export default class PortfolioCard extends Vue {
-        @Prop() private data!: PortfolioCardData;
-
-        protected get window() {
-          return window
-        }
-
-        protected get imageDestination() {
-          return this.data.website ? this.data.website : this.data.source
-        }
+    protected get imageDestination() {
+      return this.data.website ? this.data.website : this.data.source
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-    .project-card {
-        display: grid;
-        grid-gap: 20px;
-        grid-template-areas: "image" "title" "description" "skills" "links";
-        grid-template-rows: 250px 35px;
-        border: lightskyblue 1px solid;
-        border-radius: 20px;
-        padding: 20px;
-        width: 35rem;
+  .media-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsl(0, 0%, 10%);
+  }
 
-        & /deep/ img, video {
-            height: 250px;
-            max-width: 100%;
-        }
+  .project-card {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "image" "title" "description" "skills" "links";
+    grid-template-rows: 250px 35px;
+    border: lightskyblue 1px solid;
+    border-radius: 20px;
+    padding: 20px;
+    width: 35rem;
 
-        .project-image {
-            grid-area: image;
-            justify-self: center;
-            outline: hsla(203, 72%, 35%, 0.4) 2px solid;
-            transition: all 350ms ease;
-            &.bigger {
-                transform: scale(1.025);
-            }
-        }
-
-        .project-title {
-            grid-area: title;
-            justify-self: center;
-        }
-
-        .project-description {
-            grid-area: description;
-            justify-self: center;
-        }
-
-        .keywords-container {
-            grid-area: skills;
-            justify-self: center;
-        }
-
-        .links-container {
-            grid-area: links;
-            justify-self: center;
-        }
+    & /deep/ img, video {
+      height: 250px;
+      max-width: 100%;
     }
+
+    .project-image {
+      grid-area: image;
+      justify-self: center;
+      outline: hsla(203, 72%, 35%, 0.4) 2px solid;
+      transition: all 350ms ease;
+
+      &.bigger {
+        transform: scale(1.025);
+      }
+    }
+
+    .project-title {
+      grid-area: title;
+      justify-self: center;
+    }
+
+    .project-description {
+      grid-area: description;
+      justify-self: center;
+    }
+
+    .keywords-container {
+      grid-area: skills;
+      justify-self: center;
+    }
+
+    .links-container {
+      grid-area: links;
+      justify-self: center;
+    }
+  }
 </style>
