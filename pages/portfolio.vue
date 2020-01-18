@@ -96,6 +96,34 @@ export default class PortfolioPage extends Vue {
       source: 'https://github.com/FRFlor/mob-programming-experience'
     };
 
+    protected spaceGame: PortfolioCardData = {
+      media: MediaCollection.spaceGame,
+      title: 'Not enough space!',
+      description: `
+               A simple 3D space game. </br> </br>
+               The player is in control of a spaceship inside a tunnel filled with debris. </br></br>
+               Can you dodge the space junk and reach the end of the tunnel ? </br>
+               Or will your aircraft become part of the debris?
+            `,
+      keywords: ['WebGL', 'BabylonJS', 'Typescript'],
+      website: 'http://space-game.felipeflor.com/',
+      source: 'https://github.com/FRFlor/WebGL-Spaceship'
+    };
+
+    protected dangerousSigns: PortfolioCardData = {
+      media: MediaCollection.dangerousSigns,
+      title: 'Dangerous Signs',
+      description: `
+               An Open Data project! </br> </br>
+               What is the most dangerous STOP sign in the city of Kitchener?</br></br>
+               To answer this question I make use of Kitchener's Open data database to combine the information of
+               traffic collisions and stop signs locations, putting it all together into a neatly organized interactive map.
+            `,
+      keywords: ['GoogleMaps', 'GeoLocation', 'StreetView', 'Vue Typescript', 'Laravel'],
+      website: 'https://dangerous-signs.felipeflor.com/',
+      source: 'https://github.com/FRFlor/WebGL-Spaceship'
+    };
+
     protected felipeFlorDotCom: PortfolioCardData = {
       media: MediaCollection.recursionMeme,
       title: 'FelipeFlor.com',
@@ -110,26 +138,13 @@ export default class PortfolioPage extends Vue {
       source: 'https://github.com/FRFlor/felipeflor.com'
     };
 
-    protected spaceGame: PortfolioCardData = {
-      media: MediaCollection.spaceGame,
-      title: 'Not enough space!',
-      description: `
-               A simple 3D space game. </br> </br>
-               The player is in control of a spaceship inside a tunnel filled with debris. </br></br>
-               Can you dodge the space junk and reach the end of the tunnel ? </br>
-               Or will your aircraft become part of the debris?
-            `,
-      keywords: ['WebGL', 'BabylonJS', 'Typescript'],
-      website: 'https://space-game.felipeflor.com/',
-      source: 'https://github.com/FRFlor/WebGL-Spaceship'
-    };
-
     protected get projects(): PortfolioCardData[] {
       return [
         this.catMousePorfolio,
         this.balloonStory,
         this.musicGame,
         this.mobExperiment,
+        this.dangerousSigns,
         this.spaceGame,
         this.felipeFlorDotCom
       ]

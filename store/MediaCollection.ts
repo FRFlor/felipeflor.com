@@ -33,6 +33,14 @@ export class MediaCollection {
     }
   }
 
+  public static get dangerousSigns(): Media {
+    return {
+      mainSource: MediaCollection.cloudinarySource('felipeflor.com/dangerous-signs.webm', 'video'),
+      placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/dangerous-signs.jpg', 'video'),
+      alt: 'Open Data project in which an interactive map reveals the stop sign with highest collision rates!'
+    }
+  }
+
   public static get mobExperiment(): Media {
     return {
       mainSource: MediaCollection.cloudinarySource('felipeflor.com/MobExperiment.webm', 'video'),
