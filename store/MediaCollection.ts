@@ -25,6 +25,14 @@ export class MediaCollection {
     }
   }
 
+  public static get gameOfLife(): Media {
+    return {
+      mainSource: MediaCollection.cloudinarySource('felipeflor.com/game-of-life.webm', 'video'),
+      placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/game-of-life.jpg', 'video'),
+      alt: 'Conway\'s game of life.'
+    }
+  }
+
   public static get spaceGame(): Media {
     return {
       mainSource: MediaCollection.cloudinarySource('felipeflor.com/space-game.webm', 'video'),

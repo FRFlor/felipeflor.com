@@ -119,8 +119,21 @@ export default class PortfolioPage extends Vue {
                To answer this question I make use of Kitchener's Open data database to combine the information of
                traffic collisions and stop signs locations, putting it all together into a neatly organized interactive map.
             `,
-      keywords: ['GoogleMaps', 'GeoLocation', 'StreetView', 'Vue Typescript', 'Laravel'],
+      keywords: ['GoogleMaps', 'GeoLocation', 'StreetView', 'Vue', 'Typescript', 'Laravel'],
       website: 'https://dangerous-signs.felipeflor.com/',
+      source: 'https://github.com/FRFlor/WebGL-Spaceship'
+    };
+
+    protected gameOfLife: PortfolioCardData = {
+      media: MediaCollection.gameOfLife,
+      title: 'Game of Life',
+      description: `
+               Conway's Game of Life </br> </br>
+               A simulation of simple life forms that can either reproduce, die or remain.</br></br>
+               I also added a small control panel where the user can change the Frames-per-second and size of grid.
+            `,
+      keywords: ['Canvas', 'Algorithms'],
+      website: 'http://game-of-life.felipeflor.com/',
       source: 'https://github.com/FRFlor/WebGL-Spaceship'
     };
 
@@ -144,6 +157,7 @@ export default class PortfolioPage extends Vue {
         this.balloonStory,
         this.musicGame,
         this.mobExperiment,
+        this.gameOfLife,
         this.dangerousSigns,
         this.spaceGame,
         this.felipeFlorDotCom
