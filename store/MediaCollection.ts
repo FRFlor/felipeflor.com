@@ -25,6 +25,14 @@ export class MediaCollection {
     }
   }
 
+  public static get spaceGame(): Media {
+    return {
+      mainSource: MediaCollection.cloudinarySource('felipeflor.com/space-game.webm', 'video'),
+      placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/space-game.jpg', 'video'),
+      alt: 'A 3D game in WebGL! Pilot your spaceship to dodge the menacing space debris!'
+    }
+  }
+
   public static get mobExperiment(): Media {
     return {
       mainSource: MediaCollection.cloudinarySource('felipeflor.com/MobExperiment.webm', 'video'),
