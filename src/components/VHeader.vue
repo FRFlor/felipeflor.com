@@ -4,14 +4,15 @@
       <section
           class="links-section fade-in delay h-32 w-full max-w-lg z-20">
         <div class="flex items-baseline justify-around">
-          <social-button v-for="socialLink in socialLinks"
-                         :key="socialLink.icon"
-                         :description="socialLink.description"
-                         :icon="socialLink.icon"
-                         @blur="socialText=''"
-                         @focus="description => socialText = description"
-                         @hover-end="socialText = ''"
-                         @hover-start="description => socialText = description"/>
+          <social-link v-for="socialLink in socialLinks"
+                       :key="socialLink.icon"
+                       :description="socialLink.description"
+                       :href="socialLink.url"
+                       :icon="socialLink.icon"
+                       @blur="socialText=''"
+                       @focus="description => socialText = description"
+                       @hover-end="socialText = ''"
+                       @hover-start="description => socialText = description"/>
         </div>
         <p
             class="row-start-3 col-span-6 xl:col-span-3 flex items-baseline justify-center text-xl text-blue-200 pt-6 max-w-lg text-center"
@@ -30,29 +31,33 @@
 </template>
 
 <script lang="ts" setup>
-import SocialButton from "@/components/SocialButton.vue"
 import SvgCanadaFlag from "@/components/SvgCanadaFlag.vue"
 import FelipeFlorEpicyles from "@/components/FelipeFlorEpicyles.vue"
 import {ref} from "vue"
+import SocialLink from "@/components/SocialLink.vue"
 
 interface ISocialLink {
   icon: string;
   description: string;
+  url: string;
 }
 
 const socialText = ref<string>("")
 const socialLinks: ISocialLink[] = [
   {
     icon: "fab fa-twitter",
-    description: "Checkout my twitter!"
+    description: "Checkout my twitter!",
+    url: "https://twitter.com/Felipe_R_Flor"
   },
   {
     icon: "fas fa-envelope",
-    description: "Want to send an email to me?"
+    description: "Want to send an email to me?",
+    url: "mailto:hello@felipeflor.com"
   },
   {
     icon: "fab fa-github-alt",
-    description: "A lot of my projects are open source!"
+    description: "A lot of my projects are open source!",
+    url: "https://github.com/FRFlor"
   }
 ]
 </script>

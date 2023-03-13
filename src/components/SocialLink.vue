@@ -11,6 +11,11 @@ defineProps({
     type: String,
     required: false,
     default: ""
+  },
+  href: {
+    type: String,
+    required: false,
+    default: "#"
   }
 })
 const emit = defineEmits(["blur", "click", "focus", "hover-start", "hover-end"])
@@ -21,21 +26,24 @@ function onClick() {
   button.value?.classList.add("pressed")
   setTimeout(() => {
     button.value?.classList.remove("pressed")
+    button.value?.blur()
   }, 250)
 }
 </script>
 
 <template>
-  <button class="social-button cursor-pointer border border-blue-200 text-blue-200 px-4 py-2 rounded-full"
-          ref="button"
-          @blur="emit('blur')"
-          @click="onClick"
-          @focus="emit('focus', description)"
-          @mouseenter="emit('hover-start', description)"
-          @mouseleave="emit('hover-end', description)"
+  <a ref="button"
+     :href="href"
+     class="social-button cursor-pointer border border-blue-200 text-blue-200 px-4 py-2 rounded-full"
+     target="_blank"
+     @blur="emit('blur')"
+     @click="onClick"
+     @focus="emit('focus', description)"
+     @mouseenter="emit('hover-start', description)"
+     @mouseleave="emit('hover-end', description)"
   >
     <i :class="icon" class="text-4xl"/>
-  </button>
+  </a>
 </template>
 
 
