@@ -50,7 +50,7 @@ const canvas = ref<HTMLCanvasElement>()
 onMounted(() => {
   _canvasWrapper.value = new CanvasWrapper(canvas.value as HTMLCanvasElement)
   calculateCircleChains()
-  startAnimation(false)
+  startAnimation(true)
 })
 
 onBeforeUnmount(stopAnimation)
