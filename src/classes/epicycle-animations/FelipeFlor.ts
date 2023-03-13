@@ -1,6 +1,6 @@
-import FELIPE_POINTS_RAW from "@/points/Felipe.json"
+import FELIPE_POINTS_RAW from "@/assets/plot-points/Felipe.json"
 import {ICoordinates} from "@/types"
-import FLOR_POINTS_RAW from "@/points/Flor.json"
+import FLOR_POINTS_RAW from "@/assets/plot-points/Flor.json"
 import {EpicycleAnimation} from "@/classes/epicycle-animations/EpicycleAnimation"
 
 export default class FelipeFlor extends EpicycleAnimation {
