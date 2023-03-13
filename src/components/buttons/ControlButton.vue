@@ -9,14 +9,13 @@ defineProps({
     default: "fab fa-github-alt"
   }
 })
-const emit = defineEmits(["blur", "click", "focus", "hover-start", "hover-end"])
 </script>
 
 <template>
   <base-button
       class="control-button border bg-gray-800 border-gray-200 text-gray-200 py-1 px-4 rounded"
       type="button"
-      @click="emit('click')"
+      v-bind="$attrs"
   >
     <i :class="icon" class="text-xl"/>
   </base-button>
@@ -30,5 +29,4 @@ const emit = defineEmits(["blur", "click", "focus", "hover-start", "hover-end"])
 .control-button:hover, .control-button:focus {
   @apply border-gray-300 bg-gray-500 text-gray-100 outline-none
 }
-
 </style>
