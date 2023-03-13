@@ -22,7 +22,7 @@
         <FelipeFlorEpicyles class="slow-fade-in "/>
         <span class="software-developer fade-in flex items-center">
           <p class="text-2xl xl:text-3xl text-blue-100 mr-6">Software Developer</p>
-          <svg-canada-flag class="h-4 w-6 mt-1"/>
+          <img :src="canadaFlag" alt="Flag of Canada" class="h-4 w-6 mt-1">
        </span>
       </section>
     </div>
@@ -31,7 +31,7 @@
 </template>
 
 <script lang="ts" setup>
-import SvgCanadaFlag from "@/components/SvgCanadaFlag.vue"
+import canadaFlag from "@/assets/canada-flag.svg"
 import FelipeFlorEpicyles from "@/components/FelipeFlorEpicyles.vue"
 import {ref} from "vue"
 import SocialLink from "@/components/buttons/SocialLink.vue"
