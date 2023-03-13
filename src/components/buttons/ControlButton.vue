@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 
-import BaseButton from "@/components/BaseButton.vue"
+import BaseButton from "@/components/buttons/BaseButton.vue"
 
 defineProps({
   icon: {

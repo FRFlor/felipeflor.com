@@ -4,7 +4,7 @@ import {CircleChain} from "@/classes/CircleChain"
 import {CanvasWrapper} from "@/classes/CanvasWrapper"
 import FELIPE_POINTS_RAW from "@/points/Felipe.json"
 import FLOR_POINTS_RAW from "@/points/Flor.json"
-import ControlButton from "@/components/ControlButton.vue"
+import ControlButton from "@/components/buttons/ControlButton.vue"
 import {onBeforeUnmount, onMounted, ref} from "vue"
 
 

@@ -34,7 +34,7 @@
 import SvgCanadaFlag from "@/components/SvgCanadaFlag.vue"
 import FelipeFlorEpicyles from "@/components/FelipeFlorEpicyles.vue"
 import {ref} from "vue"
-import SocialLink from "@/components/SocialLink.vue"
+import SocialLink from "@/components/buttons/SocialLink.vue"
 
 interface ISocialLink {
   icon: string;
