@@ -1,6 +1,6 @@
 <template>
   <header class="bg-cover w-full bg-left">
-    <div class="container mx-auto overflow-x-hidden w-full h-full relative overflow-hidden">
+    <div class="container overflow-x-hidden mx-auto 2xl:mx-5 max-w-4xl xl:max-w-5xl h-full relative overflow-hidden">
       <section
           class="links-section fade-in delay h-32 w-full max-w-lg z-20">
         <div class="flex items-baseline justify-around">
@@ -67,17 +67,17 @@ header {
   background-image: url("https://res.cloudinary.com/felipeflor/image/upload/c_crop,g_east,h_3168,w_3651/c_scale,w_2000/v1595101853/felipeflor.com/cookie-the-pom-gySMaocSdqs-unsplash.jpg");
   background-color: hsl(185, 40%, 25%);
   background-blend-mode: overlay;
-  clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+  clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 90%, 80% 100%, 20% 100%, 0% 90%, 0% 20%);
   height: min(100vh, 35rem);
 }
 
-@media (min-width: 768px) {
+@media screen('md') {
   header {
     clip-path: polygon(0 0, 100% 0%, 85% 100%, 0 100%);
   }
 }
 
-@media (min-width: 2000px) {
+@media screen('2xl') {
   header {
     clip-path: polygon(0 0, 100% 0%, 90% 100%, 0 100%);
   }
