@@ -32,7 +32,7 @@ const emit = defineEmits(["blur", "click", "focus", "hover-start", "hover-end"])
                @mouseenter="emit('hover-start', description)"
                @mouseleave="emit('hover-end', description)"
   >
-    <i :class="icon" class="text-4xl"/>
+    <i :class="icon" class="text-3xl lg:text-4xl"/>
   </base-button>
 </template>
 

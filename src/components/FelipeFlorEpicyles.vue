@@ -42,6 +42,7 @@ function onMediaButtonPressed() {
     </h1>
     <control-button :icon="`fas ${felipeFlorAnimation?.isPlaying ? 'fa-pause' : 'fa-play'}`"
                     class="controls z-0"
+                    data-test="epicycle-play-button"
                     @click="onMediaButtonPressed"/>
   </div>
 </template>
