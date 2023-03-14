@@ -4,7 +4,7 @@ import FLOR_POINTS_RAW from "@/assets/plot-points/Flor.json"
 import {EpicycleAnimation} from "@/classes/discrete-fourier-transform/epicycle-animations/EpicycleAnimation"
 
 export default class FelipeFlor extends EpicycleAnimation {
-    public FPS: number = 30
+    public FPS: number = 50
     public frequencyRange = 130
     public animationSpeed: number = 0.025
 

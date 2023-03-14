@@ -20,7 +20,9 @@ export abstract class EpicycleAnimation {
 
     public startAnimation(shouldLoop: boolean = true): void {
         this.circleChains.forEach(chain => {
-            chain.onEdgeDrawsFull = shouldLoop ? () => null : this.stopAnimation
+            if (!shouldLoop) {
+                chain.onEdgeDrawsFull = this.stopAnimation
+            }
         })
 
         if (this.interval) {
