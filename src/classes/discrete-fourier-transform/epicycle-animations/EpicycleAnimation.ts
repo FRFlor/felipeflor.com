@@ -1,6 +1,6 @@
-import {CanvasWrapper} from "@/classes/CanvasWrapper"
+import {CanvasWrapper} from "@/classes/discrete-fourier-transform/CanvasWrapper"
 import {IComplexNumber, ICoordinates} from "@/types"
-import {CircleChain} from "@/classes/CircleChain"
+import {CircleChain} from "@/classes/discrete-fourier-transform/CircleChain"
 
 export abstract class EpicycleAnimation {
     public FPS: number = 30

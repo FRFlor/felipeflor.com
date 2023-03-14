@@ -1,4 +1,4 @@
-import {CanvasWrapper} from "@/classes/CanvasWrapper"
+import {CanvasWrapper} from "@/classes/discrete-fourier-transform/CanvasWrapper"
 
 export class Circle {
     public x: number

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import ControlButton from "@/components/buttons/ControlButton.vue"
 import {onBeforeUnmount, onMounted, ref} from "vue"
-import FelipeFlorAnimation from "@/classes/epicycle-animations/FelipeFlor"
+import FelipeFlorAnimation from "@/classes/discrete-fourier-transform/epicycle-animations/FelipeFlor"
 
 
 const canvas = ref<HTMLCanvasElement>()

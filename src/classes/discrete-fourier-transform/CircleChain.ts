@@ -1,6 +1,6 @@
-import {Circle} from "@/classes/Circle"
+import {Circle} from "@/classes/discrete-fourier-transform/Circle"
 import {ICoordinates} from "@/types"
-import {CanvasWrapper} from "@/classes/CanvasWrapper"
+import {CanvasWrapper} from "@/classes/discrete-fourier-transform/CanvasWrapper"
 import {LinkedList} from "@/classes/LinkedList"
 
 export class CircleChain {
