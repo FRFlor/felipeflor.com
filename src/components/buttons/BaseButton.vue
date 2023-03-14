@@ -11,11 +11,10 @@ interface IBaseButtonProps {
 withDefaults(defineProps<IBaseButtonProps>(), {type: "button"})
 
 function onClick() {
-  emit("click")
+  emit("click", "blur")
   button.value?.classList.add("pressed")
   setTimeout(() => {
     button.value?.classList.remove("pressed")
-    button.value?.blur()
   }, 250)
 }
 </script>
@@ -25,6 +24,8 @@ function onClick() {
       :is="type"
       ref="button"
       class="cursor-pointer"
+      v-bind="$attrs"
+      @blur="emit('blur')"
       @click="onClick"
   >
     <slot>Click Me</slot>

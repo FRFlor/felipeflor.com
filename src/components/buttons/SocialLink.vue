@@ -27,6 +27,7 @@ const emit = defineEmits(["blur", "click", "focus", "hover-start", "hover-end"])
                target="_blank"
                type="a"
                v-bind="$attrs"
+               @blur="emit('blur')"
                @focus="emit('focus', description)"
                @mouseenter="emit('hover-start', description)"
                @mouseleave="emit('hover-end', description)"
