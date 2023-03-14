@@ -70,22 +70,6 @@ header {
   height: min(100vh, 30rem);
 }
 
-@media screen('md') {
-  header {
-    clip-path: polygon(0 0, 100% 0%, 85% 100%, 0 100%);
-  }
-
-  .links-section {
-    bottom: 65px;
-  }
-}
-
-@media screen('2xl') {
-  header {
-    clip-path: polygon(0 0, 100% 0%, 90% 100%, 0 100%);
-  }
-}
-
 .name-section {
   position: absolute;
   top: 0;
@@ -117,6 +101,22 @@ header {
 
 .delay {
   animation-delay: 500ms;
+}
+
+@media screen('md') {
+  header {
+    clip-path: polygon(0 0, 100% 0%, 85% 100%, 0 100%);
+  }
+
+  .links-section {
+    bottom: 65px;
+  }
+}
+
+@media screen('2xl') {
+  header {
+    clip-path: polygon(0 0, 100% 0%, 90% 100%, 0 100%);
+  }
 }
 
 @keyframes fade-in {
