@@ -34,7 +34,7 @@ const socialLinks: ISocialLink[] = [
   <header class="bg-cover w-full bg-left h-112">
     <div class="overflow-x-hidden h-112 relative overflow-hidden">
       <section
-          class="links-section fade-in delay h-32 w-full max-w-lg z-20">
+          class="links-section fade-in delay h-32 w-full max-w-lg z-20 absolute bottom-0 md:bottom-8">
         <div class="flex items-baseline justify-around">
           <social-link v-for="socialLink in socialLinks"
                        :key="socialLink.icon"
@@ -69,23 +69,10 @@ header {
   clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 90%, 80% 100%, 20% 100%, 0% 90%, 0% 20%);
 }
 
-.name-section {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
-
 .software-developer {
   position: absolute;
   top: 250px;
   left: 25px;
-}
-
-.links-section {
-  position: absolute;
-  bottom: 0;
 }
 
 .slow-fade-in {
@@ -105,10 +92,6 @@ header {
 @media screen('md') {
   header {
     clip-path: polygon(0 0, 100% 0%, 85% 100%, 0 100%);
-  }
-
-  .links-section {
-    bottom: 55px;
   }
 }
 
