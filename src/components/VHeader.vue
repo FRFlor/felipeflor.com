@@ -31,7 +31,7 @@ const socialLinks: ISocialLink[] = [
 </script>
 
 <template>
-  <header class="bg-cover clip-path w-full bg-left h-112 relative">
+  <header class="bg-cover w-full bg-left h-112 relative">
     <div class="overflow-x-hidden h-112 relative overflow-hidden">
       <section
           class="links-section fade-in delay h-32 w-full max-w-lg z-20 absolute bottom-0 md:bottom-8">
