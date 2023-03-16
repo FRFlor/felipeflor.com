@@ -38,7 +38,7 @@ const emit = defineEmits(["blur", "click", "focus", "hover-start", "hover-end"])
                @mouseenter="emit('hover-start', description)"
                @mouseleave="emit('hover-end', description)"
   >
-    <component :is="SvgComponent" class="h-7 lg:h-10" fill="currentColor"/>
+    <component :is="SvgComponent" class="h-7 lg:h-8" fill="currentColor"/>
   </base-button>
 </template>
 
