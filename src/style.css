@@ -2,12 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+h2 {
+    @apply text-xl lg:text-7xl font-bold text-sky-900 drop-shadow-md
+}
+
+p {
+    @apply text-lg lg:text-2xl text-gray-700
+}
+
 body {
     --header-overlay-colour: hsl(185, 40%, 25%);
     --top-background-colour: hsl(184, 39%, 35%);
     --middle-background-colour-transparent: hsla(184, 20%, 52%, 0%);
     --middle-background-colour: hsl(184, 20%, 52%);
-    --bottom-background-colour: hsl(183, 65%, 26%);
+    --bottom-background-colour: hsl(184, 20%, 42%);
 
     background: var(--top-background-colour);
     background: linear-gradient(

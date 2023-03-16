@@ -2,7 +2,7 @@
 import RightArrowSvg from "@/assets/arrow-right.svg"</script>
 
 <template>
-  <div class="w-11/12 max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class="w-full max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
       <video
           autoplay
@@ -20,7 +20,7 @@ import RightArrowSvg from "@/assets/arrow-right.svg"</script>
     </a>
     <div class="p-5">
       <a href="#">
-        <h3 class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white">Balloon Story</h3>
+        <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Balloon Story</h3>
       </a>
       <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Animation that <strong class="text-blue-500">won 1st
         place</strong> in the Art Submission Contest of VueConf US 2019!</p>
