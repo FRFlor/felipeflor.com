@@ -31,8 +31,8 @@ const socialLinks: ISocialLink[] = [
 </script>
 
 <template>
-  <header class="bg-cover w-full bg-left">
-    <div class="container overflow-x-hidden mx-auto 2xl:mx-5 max-w-4xl xl:max-w-5xl h-full relative overflow-hidden">
+  <header class="bg-cover w-full bg-left h-112">
+    <div class="container overflow-x-hidden mx-auto 2xl:mx-5 max-w-4xl xl:max-w-5xl h-112 relative overflow-hidden">
       <section
           class="links-section fade-in delay h-32 w-full max-w-lg z-20">
         <div class="flex items-baseline justify-around">
@@ -67,7 +67,6 @@ header {
   background-color: hsl(185, 40%, 25%);
   background-blend-mode: overlay;
   clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 90%, 80% 100%, 20% 100%, 0% 90%, 0% 20%);
-  height: min(100vh, 30rem);
 }
 
 .name-section {
