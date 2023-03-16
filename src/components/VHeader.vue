@@ -52,7 +52,7 @@ const socialLinks: ISocialLink[] = [
       </section>
       <section class="name-section md:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl">
         <FelipeFlorEpicyles class="slow-fade-in "/>
-        <span class="software-developer fade-in flex items-center">
+        <span class="software-developer absolute top-60 left-5 fade-in flex items-center">
           <p class="text-2xl xl:text-3xl text-blue-100 mr-6">Software Developer</p>
           <img :src="CanadaFlagSvg" alt="Flag of Canada" class="h-4 w-6 mt-1">
        </span>
@@ -67,12 +67,6 @@ header {
   background-color: hsl(185, 40%, 25%);
   background-blend-mode: overlay;
   clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 90%, 80% 100%, 20% 100%, 0% 90%, 0% 20%);
-}
-
-.software-developer {
-  position: absolute;
-  top: 250px;
-  left: 25px;
 }
 
 .slow-fade-in {
