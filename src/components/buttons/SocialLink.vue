@@ -1,5 +1,9 @@
 <script lang="ts" setup>
 import BaseButton from "@/components/buttons/BaseButton.vue"
+import {computed} from "vue"
+import GithubSVG from "@/assets/font-awesome/github-alt.svg"
+import EmailSVG from "@/assets/font-awesome/envelope.svg"
+import TwitterSVG from "@/assets/font-awesome/twitter.svg"
 
 interface ISocialLinkProps {
   icon: string,
@@ -7,7 +11,18 @@ interface ISocialLinkProps {
   href?: string
 }
 
-withDefaults(defineProps<ISocialLinkProps>(), {href: "#"})
+const props = withDefaults(defineProps<ISocialLinkProps>(), {href: "#"})
+
+const SvgComponent = computed(() => {
+  switch (props.icon) {
+    case "github":
+      return GithubSVG
+    case "email":
+      return EmailSVG
+    case "twitter":
+      return TwitterSVG
+  }
+})
 
 const emit = defineEmits(["blur", "click", "focus", "hover-start", "hover-end"])
 </script>
@@ -23,7 +38,7 @@ const emit = defineEmits(["blur", "click", "focus", "hover-start", "hover-end"])
                @mouseenter="emit('hover-start', description)"
                @mouseleave="emit('hover-end', description)"
   >
-    <i :class="icon" class="text-3xl lg:text-4xl"/>
+    <component :is="SvgComponent" class="h-7 lg:h-10" fill="currentColor"/>
   </base-button>
 </template>
 

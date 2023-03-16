@@ -1,14 +1,9 @@
 <script lang="ts" setup>
-
 import BaseButton from "@/components/buttons/BaseButton.vue"
+import PauseSvg from "@/assets/font-awesome/pause.svg"
+import PlaySvg from "@/assets/font-awesome/play.svg"
 
-defineProps({
-  icon: {
-    type: String,
-    required: false,
-    default: "fab fa-github-alt"
-  }
-})
+defineProps<{ isPlaying: boolean }>()
 </script>
 
 <template>
@@ -17,7 +12,7 @@ defineProps({
       type="button"
       v-bind="$attrs"
   >
-    <i :class="icon" class="text-xl"/>
+    <component :is="isPlaying? PauseSvg : PlaySvg" class="h-5" fill="currentColor"/>
   </base-button>
 </template>
 

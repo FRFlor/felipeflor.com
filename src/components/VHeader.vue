@@ -13,17 +13,17 @@ interface ISocialLink {
 const socialText = ref<string>("")
 const socialLinks: ISocialLink[] = [
   {
-    icon: "fab fa-twitter",
+    icon: "twitter",
     description: "Checkout my twitter!",
     url: "https://twitter.com/Felipe_R_Flor"
   },
   {
-    icon: "fas fa-envelope",
+    icon: "email",
     description: "Want to send an email to me?",
     url: "mailto:hello@felipeflor.com"
   },
   {
-    icon: "fab fa-github-alt",
+    icon: "github",
     description: "A lot of my projects are open source!",
     url: "https://github.com/FRFlor"
   }
@@ -109,7 +109,7 @@ header {
   }
 
   .links-section {
-    bottom: 65px;
+    bottom: 55px;
   }
 }
 
