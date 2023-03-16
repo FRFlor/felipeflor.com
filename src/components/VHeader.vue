@@ -32,7 +32,7 @@ const socialLinks: ISocialLink[] = [
 
 <template>
   <header class="bg-cover w-full bg-left h-112">
-    <div class="container overflow-x-hidden mx-auto 2xl:mx-5 max-w-4xl xl:max-w-5xl h-112 relative overflow-hidden">
+    <div class="overflow-x-hidden h-112 relative overflow-hidden">
       <section
           class="links-section fade-in delay h-32 w-full max-w-lg z-20">
         <div class="flex items-baseline justify-around">
@@ -50,7 +50,7 @@ const socialLinks: ISocialLink[] = [
             class="row-start-3 col-span-6 xl:col-span-3 flex items-baseline justify-center text-xl text-blue-200 pt-6 max-w-lg text-center"
             v-text="socialText"/>
       </section>
-      <section class="name-section">
+      <section class="name-section md:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl">
         <FelipeFlorEpicyles class="slow-fade-in "/>
         <span class="software-developer fade-in flex items-center">
           <p class="text-2xl xl:text-3xl text-blue-100 mr-6">Software Developer</p>
