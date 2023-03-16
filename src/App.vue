@@ -1,10 +1,8 @@
 <script lang="ts" setup>
 import VHeader from "@/components/VHeader.vue"
 import ProjectCard from "@/components/ProjectCard.vue"</script>
-
 <template>
   <v-header/>
-
   <main class="container mx-2 lg:mx-10 my-10">
     <section class="my-6">
       <h2 class="text-3xl font-bold text-gray-900">Hi there 👋!</h2>

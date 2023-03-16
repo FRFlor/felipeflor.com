@@ -31,7 +31,7 @@ const socialLinks: ISocialLink[] = [
 </script>
 
 <template>
-  <header class="bg-cover w-full bg-left h-112">
+  <header class="bg-cover clip-path w-full bg-left h-112 relative">
     <div class="overflow-x-hidden h-112 relative overflow-hidden">
       <section
           class="links-section fade-in delay h-32 w-full max-w-lg z-20 absolute bottom-0 md:bottom-8">
@@ -58,15 +58,29 @@ const socialLinks: ISocialLink[] = [
        </span>
       </section>
     </div>
+    <div aria-hidden="true" class="header-fade-out"/>
   </header>
 </template>
 
 <style scoped>
+.header-fade-out {
+  --size-of-fade: 4rem;
+
+  background: linear-gradient(
+      0deg,
+      var(--middle-background-colour) 0,
+      var(--middle-background-colour-transparent) var(--size-of-fade)
+  );
+  height: var(--size-of-fade);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
 header {
   background-image: url("https://res.cloudinary.com/felipeflor/image/upload/c_crop,g_east,h_3168,w_3651/c_scale,w_2000/v1595101853/felipeflor.com/cookie-the-pom-gySMaocSdqs-unsplash.jpg");
   background-color: hsl(185, 40%, 25%);
   background-blend-mode: overlay;
-  clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 90%, 80% 100%, 20% 100%, 0% 90%, 0% 20%);
 }
 
 .slow-fade-in {
@@ -83,14 +97,18 @@ header {
   animation-delay: 500ms;
 }
 
+.clip-path {
+  clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 90%, 80% 100%, 20% 100%, 0% 90%, 0% 20%);
+}
+
 @media screen('md') {
-  header {
+  .clip-path {
     clip-path: polygon(0 0, 100% 0%, 85% 100%, 0 100%);
   }
 }
 
 @media screen('2xl') {
-  header {
+  .clip-path {
     clip-path: polygon(0 0, 100% 0%, 90% 100%, 0 100%);
   }
 }

@@ -5,6 +5,24 @@
     <link href="/vite.svg" rel="icon" type="image/svg+xml"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Felipe Flor - Software Developer</title>
+    <style>
+
+        body {
+            --top-background-colour: hsl(184, 39%, 35%);
+            --middle-background-colour-transparent: hsla(184, 20%, 52%, 0%);
+            --middle-background-colour: hsl(184, 20%, 52%);
+            --bottom-background-colour: hsl(183, 65%, 26%);
+
+            background: var(--top-background-colour);
+            background: linear-gradient(
+                    180deg,
+                    var(--top-background-colour) 0,
+                    var(--top-background-colour) 31.99rem,
+                    var(--middle-background-colour) 32rem,
+                    var(--bottom-background-colour) 100%
+            );
+        }
+    </style>
 </head>
 <body>
 <div id="app"></div>
