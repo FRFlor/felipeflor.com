@@ -1,23 +1,14 @@
 <script lang="ts" setup>
 import BaseButton from "@/components/buttons/BaseButton.vue"
 
-defineProps({
-  icon: {
-    type: String,
-    required: false,
-    default: "fab fa-github-alt"
-  },
-  description: {
-    type: String,
-    required: false,
-    default: ""
-  },
-  href: {
-    type: String,
-    required: false,
-    default: "#"
-  }
-})
+interface ISocialLinkProps {
+  icon: string,
+  description: string,
+  href?: string
+}
+
+withDefaults(defineProps<ISocialLinkProps>(), {href: "#"})
+
 const emit = defineEmits(["blur", "click", "focus", "hover-start", "hover-end"])
 </script>
 

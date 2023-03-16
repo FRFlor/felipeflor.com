@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import canadaFlag from "@/assets/canada-flag.svg"
 import FelipeFlorEpicyles from "@/components/FelipeFlorEpicyles.vue"
+import CanadaFlagSvg from "@/assets/canada-flag.svg?url"
 import {ref} from "vue"
 import SocialLink from "@/components/buttons/SocialLink.vue"
 
@@ -54,7 +54,7 @@ const socialLinks: ISocialLink[] = [
         <FelipeFlorEpicyles class="slow-fade-in "/>
         <span class="software-developer fade-in flex items-center">
           <p class="text-2xl xl:text-3xl text-blue-100 mr-6">Software Developer</p>
-          <img :src="canadaFlag" alt="Flag of Canada" class="h-4 w-6 mt-1">
+          <img :src="CanadaFlagSvg" alt="Flag of Canada" class="h-4 w-6 mt-1">
        </span>
       </section>
     </div>
