@@ -8,7 +8,7 @@ import ProjectCard from "@/components/ProjectCard.vue"</script>
     <p class="mt-6 lg:mt-14">
       I'm Felipe Flor, a web developer based in Ontario, Canada.
     </p>
-
+    <p class="text-primary">Hello</p>
     <h2 class="mt-14 lg:mt-24">Check out some of my side projects!</h2>
     <ul class="mt-6 lg:mt-14">
       <li>
