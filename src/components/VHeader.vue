@@ -3,6 +3,7 @@ import FelipeFlorEpicyles from "@/components/FelipeFlorEpicyles.vue"
 import CanadaFlagSvg from "@/assets/canada-flag.svg?url"
 import {ref} from "vue"
 import SocialLink from "@/components/buttons/SocialLink.vue"
+import ThemeSelection from "@/components/ThemeSelection.vue"
 
 interface ISocialLink {
   icon: string;
@@ -32,6 +33,7 @@ const socialLinks: ISocialLink[] = [
 
 <template>
   <header class="bg-cover w-full bg-left h-112 relative">
+    <theme-selection class="mt-5 ml-10"/>
     <div class="overflow-x-hidden h-112 relative overflow-hidden">
       <section
           class="links-section fade-in delay h-32 w-full max-w-lg z-20 absolute bottom-0 md:bottom-8">

@@ -7,20 +7,31 @@
 }
 
 h2 {
-    @apply text-xl lg:text-7xl font-bold text-sky-900 dark:text-sky-200 drop-shadow-md
+    @apply text-xl lg:text-7xl font-bold text-sky-700 dark:text-sky-900 drop-shadow-md
 }
 
 p {
     @apply text-lg lg:text-2xl text-gray-700
 }
 
-body {
+html {
     --header-overlay-colour: hsl(185, 40%, 35%);
     --top-background-colour: hsl(184, 39%, 55%);
     --middle-background-colour-transparent: hsla(184, 20%, 52%, 0%);
     --middle-background-colour: hsl(184, 20%, 72%);
     --bottom-background-colour: hsl(184, 20%, 62%);
+}
 
+html.dark {
+    --header-overlay-colour: hsl(185, 40%, 25%);
+    --top-background-colour: hsl(184, 39%, 35%);
+    --middle-background-colour-transparent: hsla(184, 20%, 52%, 0%);
+    --middle-background-colour: hsl(184, 20%, 52%);
+    --bottom-background-colour: hsl(184, 20%, 42%);
+}
+
+
+body {
     background: var(--top-background-colour);
     background: linear-gradient(
             180deg,
