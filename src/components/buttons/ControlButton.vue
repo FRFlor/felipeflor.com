@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import BaseButton from "@/components/buttons/BaseButton.vue"
-import PauseSvg from "@/assets/font-awesome/pause.svg"
-import PlaySvg from "@/assets/font-awesome/play.svg"
+import PauseSvg from "@/assets/font-awesome/pause.svg?component"
+import PlaySvg from "@/assets/font-awesome/play.svg?component"
 
 defineProps<{ isPlaying: boolean }>()
 </script>

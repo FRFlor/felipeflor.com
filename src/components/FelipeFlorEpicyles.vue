@@ -40,7 +40,7 @@ function onMediaButtonPressed() {
               width="1200"/>
 
     </h1>
-    <control-button :is-playing="felipeFlorAnimation?.isPlaying"
+    <control-button :is-playing="!!felipeFlorAnimation?.isPlaying"
                     class="controls z-0"
                     data-test="epicycle-play-button"
                     @click="onMediaButtonPressed"/>
