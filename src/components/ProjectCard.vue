@@ -22,7 +22,8 @@ import RightArrowSvg from "@/assets/arrow-right.svg"</script>
       <a href="#">
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Balloon Story</h3>
       </a>
-      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Animation that <strong class="text-blue-500">won 1st
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Animation that <strong
+          class="text-blue-500 dark:text-blue-200">won 1st
         place</strong> in the Art Submission Contest of VueConf US 2019!</p>
       <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
         Background and object movement are randomly generated; the app also demonstrates collision physics

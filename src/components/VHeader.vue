@@ -55,7 +55,7 @@ const socialLinks: ISocialLink[] = [
       <section class="name-section md:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl">
         <FelipeFlorEpicyles class="slow-fade-in "/>
         <span class="software-developer absolute top-60 left-5 fade-in flex items-center">
-          <p class="text-2xl xl:text-3xl text-blue-100 mr-6 lg:ml-8">Software Developer</p>
+          <p class="text-2xl xl:text-3xl text-white dark:text-blue-100 mr-6 lg:ml-8">Software Developer</p>
           <img :src="CanadaFlagSvg" alt="Flag of Canada" class="h-4 w-6 mt-1">
        </span>
       </section>
