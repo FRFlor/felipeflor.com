@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import BaseButton from "@/components/buttons/BaseButton.vue"
 import {computed} from "vue"
-import GithubSVG from "@/assets/font-awesome/github-alt.svg?component"
-import EmailSVG from "@/assets/font-awesome/envelope.svg?component"
-import TwitterSVG from "@/assets/font-awesome/twitter.svg?component"
+import GithubSVG from "@/assets/svg/fa-github-alt.svg?component"
+import EmailSVG from "@/assets/svg/fa-envelope.svg?component"
+import TwitterSVG from "@/assets/svg/fa-twitter.svg?component"
 
 interface ISocialLinkProps {
   icon: string,

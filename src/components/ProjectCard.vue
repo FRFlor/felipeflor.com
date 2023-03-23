@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import RightArrowSvg from "@/assets/arrow-right.svg?component"</script>
+import RightArrowSvg from "@/assets/svg/arrow-right.svg?component"</script>
 
 <template>
   <div class="w-full max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
