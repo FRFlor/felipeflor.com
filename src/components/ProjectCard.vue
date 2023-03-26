@@ -6,6 +6,7 @@ defineProps<{
   videoPoster: string;
   title: string;
   websiteUrl?: string;
+  sourceCodeUrl?: string;
 }>()
 </script>
 
@@ -42,7 +43,10 @@ defineProps<{
            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
           Visit website
         </a>
-        <a class="text-white bg-gray-700 hover:bg-gray-800 focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+        <a v-if="sourceCodeUrl"
+           :href="sourceCodeUrl"
+           class="text-white bg-gray-700 hover:bg-gray-800 focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+           data-test="visit-source-code">
           See source code
         </a>
       </section>
