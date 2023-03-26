@@ -9,6 +9,22 @@ function getVideoUrl(name: string, extension: string, gravity: string = "north_w
 <template>
   <ul class="mt-6 lg:mt-14 flex justify-around xl:justify-start xl:gap-x-6 gap-y-6 flex-wrap">
     <li>
+      <project-card :chips="['WebGL', 'BabylonJS', 'Typescript']"
+                    :video-poster="getVideoUrl('space-game', 'webp', 'north')"
+                    :video-source="getVideoUrl('space-game', 'webm', 'north')"
+                    source-code-url="https://github.com/FRFlor/WebGL-Spaceship"
+                    title="Not enough space!"
+                    website-url="https://space-game.felipeflor.com/"
+                    year="2020"
+      >
+        <p>A simple 3D space game.</p>
+        <p>The player is in control of a spaceship inside a tunnel filled with debris.</p>
+        <p>Can you dodge the space junk and reach the end of the tunnel ?</p>
+        <p>Or will your aircraft become part of the debris?</p>
+      </project-card>
+    </li>
+
+    <li>
       <project-card :chips="['GoogleMaps API', 'GeoLocation API', 'StreetView', 'Vue2', 'Typescript', 'Laravel']"
                     :video-poster="getVideoUrl('dangerous-signs', 'webp')"
                     :video-source="getVideoUrl('dangerous-signs', 'webm')"
