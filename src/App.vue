@@ -2,16 +2,20 @@
 import VHeader from "@/components/partials/VHeader.vue"
 import MyProjectsList from "@/components/partials/MyProjectsList.vue"
 import AnimatedBackground from "@/components/partials/AnimatedBackground.vue"
-import VehiklLogo from "@/assets/vehikl-logo.webp"</script>
+import VehiklLogo from "@/assets/vehikl-logo.webp"
+import Headshot from "@/assets/felipe-flor-vehikl.webp"</script>
 <template>
   <animated-background/>
   <v-header/>
   <main class="container px-4 lg:px-10 my-10 mx-auto">
     <h2 class="mt-14 lg:mt-24">Hi there! 👋</h2>
-    <p class="mt-6 lg:mt-14">
-      I'm Felipe Flor, a web developer based in Ontario, Canada.
-    </p>
-    <h2 class="mt-14 lg:mt-24">Check out some of my side projects!</h2>
+    <div class="flex flex-col lg:flex-row items-center mt-6 lg:mt-14 gap-6">
+      <img :src="Headshot" alt="My headshot" class="w-52">
+      <p>
+        I'm Felipe Flor, a web developer based in Ontario, Canada.
+      </p>
+    </div>
+    <h2 class="mt-14 lg:mt-12">Check out some of my side projects!</h2>
     <my-projects-list/>
     <h2 class="mt-14 lg:mt-24">I love participating in events</h2>
     <ul class="mt-6 lg:mt-14">
