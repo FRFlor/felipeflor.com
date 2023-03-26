@@ -2,8 +2,7 @@
 import {useIntersectionObserver} from "@vueuse/core"
 import {ref} from "vue"
 
-const topTarget = ref<HTMLElement>()
-const bottomTarget = ref<HTMLElement>()
+const target = ref<HTMLElement>()
 const isTargetVisible = ref(false)
 const isDebugging = ref(false)
 
@@ -14,29 +13,18 @@ function onIntersectionObserverTriggered(entries: IntersectionObserverEntry[], o
   }
 }
 
-useIntersectionObserver(topTarget, onIntersectionObserverTriggered)
-useIntersectionObserver(bottomTarget, onIntersectionObserverTriggered)
+useIntersectionObserver(target, onIntersectionObserverTriggered)
 </script>
 
 <template>
   <div class="relative h-full">
-    <div ref="topTarget"
+    <div ref="target"
          :class="isDebugging? 'bg-red-600' : 'bg-transparent'"
          aria-hidden="true"
-         class="observer-target pointer-events-none h-6 w-6 buffer top-0 -translate-y-128 top-buffer"/>
+         class="absolute left-1/2 -translate-x-1/2 -top-128 -bottom-128 pointer-events-none w-6"/>
     <div v-if="isTargetVisible" class="h-full">
       <slot></slot>
     </div>
     <div v-else class="placeholder h-92 w-92"/>
-    <div ref="bottomTarget"
-         :class="isDebugging ? 'bg-red-600' : 'bg-transparent'"
-         aria-hidden="true"
-         class="observer-target pointer-events-none buffer bottom-0 translate-y-128 bottom-buffer"/>
   </div>
 </template>
-
-<style scoped>
-.buffer {
-  @apply h-6 w-6 absolute left-1/2 -translate-x-1/2
-}
-</style>
