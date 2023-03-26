@@ -13,11 +13,11 @@ defineProps<{
 
 <template>
   <div
-      class="project-card overflow-hidden w-full md:w-96 2xl:w-120 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      class="project-card overflow-hidden flex flex-col h-full w-full md:w-96 2xl:w-120 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <video
         :poster="videoPoster"
         autoplay
-        class="h-full w-full"
+        class="w-full"
         loop
         muted
         playsinline
@@ -27,10 +27,12 @@ defineProps<{
           type="video/webm"
       >
     </video>
-    <div class="p-5 h-92 flex flex-col">
+    <div class="p-5 flex flex-col flex-grow">
       <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-blue-100">{{ title }}</h3>
       <div class="flex flex-col h-full justify-between">
-        <slot><p>This is a placeholder for the description of the project</p></slot>
+        <div>
+          <slot><p>This is a placeholder for the description of the project</p></slot>
+        </div>
 
         <div>
           <section class="mb-4">
