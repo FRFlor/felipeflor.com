@@ -5,10 +5,19 @@ const props = defineProps<{
   svgName: string;
 }>()
 
-const modules = import.meta.glob("/src/assets/svg/*.svg", {eager: true, as: "raw"})
-const rawSvg = computed(() => modules[`/src/assets/svg/${props.svgName}.svg`])
+const svgsAvailable = import.meta.glob("/src/assets/svg/*.svg", {eager: true, as: "raw"})
+
+const rawSvg = computed(() => svgsAvailable[`/src/assets/svg/${props.svgName}.svg`])
 </script>
 
 <template>
-  <i v-html="rawSvg"/>
+  <i v-bind="$attrs" v-html="rawSvg"/>
 </template>
+
+<style scoped>
+:deep(svg) {
+  height: 100%;
+  width: 100%;
+  fill: currentColor;
+}
+</style>

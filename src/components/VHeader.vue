@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import FelipeFlorEpicyles from "@/components/FelipeFlorEpicyles.vue"
-import CanadaFlagSvg from "@/assets/canada-flag.svg?url"
+import CanadaFlagSvg from "@/assets/svg/canada-flag.svg?url"
 import {ref} from "vue"
 import SocialLink from "@/components/buttons/SocialLink.vue"
 import ThemeSelection from "@/components/ThemeSelection.vue"
@@ -14,17 +14,17 @@ interface ISocialLink {
 const socialText = ref<string>("")
 const socialLinks: ISocialLink[] = [
   {
-    icon: "twitter",
+    icon: "fa-twitter",
     description: "Checkout my twitter!",
     url: "https://twitter.com/Felipe_R_Flor"
   },
   {
-    icon: "email",
+    icon: "fa-envelope",
     description: "Want to send an email to me?",
     url: "mailto:hello@felipeflor.com"
   },
   {
-    icon: "github",
+    icon: "fa-github-alt",
     description: "A lot of my projects are open source!",
     url: "https://github.com/FRFlor"
   }

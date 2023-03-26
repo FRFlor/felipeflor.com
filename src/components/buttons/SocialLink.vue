@@ -1,9 +1,6 @@
 <script lang="ts" setup>
 import BaseButton from "@/components/buttons/BaseButton.vue"
-import {computed} from "vue"
-import GithubSVG from "@/assets/svg/fa-github-alt.svg?component"
-import EmailSVG from "@/assets/svg/fa-envelope.svg?component"
-import TwitterSVG from "@/assets/svg/fa-twitter.svg?component"
+import SvgLoader from "@/components/SvgLoader.vue"
 
 interface ISocialLinkProps {
   icon: string,
@@ -11,25 +8,15 @@ interface ISocialLinkProps {
   href?: string
 }
 
-const props = withDefaults(defineProps<ISocialLinkProps>(), {href: "#"})
+withDefaults(defineProps<ISocialLinkProps>(), {href: "#"})
 
-const SvgComponent = computed(() => {
-  switch (props.icon) {
-    case "github":
-      return GithubSVG
-    case "email":
-      return EmailSVG
-    case "twitter":
-      return TwitterSVG
-  }
-})
 
 const emit = defineEmits(["blur", "click", "focus", "hover-start", "hover-end"])
 </script>
 
 <template>
   <base-button :href="href"
-               class="social-button cursor-pointer border border-blue-200 text-blue-200 px-4 py-2 rounded-full"
+               class="social-button cursor-pointer border border-blue-200 text-blue-200 px-4 py-2 rounded-full h-8 lg:h-9"
                target="_blank"
                type="a"
                v-bind="$attrs"
@@ -38,7 +25,7 @@ const emit = defineEmits(["blur", "click", "focus", "hover-start", "hover-end"])
                @mouseenter="emit('hover-start', description)"
                @mouseleave="emit('hover-end', description)"
   >
-    <component :is="SvgComponent" class="h-7 lg:h-8" fill="currentColor"/>
+    <svg-loader :svg-name="icon"/>
   </base-button>
 </template>
 

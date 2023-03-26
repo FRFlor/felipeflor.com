@@ -1,18 +1,17 @@
 <script lang="ts" setup>
 import BaseButton from "@/components/buttons/BaseButton.vue"
-import PauseSvg from "@/assets/svg/fa-pause.svg?component"
-import PlaySvg from "@/assets/svg/fa-play.svg?component"
+import SvgLoader from "@/components/SvgLoader.vue"
 
 defineProps<{ isPlaying: boolean }>()
 </script>
 
 <template>
   <base-button
-      class="control-button border bg-gray-800 border-gray-200 text-gray-200 py-1 px-4 rounded"
+      class="control-button border bg-gray-800 border-gray-200 text-gray-200 py-1 px-4 h-6 rounded"
       type="button"
       v-bind="$attrs"
   >
-    <component :is="isPlaying? PauseSvg : PlaySvg" class="h-5" fill="currentColor"/>
+    <svg-loader :svg-name="isPlaying? 'fa-pause' : 'fa-play'"/>
   </base-button>
 </template>
 
