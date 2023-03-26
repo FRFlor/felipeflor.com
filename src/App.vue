@@ -1,7 +1,9 @@
 <script lang="ts" setup>
 import VHeader from "@/components/VHeader.vue"
-import MyProjectsList from "@/components/partials/MyProjectsList.vue"</script>
+import MyProjectsList from "@/components/partials/MyProjectsList.vue"
+import AnimatedBackground from "@/components/AnimatedBackground.vue"</script>
 <template>
+  <animated-background/>
   <v-header/>
   <main class="container px-4 lg:px-10 my-10 mx-auto">
     <h2 class="mt-14 lg:mt-24">Hi there! 👋</h2>
