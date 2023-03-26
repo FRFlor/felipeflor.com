@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import VHeader from "@/components/partials/VHeader.vue"
 import MyProjectsList from "@/components/partials/MyProjectsList.vue"
-import AnimatedBackground from "@/components/partials/AnimatedBackground.vue"</script>
+import AnimatedBackground from "@/components/partials/AnimatedBackground.vue"
+import VehiklLogo from "@/assets/vehikl-logo.webp"</script>
 <template>
   <animated-background/>
   <v-header/>
@@ -22,10 +23,15 @@ import AnimatedBackground from "@/components/partials/AnimatedBackground.vue"</s
 
     <h2 class="mt-14 lg:mt-24">Vehikl</h2>
 
-    <p class="mt-6 lg:mt-14">
-      Working at Vehikl has been a dream come true. We are a consultancy company, which means we work with multiple
-      clients with completely different apps, this offers amazing opportunities to learn new technologies.
-    </p>
+    <div class="flex flex-col lg:flex-row items-center mt-6 lg:mt-14">
+      <div>
+        <img :src="VehiklLogo" alt="Vehikl Logo" class="w-40 lg:w-96 mb-4 lg:mb-0">
+      </div>
+      <p class="ml-0 lg:ml-3">
+        Working at Vehikl has been a dream come true. We are a consultancy company, which means we work with multiple
+        clients with completely different apps, this offers amazing opportunities to learn new technologies.
+      </p>
+    </div>
 
     <p class="mt-6 lg:mt-14">
       On top of that, we have a very strong culture of collaboration, team work and sharing knowledge.

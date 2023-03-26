@@ -19,7 +19,7 @@ useIntersectionObserver(bottomTarget, onIntersectionObserverTriggered)
 </script>
 
 <template>
-  <div class="relative h-full">
+  <div class="relative h-full overflow-hidden">
     <div ref="topTarget"
          :class="isDebugging? 'bg-red-600' : 'bg-transparent'"
          aria-hidden="true"
