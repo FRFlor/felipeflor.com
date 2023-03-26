@@ -23,7 +23,7 @@ useIntersectionObserver(bottomTarget, onIntersectionObserverTriggered)
     <div ref="topTarget"
          :class="isDebugging? 'bg-red-600' : 'bg-transparent'"
          aria-hidden="true"
-         class="absolute -top-128 h-10 w-40 pointer-events-none bg-red-600"/>
+         class="observer-target pointer-events-none buffer"/>
     <div v-if="isTargetVisible" class="h-full">
       <slot></slot>
     </div>
@@ -31,6 +31,12 @@ useIntersectionObserver(bottomTarget, onIntersectionObserverTriggered)
     <div ref="bottomTarget"
          :class="isDebugging ? 'bg-red-600' : 'bg-transparent'"
          aria-hidden="true"
-         class="absolute -bottom-128 h-10 w-40 bg-transparent pointer-events-none"/>
+         class="observer-target pointer-events-none buffer"/>
   </div>
 </template>
+
+<style scoped>
+.buffer {
+  @apply absolute -top-128 -bottom-128 -left-128 -right-128 opacity-20
+}
+</style>
