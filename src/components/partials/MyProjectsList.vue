@@ -1,13 +1,17 @@
 <script lang="ts" setup>
-import ProjectCard from "@/components/ProjectCard.vue"</script>
+import ProjectCard from "@/components/ProjectCard.vue"
+
+const videoBaseUrl = "https://res.cloudinary.com/felipeflor/video/upload/c_fill,g_north_west,h_500,w_500/v1579327020/felipeflor.com/"
+</script>
+
 <template>
   <ul class="mt-6 lg:mt-14 flex justify-around xl:justify-start xl:gap-x-6 gap-y-6 flex-wrap">
     <li>
       <project-card :chips="['Canvas', 'Algorithms']"
                     source-code-url="https://github.com/FRFlor/game-of-life"
                     title="Game of Life"
-                    video-poster="https://res.cloudinary.com/felipeflor/video/upload/c_fill,g_north_west,h_500,w_500/v1579327020/felipeflor.com/game-of-life.webp"
-                    video-source="https://res.cloudinary.com/felipeflor/video/upload/c_fill,g_north_west,h_500,w_500/v1579327020/felipeflor.com/game-of-life.webm"
+                    :video-poster="videoBaseUrl + 'game-of-life.webp'"
+                    :video-source="videoBaseUrl + 'game-of-life.webm'"
                     website-url="http://game-of-life.felipeflor.com/"
                     year="2019"
       >
@@ -22,8 +26,8 @@ import ProjectCard from "@/components/ProjectCard.vue"</script>
     <li>
       <project-card :chips="['Breadth First Search', 'Graph Theory', 'Vue2', 'Typescript', 'Mocha', 'Vue Test Utils']"
                     title="Cat Mouse"
-                    video-poster="https://res.cloudinary.com/felipeflor/video/upload/v1556653952/felipeflor.com/catmouse.jpg"
-                    video-source="https://res.cloudinary.com/felipeflor/video/upload/v1556653952/felipeflor.com/catmouse.webm"
+                    :video-poster="videoBaseUrl + 'catmouse.webp'"
+                    :video-source="videoBaseUrl + 'catmouse.webm'"
                     year="2019"
                     source-code-url="https://github.com/FRFlor/cat-mouse"
                     website-url="https://catmouse.felipeflor.com/"
@@ -40,8 +44,8 @@ import ProjectCard from "@/components/ProjectCard.vue"</script>
     <li>
       <project-card :chips="['Vue2','Javascript', 'VueConf 2019']"
                     title="Balloon Story"
-                    video-poster="https://res.cloudinary.com/felipeflor/video/upload/v1556653952/felipeflor.com/balloonStory.jpg"
-                    video-source="https://res.cloudinary.com/felipeflor/video/upload/v1556653952/felipeflor.com/balloonStory.webm"
+                    :video-poster="videoBaseUrl + 'balloonStory.webp'"
+                    :video-source="videoBaseUrl + 'balloonStory.webm'"
                     year="2019"
                     source-code-url="https://codepen.io/frflor/pen/QoRmRq"
       >
@@ -56,8 +60,8 @@ import ProjectCard from "@/components/ProjectCard.vue"</script>
     <li>
       <project-card :chips="['Youtube API', 'Vue', 'Vuetify', 'Typescript']"
                     title="Disney Music Game!"
-                    video-poster="https://res.cloudinary.com/felipeflor/video/upload/v1556653952/felipeflor.com/musicgame.jpg"
-                    video-source="https://res.cloudinary.com/felipeflor/video/upload/v1556653952/felipeflor.com/musicgame.webm"
+                    :video-poster="videoBaseUrl + 'musicgame.webp'"
+                    :video-source="videoBaseUrl + 'musicgame.webm'"
                     source-code-url="https://github.com/FRFlor/music-game"
                     website-url="https://musicgame.felipeflor.com/"
                     year="2019"
@@ -74,8 +78,8 @@ import ProjectCard from "@/components/ProjectCard.vue"</script>
       <project-card :chips="['ChartJs', 'Vue', 'Typescript']"
                     source-code-url="https://github.com/FRFlor/mob-programming-experience"
                     title="Mob Programming"
-                    video-poster="https://res.cloudinary.com/felipeflor/video/upload/v1556653952/felipeflor.com/MobExperiment.jpg"
-                    video-source="https://res.cloudinary.com/felipeflor/video/upload/v1556653952/felipeflor.com/MobExperiment.webm"
+                    :video-poster="videoBaseUrl + 'MobExperiment.webp'"
+                    :video-source="videoBaseUrl + 'MobExperiment.webm'"
                     website-url="https://mob.felipeflor.com/"
                     year="2019"
       >
