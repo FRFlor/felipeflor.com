@@ -63,19 +63,19 @@ canvas {
   top: 165px;
 }
 
-@media (min-width: 1024px) {
+@media screen('lg') {
   canvas {
     transform: scaleY(-1) scaleX(1);
     top: -245px;
     left: unset;
-    right: -250px;
+    right: -435px;
   }
 
   .controls {
     position: absolute;
     left: unset;
     top: 380px;
-    right: 85px;
+    right: 105px;
   }
 }
 </style>
