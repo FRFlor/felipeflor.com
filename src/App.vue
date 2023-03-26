@@ -19,8 +19,21 @@ import AnimatedBackground from "@/components/partials/AnimatedBackground.vue"</s
       <li><a href="#">Project 2</a></li>
       <li><a href="#">Project 3</a></li>
     </ul>
+
+    <h2 class="mt-14 lg:mt-24">Vehikl</h2>
+
+    <p class="mt-6 lg:mt-14">
+      Working at Vehikl has been a dream come true. We are a consultancy company, which means we work with multiple
+      clients with completely different apps, this offers amazing opportunities to learn new technologies.
+    </p>
+
+    <p class="mt-6 lg:mt-14">
+      On top of that, we have a very strong culture of collaboration, team work and sharing knowledge.
+      If you're interested in knowing more, <a href="https://vehikl.com" target="_blank">visit our website</a>!
+    </p>
+    <p class="mt-6 lg:mt-14">
+      I'm very thankful to be working with some of the most talented and friendly people I have ever seen.
+      I wish everyone could have an awesome job like this.
+    </p>
   </main>
 </template>
-
-<style lang="scss">
-</style>
