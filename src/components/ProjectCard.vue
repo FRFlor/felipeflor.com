@@ -1,10 +1,11 @@
 <script lang="ts" setup>
-import SvgLoader from "@/components/SvgLoader.vue"
+import VChip from "@/components/VChip.vue"
 
 defineProps<{
   videoSource: string;
   videoPoster: string;
   title: string;
+  websiteUrl?: string;
 }>()
 </script>
 
@@ -27,14 +28,34 @@ defineProps<{
     <div class="p-5">
       <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-blue-100">{{ title }}</h3>
       <slot><p>This is a placeholder for the description of the project</p></slot>
-      <button
-          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-        Read more
-        <svg-loader class="w-4 h-4 ml-2 -mr-1" svg-name="arrow-right"/>
-      </button>
+
+      <section class="mb-6">
+        <v-chip text="Vue"/>
+        <v-chip text="Javascript"/>
+        <v-chip text="VueConf 2019"/>
+      </section>
+
+      <section class="gap-4 flex">
+        <a :href="websiteUrl"
+           v-if="websiteUrl"
+           data-test="visit-website"
+           class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Visit website
+        </a>
+        <a class="text-white bg-gray-700 hover:bg-gray-800 focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+          See source code
+        </a>
+      </section>
+
     </div>
   </div>
 </template>
+
+<style scoped>
+a {
+  @apply inline-flex items-center px-3 py-2 text-sm font-medium text-center rounded-lg focus:ring-4 focus:outline-none
+}
+</style>
 
 <style>
 .project-card p {
