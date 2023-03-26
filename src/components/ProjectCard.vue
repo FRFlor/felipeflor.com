@@ -12,7 +12,7 @@ defineProps<{
 
 <template>
   <div
-      class="project-card w-full md:w-112 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      class="project-card w-full md:w-96 2xl:w-120 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <video
         :poster="videoPoster"
         autoplay
@@ -62,7 +62,7 @@ a {
 
 <style>
 .project-card p {
-  @apply mb-3 font-normal text-gray-700 dark:text-gray-300;
+  @apply mb-3 font-thin text-sm text-gray-700 dark:text-gray-300;
 }
 
 .project-card strong {
