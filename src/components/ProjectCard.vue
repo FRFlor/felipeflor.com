@@ -42,13 +42,13 @@ defineProps<{
           <section class="gap-4 flex">
             <a v-if="websiteUrl"
                :href="websiteUrl"
-               class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+               class="text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700"
                data-test="visit-website">
               Visit website
             </a>
             <a v-if="sourceCodeUrl"
                :href="sourceCodeUrl"
-               class="text-white bg-gray-700 hover:bg-gray-800 focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+               class="text-white bg-gray-700 hover:bg-gray-800 dark:bg-gray-600 dark:hover:bg-gray-700"
                data-test="visit-source-code">
               See source code
             </a>
@@ -61,7 +61,7 @@ defineProps<{
 
 <style scoped>
 a {
-  @apply inline-flex items-center px-3 py-2 text-xs md:text-sm font-medium text-center rounded-lg focus:ring-4 focus:outline-none
+  @apply inline-flex items-center px-3 py-2 text-xs md:text-sm font-medium text-center rounded-lg
 }
 </style>
 
