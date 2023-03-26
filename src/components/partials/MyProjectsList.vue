@@ -1,19 +1,37 @@
 <script lang="ts" setup>
 import ProjectCard from "@/components/ProjectCard.vue"
 
-const videoBaseUrl = "https://res.cloudinary.com/felipeflor/video/upload/c_fill,g_north_west,h_500,w_500/v1579327020/felipeflor.com/"
+function getVideoUrl(name: string, extension: string, gravity: string = "north_west") {
+  return `https://res.cloudinary.com/felipeflor/video/upload/c_fill,g_${gravity},h_500,w_500/v1579327020/felipeflor.com/${name}.${extension}`
+}
 </script>
 
 <template>
   <ul class="mt-6 lg:mt-14 flex justify-around xl:justify-start xl:gap-x-6 gap-y-6 flex-wrap">
     <li>
+      <project-card :chips="['GoogleMaps API', 'GeoLocation API', 'StreetView', 'Vue2', 'Typescript', 'Laravel']"
+                    :video-poster="getVideoUrl('dangerous-signs', 'webp')"
+                    :video-source="getVideoUrl('dangerous-signs', 'webm')"
+                    source-code-url="https://github.com/FRFlor/dangerous-signs"
+                    title="Dangerous Signs"
+                    website-url="https://dangerous-signs.felipeflor.com/"
+                    year="2020"
+      >
+        <p>An Open Data project!</p>
+        <p>What is the most dangerous STOP sign in the city of Kitchener, Ontario?</p>
+        <p>To answer this question I make use of Kitchener's Open data database to combine the information of traffic
+          collisions and stop signs locations, putting it all together into a neatly organized interactive map.</p>
+      </project-card>
+    </li>
+
+    <li>
       <project-card :chips="['Canvas', 'Algorithms']"
-                    source-code-url="https://github.com/FRFlor/game-of-life"
                     title="Game of Life"
-                    :video-poster="videoBaseUrl + 'game-of-life.webp'"
-                    :video-source="videoBaseUrl + 'game-of-life.webm'"
-                    website-url="http://game-of-life.felipeflor.com/"
                     year="2019"
+                    :video-poster="getVideoUrl('game-of-life', 'webp')"
+                    :video-source="getVideoUrl('game-of-life', 'webm')"
+                    source-code-url="https://github.com/FRFlor/game-of-life"
+                    website-url="https://game-of-life.felipeflor.com/"
       >
         <p>An application that simulates a production line.</p>
         <p>It is meant to help the user to understand the benefits of mob programming. It allows manual management by
@@ -26,9 +44,9 @@ const videoBaseUrl = "https://res.cloudinary.com/felipeflor/video/upload/c_fill,
     <li>
       <project-card :chips="['Breadth First Search', 'Graph Theory', 'Vue2', 'Typescript', 'Mocha', 'Vue Test Utils']"
                     title="Cat Mouse"
-                    :video-poster="videoBaseUrl + 'catmouse.webp'"
-                    :video-source="videoBaseUrl + 'catmouse.webm'"
                     year="2019"
+                    :video-poster="getVideoUrl('catmouse', 'webp')"
+                    :video-source="getVideoUrl('catmouse', 'webm')"
                     source-code-url="https://github.com/FRFlor/cat-mouse"
                     website-url="https://catmouse.felipeflor.com/"
       >
@@ -44,9 +62,9 @@ const videoBaseUrl = "https://res.cloudinary.com/felipeflor/video/upload/c_fill,
     <li>
       <project-card :chips="['Vue2','Javascript', 'VueConf 2019']"
                     title="Balloon Story"
-                    :video-poster="videoBaseUrl + 'balloonStory.webp'"
-                    :video-source="videoBaseUrl + 'balloonStory.webm'"
                     year="2019"
+                    :video-poster="getVideoUrl('balloonStory', 'webp')"
+                    :video-source="getVideoUrl('balloonStory', 'webm')"
                     source-code-url="https://codepen.io/frflor/pen/QoRmRq"
       >
         <p>Animation that <strong>won 1st place</strong> in the Art Submission Contest of VueConf US 2019!</p>
@@ -60,11 +78,11 @@ const videoBaseUrl = "https://res.cloudinary.com/felipeflor/video/upload/c_fill,
     <li>
       <project-card :chips="['Youtube API', 'Vue', 'Vuetify', 'Typescript']"
                     title="Disney Music Game!"
-                    :video-poster="videoBaseUrl + 'musicgame.webp'"
-                    :video-source="videoBaseUrl + 'musicgame.webm'"
+                    :video-poster="getVideoUrl('musicgame', 'webp')"
+                    :video-source="getVideoUrl('musicgame', 'webm')"
+                    year="2019"
                     source-code-url="https://github.com/FRFlor/music-game"
                     website-url="https://musicgame.felipeflor.com/"
-                    year="2019"
       >
         <p>I'm a big fan of Disney Songs in general, so this project had to happen eventually!</p>
         <p>Can you guess the song? This WebApp will randomly select a certain Disney song and, by using YouTube's API,
@@ -76,12 +94,12 @@ const videoBaseUrl = "https://res.cloudinary.com/felipeflor/video/upload/c_fill,
 
     <li>
       <project-card :chips="['ChartJs', 'Vue', 'Typescript']"
-                    source-code-url="https://github.com/FRFlor/mob-programming-experience"
+                    :video-poster="getVideoUrl('MobExperiment', 'webp')"
+                    :video-source="getVideoUrl('MobExperiment', 'webm')"
                     title="Mob Programming"
-                    :video-poster="videoBaseUrl + 'MobExperiment.webp'"
-                    :video-source="videoBaseUrl + 'MobExperiment.webm'"
-                    website-url="https://mob.felipeflor.com/"
                     year="2019"
+                    source-code-url="https://github.com/FRFlor/mob-programming-experience"
+                    website-url="https://mob.felipeflor.com/"
       >
         <p>An application that simulates a production line.</p>
         <p>It is meant to help the user to understand the benefits of mob programming. It allows manual management by
