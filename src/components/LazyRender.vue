@@ -19,11 +19,11 @@ useIntersectionObserver(bottomTarget, onIntersectionObserverTriggered)
 </script>
 
 <template>
-  <div class="relative h-full overflow-hidden">
+  <div class="relative h-full">
     <div ref="topTarget"
          :class="isDebugging? 'bg-red-600' : 'bg-transparent'"
          aria-hidden="true"
-         class="observer-target pointer-events-none buffer"/>
+         class="observer-target pointer-events-none h-6 w-6 buffer top-0 -translate-y-128 top-buffer"/>
     <div v-if="isTargetVisible" class="h-full">
       <slot></slot>
     </div>
@@ -31,12 +31,12 @@ useIntersectionObserver(bottomTarget, onIntersectionObserverTriggered)
     <div ref="bottomTarget"
          :class="isDebugging ? 'bg-red-600' : 'bg-transparent'"
          aria-hidden="true"
-         class="observer-target pointer-events-none buffer"/>
+         class="observer-target pointer-events-none buffer bottom-0 translate-y-128 bottom-buffer"/>
   </div>
 </template>
 
 <style scoped>
 .buffer {
-  @apply absolute -top-128 -bottom-128 -left-128 -right-128 opacity-20
+  @apply h-6 w-6 absolute left-1/2 -translate-x-1/2
 }
 </style>
