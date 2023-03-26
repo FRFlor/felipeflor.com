@@ -37,17 +37,19 @@ import ProjectCard from "@/components/ProjectCard.vue"</script>
     </li>
 
     <li>
-      <project-card :chips="['Vue', 'Javascript', 'VueConf 2019']"
-                    source-code-url="https://codepen.io/frflor/pen/QoRmRq"
-                    title="Balloon Story"
-                    video-poster="https://res.cloudinary.com/felipeflor/video/upload/v1556653952/felipeflor.com/balloonStory.jpg"
-                    video-source="https://res.cloudinary.com/felipeflor/video/upload/v1556653952/felipeflor.com/balloonStory.webm"
+      <project-card :chips="['Youtube API', 'Vue', 'Vuetify', 'Typescript']"
+                    source-code-url="https://github.com/FRFlor/music-game"
+                    title="Disney Music Game!"
+                    video-poster="https://res.cloudinary.com/felipeflor/video/upload/v1556653952/felipeflor.com/musicgame.jpg"
+                    video-source="https://res.cloudinary.com/felipeflor/video/upload/v1556653952/felipeflor.com/musicgame.webm"
+                    website-url="https://musicgame.felipeflor.com/"
+                    year="2019"
       >
-        <p>Animation that <strong>won 1st place</strong> in the Art Submission Contest of VueConf US 2019!</p>
-        <p>
-          Background and object movement are randomly generated; the app also demonstrates collision physics
-          between the snow flakes and the balloon. Everything was made from scratch using canvas.
-        </p>
+        <p>I'm a big fan of Disney Songs in general, so this project had to happen eventually!</p>
+        <p>Can you guess the song? This WebApp will randomly select a certain Disney song and, by using YouTube's API,
+          play random parts of that song at random speeds (super slow or super fast).</p>
+        <p>You have a few seconds to guess, once the time is up, the answer is revealed with a video playing an iconic
+          part of that song.</p>
       </project-card>
     </li>
   </ul>
