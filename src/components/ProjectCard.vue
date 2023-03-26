@@ -18,7 +18,7 @@ withDefaults(defineProps<IProjectCardProps>(), {chips: () => [], year: "20XX"})
 <template>
   <lazy-render>
     <div
-        class="project-card overflow-hidden flex flex-col h-full w-full md:w-96 2xl:w-120 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        class="project-card overflow-hidden flex flex-col h-full w-full sm:w-96 2xl:w-120 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <video
           :poster="videoPoster"
           autoplay
@@ -71,7 +71,7 @@ withDefaults(defineProps<IProjectCardProps>(), {chips: () => [], year: "20XX"})
 
 <style scoped>
 a {
-  @apply inline-flex items-center px-3 py-2 text-xs md:text-sm font-medium text-center rounded-lg
+  @apply inline-flex items-center px-3 py-2 text-xs sm:text-sm font-medium text-center rounded-lg
 }
 </style>
 

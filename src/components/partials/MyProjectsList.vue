@@ -124,3 +124,9 @@ function getVideoUrl(name: string, extension: string, gravity: string = "north_w
     </li>
   </ul>
 </template>
+
+<style scoped>
+li {
+  @apply w-full sm:w-auto
+}
+</style>
