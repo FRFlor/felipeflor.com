@@ -11,7 +11,15 @@ import ProjectCard from "@/components/ProjectCard.vue"</script>
     <h2 class="mt-14 lg:mt-24">Check out some of my side projects!</h2>
     <ul class="mt-6 lg:mt-14">
       <li>
-        <project-card/>
+        <project-card title="Balloon Story"
+                      video-poster="https://res.cloudinary.com/felipeflor/video/upload/v1556653952/felipeflor.com/balloonStory.jpg"
+                      video-source="https://res.cloudinary.com/felipeflor/video/upload/v1556653952/felipeflor.com/balloonStory.webm">
+          <p>Animation that <strong>won 1st place</strong> in the Art Submission Contest of VueConf US 2019!</p>
+          <p>
+            Background and object movement are randomly generated; the app also demonstrates collision physics
+            between the snow flakes and the balloon. Everything was made from scratch using canvas.
+          </p>
+        </project-card>
       </li>
       <li><a href="#">Project 2</a></li>
       <li><a href="#">Project 3</a></li>
