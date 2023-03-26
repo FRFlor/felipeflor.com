@@ -7,7 +7,7 @@
 }
 
 h2 {
-    @apply text-xl lg:text-6xl font-bold text-sky-700 dark:text-sky-600 drop-shadow-md
+    @apply text-xl lg:text-6xl font-bold text-teal-700 dark:text-teal-500 drop-shadow-md
 }
 
 p {

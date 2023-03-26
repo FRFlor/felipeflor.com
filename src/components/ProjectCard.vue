@@ -49,7 +49,7 @@ withDefaults(defineProps<IProjectCardProps>(), {chips: () => [], year: "20XX"})
           <section class="gap-4 flex">
             <a v-if="websiteUrl"
                :href="websiteUrl"
-               class="text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700"
+               class="text-white bg-teal-700 hover:bg-teal-800 dark:bg-teal-600 dark:hover:bg-teal-700"
                data-test="visit-website">
               Visit website
             </a>
