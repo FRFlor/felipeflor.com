@@ -7,6 +7,7 @@ defineProps<{
   title: string;
   websiteUrl?: string;
   sourceCodeUrl?: string;
+  chips: string[];
 }>()
 </script>
 
@@ -32,9 +33,7 @@ defineProps<{
 
       <div class="flex flex-col h-full justify-between">
         <section>
-          <v-chip text="Vue"/>
-          <v-chip text="Javascript"/>
-          <v-chip text="VueConf 2019"/>
+          <v-chip v-for="chip in chips" :key="chip" :text="chip"/>
         </section>
 
         <section class="gap-4 flex">
