@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import ProjectCard from "@/components/ProjectCard.vue"
-import LazyRender from "@/components/LazyRender.vue"
 
 function getVideoUrl(name: string, extension: string, gravity: string = "north_west") {
   return `https://res.cloudinary.com/felipeflor/video/upload/c_fill,g_${gravity},h_500,w_500/v1579327020/felipeflor.com/${name}.${extension}`
@@ -108,22 +107,20 @@ function getVideoUrl(name: string, extension: string, gravity: string = "north_w
     </li>
 
     <li>
-      <lazy-render>
-        <project-card :chips="['ChartJs', 'Vue', 'Typescript']"
-                      :video-poster="getVideoUrl('MobExperiment', 'webp')"
-                      :video-source="getVideoUrl('MobExperiment', 'webm')"
-                      source-code-url="https://github.com/FRFlor/mob-programming-experience"
-                      title="Mob Programming"
-                      website-url="https://mob.felipeflor.com/"
-                      year="2019"
-        >
-          <p>An application that simulates a production line.</p>
-          <p>It is meant to help the user to understand the benefits of mob programming. It allows manual management by
-            drag-and-dropping workers into any workstation. The animation speeds are fully customizable via an intuitive
-            control panel.</p>
-          <p>The production statistics are shown in the end as a bar chart.</p>
-        </project-card>
-      </lazy-render>
+      <project-card :chips="['ChartJs', 'Vue', 'Typescript']"
+                    :video-poster="getVideoUrl('MobExperiment', 'webp')"
+                    :video-source="getVideoUrl('MobExperiment', 'webm')"
+                    source-code-url="https://github.com/FRFlor/mob-programming-experience"
+                    title="Mob Programming"
+                    website-url="https://mob.felipeflor.com/"
+                    year="2019"
+      >
+        <p>An application that simulates a production line.</p>
+        <p>It is meant to help the user to understand the benefits of mob programming. It allows manual management by
+          drag-and-dropping workers into any workstation. The animation speeds are fully customizable via an intuitive
+          control panel.</p>
+        <p>The production statistics are shown in the end as a bar chart.</p>
+      </project-card>
     </li>
   </ul>
 </template>
