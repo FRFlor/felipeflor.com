@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import RightArrowSvg from "@/assets/svg/arrow-right.svg?component"</script>
+import SvgLoader from "@/components/SvgLoader.vue"</script>
 
 <template>
   <div class="w-full max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -33,7 +33,7 @@ import RightArrowSvg from "@/assets/svg/arrow-right.svg?component"</script>
       <button
           class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
         Read more
-        <right-arrow-svg class="w-4 h-4 ml-2 -mr-1" fill="currentColor"/>
+        <svg-loader class="w-4 h-4 ml-2 -mr-1" svg-name="arrow-right"/>
       </button>
     </div>
   </div>
