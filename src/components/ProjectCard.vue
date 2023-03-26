@@ -26,7 +26,7 @@ defineProps<{
           type="video/webm"
       >
     </video>
-    <div class="p-5 h-96">
+    <div class="p-5 h-92 flex flex-col">
       <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-blue-100">{{ title }}</h3>
       <slot><p>This is a placeholder for the description of the project</p></slot>
 
