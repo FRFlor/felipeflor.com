@@ -3,6 +3,23 @@ import ProjectCard from "@/components/ProjectCard.vue"</script>
 <template>
   <ul class="mt-6 lg:mt-14 flex justify-around xl:justify-start xl:gap-x-6 gap-y-6 flex-wrap">
     <li>
+      <project-card :chips="['Canvas', 'Algorithms']"
+                    source-code-url="https://github.com/FRFlor/game-of-life"
+                    title="Game of Life"
+                    video-poster="https://res.cloudinary.com/felipeflor/video/upload/c_fill,g_north_west,h_500,w_500/v1579327020/felipeflor.com/game-of-life.webp"
+                    video-source="https://res.cloudinary.com/felipeflor/video/upload/c_fill,g_north_west,h_500,w_500/v1579327020/felipeflor.com/game-of-life.webm"
+                    website-url="http://game-of-life.felipeflor.com/"
+                    year="2019"
+      >
+        <p>An application that simulates a production line.</p>
+        <p>It is meant to help the user to understand the benefits of mob programming. It allows manual management by
+          drag-and-dropping workers into any workstation. The animation speeds are fully customizable via an intuitive
+          control panel.</p>
+        <p>The production statistics are shown in the end as a bar chart.</p>
+      </project-card>
+    </li>
+
+    <li>
       <project-card :chips="['Breadth First Search', 'Graph Theory', 'Vue2', 'Typescript', 'Mocha', 'Vue Test Utils']"
                     title="Cat Mouse"
                     video-poster="https://res.cloudinary.com/felipeflor/video/upload/v1556653952/felipeflor.com/catmouse.jpg"
