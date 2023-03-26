@@ -50,7 +50,6 @@ defineProps<{
           See source code
         </a>
       </section>
-
     </div>
   </div>
 </template>
@@ -63,7 +62,7 @@ a {
 
 <style>
 .project-card p {
-  @apply mb-3 font-normal text-gray-700 dark:text-gray-400;
+  @apply mb-3 font-normal text-gray-700 dark:text-gray-300;
 }
 
 .project-card strong {

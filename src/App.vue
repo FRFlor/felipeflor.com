@@ -13,7 +13,9 @@ import ProjectCard from "@/components/ProjectCard.vue"</script>
       <li v-for="i in 8">
         <project-card title="Balloon Story"
                       video-poster="https://res.cloudinary.com/felipeflor/video/upload/v1556653952/felipeflor.com/balloonStory.jpg"
-                      video-source="https://res.cloudinary.com/felipeflor/video/upload/v1556653952/felipeflor.com/balloonStory.webm">
+                      source-code-url="https://codepen.io/frflor/pen/QoRmRq"
+                      video-source="https://res.cloudinary.com/felipeflor/video/upload/v1556653952/felipeflor.com/balloonStory.webm"
+        >
           <p>Animation that <strong>won 1st place</strong> in the Art Submission Contest of VueConf US 2019!</p>
           <p>
             Background and object movement are randomly generated; the app also demonstrates collision physics
