@@ -29,27 +29,29 @@ defineProps<{
     </video>
     <div class="p-5 h-92 flex flex-col">
       <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-blue-100">{{ title }}</h3>
-      <slot><p>This is a placeholder for the description of the project</p></slot>
-
       <div class="flex flex-col h-full justify-between">
-        <section>
-          <v-chip v-for="chip in chips" :key="chip" :text="chip"/>
-        </section>
+        <slot><p>This is a placeholder for the description of the project</p></slot>
 
-        <section class="gap-4 flex">
-          <a v-if="websiteUrl"
-             :href="websiteUrl"
-             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-             data-test="visit-website">
-            Visit website
-          </a>
-          <a v-if="sourceCodeUrl"
-             :href="sourceCodeUrl"
-             class="text-white bg-gray-700 hover:bg-gray-800 focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
-             data-test="visit-source-code">
-            See source code
-          </a>
-        </section>
+        <div>
+          <section class="mb-4">
+            <v-chip v-for="chip in chips" :key="chip" :text="chip"/>
+          </section>
+
+          <section class="gap-4 flex">
+            <a v-if="websiteUrl"
+               :href="websiteUrl"
+               class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+               data-test="visit-website">
+              Visit website
+            </a>
+            <a v-if="sourceCodeUrl"
+               :href="sourceCodeUrl"
+               class="text-white bg-gray-700 hover:bg-gray-800 focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+               data-test="visit-source-code">
+              See source code
+            </a>
+          </section>
+        </div>
       </div>
     </div>
   </div>
