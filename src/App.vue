@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import VHeader from "@/components/VHeader.vue"
+import VHeader from "@/components/partials/VHeader.vue"
 import MyProjectsList from "@/components/partials/MyProjectsList.vue"
-import AnimatedBackground from "@/components/AnimatedBackground.vue"</script>
+import AnimatedBackground from "@/components/partials/AnimatedBackground.vue"</script>
 <template>
   <animated-background/>
   <v-header/>
