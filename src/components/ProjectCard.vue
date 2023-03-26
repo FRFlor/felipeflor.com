@@ -61,7 +61,7 @@ defineProps<{
 
 <style scoped>
 a {
-  @apply inline-flex items-center px-3 py-2 text-sm font-medium text-center rounded-lg focus:ring-4 focus:outline-none
+  @apply inline-flex items-center px-3 py-2 text-xs md:text-sm font-medium text-center rounded-lg focus:ring-4 focus:outline-none
 }
 </style>
 
