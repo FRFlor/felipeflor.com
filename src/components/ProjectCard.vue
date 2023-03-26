@@ -1,14 +1,17 @@
 <script lang="ts" setup>
 import VChip from "@/components/VChip.vue"
 
-defineProps<{
+interface IProjectCardProps {
   videoSource: string;
   videoPoster: string;
   title: string;
+  year?: string;
   websiteUrl?: string;
   sourceCodeUrl?: string;
-  chips: string[];
-}>()
+  chips?: string[];
+}
+
+withDefaults(defineProps<IProjectCardProps>(), {chips: () => [], year: "20XX"})
 </script>
 
 <template>
@@ -28,7 +31,11 @@ defineProps<{
       >
     </video>
     <div class="p-5 flex flex-col flex-grow">
-      <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-blue-100">{{ title }}</h3>
+      <div class="flex justify-between">
+        <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-blue-100">{{ title }}</h3>
+        <p>{{ year }}</p>
+      </div>
+
       <div class="flex flex-col h-full justify-between">
         <div>
           <slot><p>This is a placeholder for the description of the project</p></slot>
