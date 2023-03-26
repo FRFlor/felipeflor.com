@@ -7,11 +7,11 @@
 }
 
 h2 {
-    @apply text-xl lg:text-6xl font-bold text-sky-700 dark:text-sky-900 drop-shadow-md
+    @apply text-xl lg:text-6xl font-bold text-sky-700 dark:text-sky-600 drop-shadow-md
 }
 
 p {
-    @apply text-lg lg:text-2xl text-gray-700
+    @apply text-lg lg:text-2xl text-gray-300
 }
 
 html {
@@ -24,10 +24,11 @@ html {
 
 html.dark {
     --header-overlay-colour: hsl(185, 40%, 25%);
+
     --top-background-colour: hsl(184, 39%, 35%);
     --middle-background-colour-transparent: hsla(184, 20%, 52%, 0%);
-    --middle-background-colour: hsl(184, 20%, 52%);
-    --bottom-background-colour: hsl(184, 20%, 42%);
+    --middle-background-colour: hsl(185, 18%, 24%);
+    --bottom-background-colour: hsl(184, 20%, 10%);
 }
 
 
