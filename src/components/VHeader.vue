@@ -29,11 +29,13 @@ const socialLinks: ISocialLink[] = [
     url: "https://github.com/FRFlor"
   }
 ]
+
+const hasThemeToggle = import.meta.env.VITE_FEATURE_FLAG_THEME_MODES
 </script>
 
 <template>
   <header class="bg-cover w-full bg-left h-112 relative">
-    <theme-selection class="mt-5 ml-10"/>
+    <theme-selection v-if="hasThemeToggle" class="mt-5 ml-10"/>
     <div class="overflow-x-hidden h-112 relative overflow-hidden">
       <section
           class="links-section fade-in delay h-32 w-full max-w-lg z-20 absolute bottom-0 md:bottom-8">
