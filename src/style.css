@@ -11,7 +11,7 @@ h2 {
 }
 
 p {
-    @apply text-lg lg:text-2xl text-gray-300
+    @apply text-lg lg:text-2xl text-gray-900 dark:text-gray-300
 }
 
 html {
