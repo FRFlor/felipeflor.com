@@ -9,6 +9,7 @@ defineProps<{ isPlaying: boolean }>()
   <base-button
       class="control-button border bg-gray-800 border-gray-200 text-gray-200 py-1 px-4 h-6 rounded"
       type="button"
+      :aria-label="isPlaying? 'Pause animation' : 'Play animation'"
       v-bind="$attrs"
   >
     <svg-loader :svg-name="isPlaying? 'fa-pause' : 'fa-play'"/>
