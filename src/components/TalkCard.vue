@@ -3,7 +3,7 @@ import VChip from "@/components/VChip.vue"
 import {ref} from "vue"
 
 interface IProjectCardProps {
-  youtubeId: string;
+  videoUrl: string;
   title: string;
   year?: string;
   chips?: string[];
@@ -17,7 +17,7 @@ const aspectRatio = 16 / 9
 <template>
   <div
       class="talk-card flex flex-col overflow-hidden h-full w-full max-w-3xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <iframe :src="`https://www.youtube.com/embed/${youtubeId}`"
+    <iframe :src="videoUrl"
             :title="`${title} Video Player`"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
