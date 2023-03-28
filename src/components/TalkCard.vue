@@ -22,7 +22,7 @@ const aspectRatio = 16 / 9
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
             class="w-full h-80"/>
-    <div class="p-5 pb-0 flex flex-col flex-grow">
+    <div class="p-5 flex flex-col flex-grow">
       <div class="flex justify-between">
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-blue-100">{{ title }}</h3>
         <p>{{ year }}</p>
@@ -55,5 +55,9 @@ a {
 
 .talk-card strong {
   @apply text-blue-500 dark:text-blue-200
+}
+
+.talk-card a {
+  @apply text-blue-500 dark:text-blue-400 underline font-bold
 }
 </style>
