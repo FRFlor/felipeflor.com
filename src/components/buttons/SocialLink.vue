@@ -16,6 +16,7 @@ const emit = defineEmits(["blur", "click", "focus", "hover-start", "hover-end"])
 
 <template>
   <base-button :href="href"
+               :aria-label="description"
                class="social-button cursor-pointer border border-blue-200 text-blue-200 px-4 py-2 rounded-full h-9 lg:h-12"
                target="_blank"
                type="a"
