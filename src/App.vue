@@ -3,14 +3,15 @@ import VHeader from "@/components/partials/VHeader.vue"
 import MyProjectsList from "@/components/partials/MyProjectsList.vue"
 import AnimatedBackground from "@/components/partials/AnimatedBackground.vue"
 import VehiklLogo from "@/assets/vehikl-logo.webp"
-import Headshot from "@/assets/felipe-flor-vehikl.webp"</script>
+import Headshot from "@/assets/felipe-flor-vehikl.webp"
+import MyTalksList from "@/components/partials/MyTalksList.vue"</script>
 <template>
   <animated-background/>
   <v-header/>
   <main class="container px-4 lg:px-10 my-10 mx-auto">
     <h2 class="mt-14 lg:mt-24">Hi there! 👋</h2>
     <div class="flex flex-col lg:flex-row items-center mt-6 lg:mt-14 gap-6">
-      <img :src="Headshot" alt="My headshot" class="w-52">
+      <img :src="Headshot" alt="My headshot" class="w-52 sr-only">
       <p>
         I'm Felipe Flor, a web developer based in Ontario, Canada.
       </p>
@@ -18,13 +19,7 @@ import Headshot from "@/assets/felipe-flor-vehikl.webp"</script>
     <h2 class="mt-14 lg:mt-12">Check out some of my side projects!</h2>
     <my-projects-list/>
     <h2 class="mt-14 lg:mt-24">I love participating in events</h2>
-    <ul class="mt-6 lg:mt-14">
-      <li>
-      </li>
-      <li><a href="#">Project 2</a></li>
-      <li><a href="#">Project 3</a></li>
-    </ul>
-
+    <my-talks-list/>
     <h2 class="mt-14 lg:mt-24">Vehikl</h2>
 
     <div class="flex flex-col lg:flex-row items-center mt-6 lg:mt-14">
