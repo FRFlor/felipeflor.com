@@ -24,7 +24,14 @@ import TalkCard from "@/components/TalkCard.vue"</script>
       <talk-card :chips="['Laravel','PHP']"
                  title="Laravel Local Development"
                  year="2021"
-                 youtube-id="ESVId6riKO0"/>
+                 youtube-id="ESVId6riKO0">
+        <p>In this meetup I present several different ways a developer can setup their local development environment for
+          the Laravel PHP Framework.</p>
+        <p>The topics covered should be beneficial for beginners and veterans alike.</p>
+        <p>In a bit over an hour, we explore the costs and benefits behind setting up a local development environment
+          with <strong>Artisan Serve Command</strong>, <strong>Laravel Valet</strong>, <strong>Laravel
+            Homestead</strong> and <strong>Laravel Sail</strong>.</p>
+      </talk-card>
     </li>
   </ul>
 </template>
