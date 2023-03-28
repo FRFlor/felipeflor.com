@@ -16,7 +16,7 @@ withDefaults(defineProps<IProjectCardProps>(), {chips: () => [], year: "20XX"})
 
 <template>
   <div
-      class="project-card overflow-hidden flex flex-col h-full w-full sm:w-96 2xl:w-120 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      class="project-card overflow-hidden flex flex-col h-full w-full sm:w-96 3xl:w-120 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <video
         :poster="videoPoster"
         autoplay

@@ -6,6 +6,12 @@ module.exports = {
     ],
     theme: {
         extend: {
+            screens: {
+                '3xl': '1600px',
+            },
+            container: {
+                '3xl': '1600px'
+            },
             spacing: {
                 92: '23rem',
                 // 96: '24rem', +4 per 1rem,
