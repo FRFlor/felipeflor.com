@@ -35,7 +35,7 @@ import TalkCard from "@/components/TalkCard.vue"</script>
     </li>
     <li>
       <talk-card :chips="['Mob Programming']"
-                 title="VueConf US - What the heck is Mob Programming?!"
+                 title="VueConf US 2021 - What the heck is Mob Programming?!"
                  videoUrl="https://drive.google.com/file/d/1t9Zb5Kx_6EQjgScC5WLNqpQKb8o5rrHt/preview"
                  year="2021">
         <p>At <a href="https://vehikl.com" target="_blank">Vehikl</a> we do Mob Programming all the time. It's a
