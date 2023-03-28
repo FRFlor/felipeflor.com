@@ -46,6 +46,18 @@ import TalkCard from "@/components/TalkCard.vue"</script>
         <p>If this entices your curiosity, I strongly recommend watching this Lightning Talk!</p>
       </talk-card>
     </li>
+    <li>
+      <talk-card :chips="['Accessibility', 'A11Y','Webdev Tools', 'Axe']"
+                 title="How to use Axe (Accessibility Tool)"
+                 videoUrl="https://www.youtube.com/embed/dmdAmVr_HYE"
+                 year="2020">
+        <p>In this short video I go over the basic uses for the <strong>Axe Browser Extension</strong> for Accessibility
+          Analysis.</p>
+        <p>For this tutorial, I made a simple website that has multiple accessibility problems.</p>
+        <p>I demonstrate how Axe provides an descriptive report with conclusive suggestions on how to correct the
+          accessibility issues.</p>
+      </talk-card>
+    </li>
   </ul>
 </template>
 

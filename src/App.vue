@@ -18,7 +18,7 @@ import MyTalksList from "@/components/partials/MyTalksList.vue"</script>
     </div>
     <h2 class="mt-14 lg:mt-12">Check out some of my side projects!</h2>
     <my-projects-list/>
-    <h2 class="mt-14 lg:mt-24">I love participating in events</h2>
+    <h2 class="mt-14 lg:mt-24">Explore my talks and video tutorials!</h2>
     <my-talks-list/>
     <h2 class="mt-14 lg:mt-24">Vehikl</h2>
 

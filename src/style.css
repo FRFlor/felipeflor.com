@@ -14,6 +14,10 @@ p {
     @apply text-lg lg:text-2xl text-gray-900 dark:text-gray-300
 }
 
+a {
+    @apply text-blue-500 hover:text-blue-600 underline;
+}
+
 html {
     --header-overlay-colour: hsl(185, 40%, 35%);
     --top-background-colour: hsl(184, 39%, 55%);
