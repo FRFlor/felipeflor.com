@@ -20,6 +20,7 @@ withDefaults(defineProps<IProjectCardProps>(), {chips: () => [], year: "20XX"})
     <video
         :poster="videoPoster"
         autoplay
+        preload="none"
         class="w-full"
         loop
         muted
