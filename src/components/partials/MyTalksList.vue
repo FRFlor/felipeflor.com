@@ -7,7 +7,7 @@ import TalkCard from "@/components/TalkCard.vue"</script>
       <talk-card :chips="['TDD','Vue', 'Typescript']"
                  title="A Wordle on TDD"
                  year="2022"
-                 videoUrl="https://www.youtube.com/embed/zm8BtYtLwIE">
+                 videoUrl="https://www.youtube-nocookie.com/embed/zm8BtYtLwIE">
         <p>In this presentation, I cover the main benefits of following Test Driven Development (TDD), how one can go
           into following this technique and also what are the challenges involved in this transition.</p>
         <p>The presentation will demonstrates TDD by implementing a clone of the popular game <a
@@ -24,7 +24,7 @@ import TalkCard from "@/components/TalkCard.vue"</script>
       <talk-card :chips="['Laravel','PHP']"
                  title="Laravel Local Development"
                  year="2021"
-                 videoUrl="https://www.youtube.com/embed/ESVId6riKO0">
+                 videoUrl="https://www.youtube-nocookie.com/embed/ESVId6riKO0">
         <p>In this meetup I present several different ways a developer can setup their local development environment for
           the Laravel PHP Framework.</p>
         <p>The topics covered should be beneficial for beginners and veterans alike.</p>
@@ -49,7 +49,7 @@ import TalkCard from "@/components/TalkCard.vue"</script>
     <li>
       <talk-card :chips="['Accessibility', 'A11Y','Webdev Tools', 'Axe']"
                  title="How to use Axe (Accessibility Tool)"
-                 videoUrl="https://www.youtube.com/embed/dmdAmVr_HYE"
+                 videoUrl="https://www.youtube-nocookie.com/embed/dmdAmVr_HYE"
                  year="2020">
         <p>In this short video I go over the basic uses for the <strong>Axe Browser Extension</strong> for Accessibility
           Analysis.</p>
