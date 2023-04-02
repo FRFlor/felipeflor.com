@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import VChip from "@/components/VChip.vue"
+import VChip from "./VChip.vue"
 
 interface IProjectCardProps {
   videoUrl: string;

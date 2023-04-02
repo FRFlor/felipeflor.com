@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import ProjectCard from "@/components/ProjectCard.vue"
+import ProjectCard from "../ProjectCard.vue"
 
 function getVideoUrl(name: string, extension: string, gravity: string = "north_west") {
   return `https://res.cloudinary.com/felipeflor/video/upload/c_fill,g_${gravity},h_500,w_500/v1579327020/felipeflor.com/${name}.${extension}`

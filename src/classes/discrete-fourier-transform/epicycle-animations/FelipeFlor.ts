@@ -1,7 +1,7 @@
-import FELIPE_POINTS_RAW from "@/assets/plot-points/Felipe.json"
+import FELIPE_POINTS_RAW from "../../../assets/plot-points/Felipe.json"
 import {ICoordinates} from "@/types"
-import FLOR_POINTS_RAW from "@/assets/plot-points/Flor.json"
-import {EpicycleAnimation} from "@/classes/discrete-fourier-transform/epicycle-animations/EpicycleAnimation"
+import FLOR_POINTS_RAW from "../../../assets/plot-points/Flor.json"
+import {EpicycleAnimation} from "./EpicycleAnimation"
 
 export default class FelipeFlor extends EpicycleAnimation {
     public FPS: number = 50

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import BaseButton from "@/components/buttons/BaseButton.vue"
-import SvgLoader from "@/components/SvgLoader.vue"
+import BaseButton from "./BaseButton.vue"
+import SvgLoader from "../SvgLoader.vue"
 
 interface ISocialLinkProps {
   icon: string,
@@ -15,8 +15,8 @@ const emit = defineEmits(["blur", "click", "focus", "hover-start", "hover-end"])
 </script>
 
 <template>
-  <base-button :href="href"
-               :aria-label="description"
+  <base-button :aria-label="description"
+               :href="href"
                class="social-button cursor-pointer border border-blue-200 text-blue-200 px-4 py-2 rounded-full h-9 lg:h-12"
                target="_blank"
                type="a"

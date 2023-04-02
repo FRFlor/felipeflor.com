@@ -11,7 +11,7 @@ import MyTalksList from "@/components/partials/MyTalksList.vue"</script>
   <main class="container px-4 lg:px-10 my-10 mx-auto">
     <h2 class="mt-14 lg:mt-24">Hi there! 👋</h2>
     <div class="flex flex-col lg:flex-row items-center mt-6 lg:mt-14 gap-6">
-      <img :src="Headshot" alt="My headshot" class="w-52 sr-only">
+      <img :src="Headshot" alt="My headshot" class="w-52 hidden">
       <p>
         I'm Felipe Flor, a web developer based in Ontario, Canada.
       </p>

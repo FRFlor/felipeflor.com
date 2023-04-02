@@ -1,5 +1,5 @@
 import {ICoordinates} from "@/types"
-import {LinkedList} from "@/classes/LinkedList"
+import {LinkedList} from "../LinkedList"
 
 export class CanvasWrapper {
     private _canvas: HTMLCanvasElement

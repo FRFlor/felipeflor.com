@@ -1,14 +1,14 @@
 <script lang="ts" setup>
-import TalkCard from "@/components/TalkCard.vue"</script>
+import TalkCard from "../TalkCard.vue"</script>
 
 <template>
   <ul class="mt-6 lg:mt-14 flex flex-wrap gap-6">
     <li>
       <talk-card :chips="['TDD','Vue', 'Typescript']"
                  title="A Wordle on TDD"
-                 year="2022"
                  video-poster="https://res.cloudinary.com/felipeflor/image/upload/c_lfill,g_south,h_1500,w_3000/v1680400013/felipeflor.com/a-wordle-on-tdd-aug-2022.webp"
-                 video-url="https://youtu.be/zm8BtYtLwIE">
+                 video-url="https://youtu.be/zm8BtYtLwIE"
+                 year="2022">
         <p>In this presentation, I cover the main benefits of following Test Driven Development (TDD), how one can go
           into following this technique and also what are the challenges involved in this transition.</p>
         <p>The presentation will demonstrates TDD by implementing a clone of the popular game <a
@@ -24,9 +24,9 @@ import TalkCard from "@/components/TalkCard.vue"</script>
     <li>
       <talk-card :chips="['Laravel','PHP']"
                  title="Laravel Local Development"
-                 year="2021"
                  video-poster="https://res.cloudinary.com/felipeflor/image/upload/c_lfill,g_south,h_1500,w_3000/v1680400556/felipeflor.com/laravel-local-developments-jan-2021.webp"
-                 video-url="https://youtu.be/ESVId6riKO0">
+                 video-url="https://youtu.be/ESVId6riKO0"
+                 year="2021">
         <p>In this meetup I present several different ways a developer can setup their local development environment for
           the Laravel PHP Framework.</p>
         <p>The topics covered should be beneficial for beginners and veterans alike.</p>

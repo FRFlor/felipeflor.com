@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import FelipeFlorEpicyles from "@/components/partials/FelipeFlorEpicyles.vue"
+import FelipeFlorEpicyles from "./FelipeFlorEpicyles.vue"
 import CanadaFlagSvg from "@/assets/svg/canada-flag.svg?url"
 import {ref} from "vue"
 import SocialLink from "@/components/buttons/SocialLink.vue"

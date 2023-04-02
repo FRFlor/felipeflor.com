@@ -1,12 +1,10 @@
 import vue from "@vitejs/plugin-vue"
-import path from "path"
+import ssr from "vite-plugin-ssr/plugin"
 import {defineConfig} from "vitest/config"
+import path from "path"
 
 export default defineConfig({
-    plugins: [
-        vue(),
-        // svgLoader()
-    ],
+    plugins: [vue(), ssr()],
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "./src")

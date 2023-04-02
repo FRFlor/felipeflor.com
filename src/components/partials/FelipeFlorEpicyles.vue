@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import ControlButton from "@/components/buttons/ControlButton.vue"
+import ControlButton from "../buttons/ControlButton.vue"
 import {onBeforeUnmount, onMounted, ref} from "vue"
-import FelipeFlorAnimation from "@/classes/discrete-fourier-transform/epicycle-animations/FelipeFlor"
+import FelipeFlorAnimation from "../../classes/discrete-fourier-transform/epicycle-animations/FelipeFlor"
 
 
 const canvas = ref<HTMLCanvasElement>()
@@ -31,15 +31,11 @@ function onMediaButtonPressed() {
 
 <template>
   <div>
-    <h1>
-      <span class="sr-only">Felipe Flor</span>
-      <canvas ref="canvas"
-              aria-hidden="true"
-              class="pointer-events-none z-10"
-              height="800"
-              width="1200"/>
-
-    </h1>
+    <canvas ref="canvas"
+            aria-hidden="true"
+            class="pointer-events-none z-10"
+            height="800"
+            width="1200"/>
     <control-button :is-playing="!!felipeFlorAnimation?.isPlaying"
                     class="controls z-0"
                     data-test="epicycle-play-button"
