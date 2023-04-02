@@ -7,7 +7,8 @@ import TalkCard from "@/components/TalkCard.vue"</script>
       <talk-card :chips="['TDD','Vue', 'Typescript']"
                  title="A Wordle on TDD"
                  year="2022"
-                 videoUrl="https://www.youtube-nocookie.com/embed/zm8BtYtLwIE">
+                 video-poster="https://res.cloudinary.com/felipeflor/image/upload/c_lfill,g_south,h_1500,w_3000/v1680400013/felipeflor.com/a-wordle-on-tdd-aug-2022.webp"
+                 video-url="https://youtu.be/zm8BtYtLwIE">
         <p>In this presentation, I cover the main benefits of following Test Driven Development (TDD), how one can go
           into following this technique and also what are the challenges involved in this transition.</p>
         <p>The presentation will demonstrates TDD by implementing a clone of the popular game <a
@@ -24,7 +25,8 @@ import TalkCard from "@/components/TalkCard.vue"</script>
       <talk-card :chips="['Laravel','PHP']"
                  title="Laravel Local Development"
                  year="2021"
-                 videoUrl="https://www.youtube-nocookie.com/embed/ESVId6riKO0">
+                 video-poster="https://res.cloudinary.com/felipeflor/image/upload/c_lfill,g_south,h_1500,w_3000/v1680400556/felipeflor.com/laravel-local-developments-jan-2021.webp"
+                 video-url="https://youtu.be/ESVId6riKO0">
         <p>In this meetup I present several different ways a developer can setup their local development environment for
           the Laravel PHP Framework.</p>
         <p>The topics covered should be beneficial for beginners and veterans alike.</p>
@@ -36,7 +38,8 @@ import TalkCard from "@/components/TalkCard.vue"</script>
     <li>
       <talk-card :chips="['Mob Programming']"
                  title="VueConf US 2021 - What the heck is Mob Programming?!"
-                 videoUrl="https://drive.google.com/file/d/1t9Zb5Kx_6EQjgScC5WLNqpQKb8o5rrHt/preview"
+                 video-poster="https://res.cloudinary.com/felipeflor/image/upload/c_lfill,g_south,h_1500,w_3000/v1680400556/felipeflor.com/what-is-mob-programming-2021.webp"
+                 video-url="https://drive.google.com/file/d/1t9Zb5Kx_6EQjgScC5WLNqpQKb8o5rrHt/preview"
                  year="2021">
         <p>At <a href="https://vehikl.com" target="_blank">Vehikl</a> we do Mob Programming all the time. It's a
           fascinating way to work that
@@ -49,8 +52,9 @@ import TalkCard from "@/components/TalkCard.vue"</script>
     <li>
       <talk-card :chips="['Accessibility', 'A11Y','Webdev Tools', 'Axe']"
                  title="How to use Axe (Accessibility Tool)"
-                 videoUrl="https://www.youtube-nocookie.com/embed/dmdAmVr_HYE"
-                 year="2020">
+                 video-poster="https://res.cloudinary.com/felipeflor/image/upload/c_lfill,g_south,h_1500,w_3000/v1680400556/felipeflor.com/how-to-use-axe-2019.webp"
+                 video-url="https://youtu.be/dmdAmVr_HYE"
+                 year="2019">
         <p>In this short video I go over the basic uses for the <strong>Axe Browser Extension</strong> for Accessibility
           Analysis.</p>
         <p>For this tutorial, I made a simple website that has multiple accessibility problems.</p>
