@@ -1,8 +1,8 @@
 <template>
-  <div aria-hidden="true" class="opacity-30 pointer-events-none">
-    <div aria-hidden="true" class="animated-background-top"></div>
-    <div aria-hidden="true" class="animated-background-bottom"></div>
-  </div>
+    <div aria-hidden="true" class="opacity-30 pointer-events-none">
+        <div aria-hidden="true" class="animated-background-top"></div>
+        <div aria-hidden="true" class="animated-background-bottom"></div>
+    </div>
 
 </template>
 

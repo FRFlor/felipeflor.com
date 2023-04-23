@@ -8,70 +8,70 @@ const canvas = ref<HTMLCanvasElement>()
 const felipeFlorAnimation = ref<FelipeFlorAnimation>()
 
 onMounted(() => {
-  felipeFlorAnimation.value = new FelipeFlorAnimation(canvas.value!)
-  felipeFlorAnimation.value?.startAnimation(true)
+    felipeFlorAnimation.value = new FelipeFlorAnimation(canvas.value!)
+    felipeFlorAnimation.value?.startAnimation(true)
 })
 
 onBeforeUnmount(() => felipeFlorAnimation.value?.stopAnimation())
 
 function onMediaButtonPressed() {
-  if (!felipeFlorAnimation.value) {
-    return
-  }
+    if (!felipeFlorAnimation.value) {
+        return
+    }
 
-  if (felipeFlorAnimation.value.isPlaying) {
-    felipeFlorAnimation.value.stopAnimation()
-  } else {
-    felipeFlorAnimation.value.startAnimation(true)
-  }
+    if (felipeFlorAnimation.value.isPlaying) {
+        felipeFlorAnimation.value.stopAnimation()
+    } else {
+        felipeFlorAnimation.value.startAnimation(true)
+    }
 }
 
 
 </script>
 
 <template>
-  <div>
-    <canvas ref="canvas"
-            aria-hidden="true"
-            class="pointer-events-none z-10"
-            height="800"
-            width="1200"/>
-    <control-button :is-playing="!!felipeFlorAnimation?.isPlaying"
-                    class="controls z-0"
-                    data-test="epicycle-play-button"
-                    @click="onMediaButtonPressed"/>
-  </div>
+    <div>
+        <canvas ref="canvas"
+                aria-hidden="true"
+                class="pointer-events-none z-10"
+                height="800"
+                width="1200"/>
+        <control-button :is-playing="!!felipeFlorAnimation?.isPlaying"
+                        class="controls z-0"
+                        data-test="epicycle-play-button"
+                        @click="onMediaButtonPressed"/>
+    </div>
 </template>
 
 <style scoped>
 canvas {
-  transform: scaleY(-0.65) scaleX(0.65);
-  position: absolute;
-  top: -315px;
-  left: -475px;
-  right: unset;
+    transform: scaleY(-0.65) scaleX(0.65);
+    position: absolute;
+    top: -315px;
+    left: -475px;
+    right: unset;
 }
 
 .controls {
-  position: absolute;
-  left: 30px;
-  right: unset;
-  top: 165px;
+    position: absolute;
+    left: 30px;
+    right: unset;
+    top: 165px;
 }
 
 @media screen('lg') {
-  canvas {
-    transform: scaleY(-1) scaleX(1);
-    top: -245px;
-    left: unset;
-    right: -435px;
-  }
+    canvas {
+        transform: scaleY(-1) scaleX(1);
+        top: -245px;
+        left: unset;
+        right: -435px;
+    }
 
-  .controls {
-    position: absolute;
-    left: unset;
-    top: 380px;
-    right: 105px;
-  }
+    .controls {
+        position: absolute;
+        left: unset;
+        top: 380px;
+        right: 105px;
+    }
 }
 </style>

@@ -1,15 +1,15 @@
 <template>
-  <a :class="{ active: pageContext.urlPathname === $attrs.href }">
-    <slot/>
-  </a>
+    <a :class="{ active: pageContext.urlPathname === $attrs.href }">
+        <slot/>
+    </a>
 </template>
 <style scoped>
 a {
-  padding: 3px 10px;
+    padding: 3px 10px;
 }
 
 a.active {
-  background-color: #eee;
+    background-color: #eee;
 }
 </style>
 <script lang="ts" setup>
