@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import VChip from "./VChip.vue"
+import BaseButton from "@/components/buttons/BaseButton.vue"
 
 interface IProjectCardProps {
   videoSource: string;
@@ -47,20 +48,22 @@ withDefaults(defineProps<IProjectCardProps>(), {chips: () => [], year: "20XX"})
             <v-chip v-for="chip in chips" :key="chip" :text="chip"/>
           </section>
 
-          <section class="gap-4 flex">
-            <a v-if="websiteUrl"
-               :href="websiteUrl"
-               class="text-white hover:text-orange-200 bg-teal-600 hover:bg-teal-800 dark:bg-teal-800 dark:hover:bg-teal-700"
-               data-test="visit-website">
-              Visit website
-            </a>
-            <a v-if="sourceCodeUrl"
-               :href="sourceCodeUrl"
-               class="text-white hover:text-blue-200 bg-gray-700 hover:bg-gray-800 dark:bg-gray-600 dark:hover:bg-gray-700"
-               data-test="visit-source-code">
-              See source code
-            </a>
-          </section>
+            <section class="gap-4 flex">
+                <base-button v-if="websiteUrl"
+                             :href="websiteUrl"
+                             class="text-white hover:text-orange-200 bg-teal-600 hover:bg-teal-800 dark:bg-teal-800 dark:hover:bg-teal-700"
+                             data-test="visit-website"
+                             type="a">
+                    Visit website
+                </base-button>
+                <base-button v-if="sourceCodeUrl"
+                             :href="sourceCodeUrl"
+                             class="text-white hover:text-blue-200 bg-gray-700 hover:bg-gray-800 dark:bg-gray-600 dark:hover:bg-gray-700"
+                             data-test="visit-source-code"
+                             type="a">
+                    See source code
+                </base-button>
+            </section>
         </div>
       </div>
     </div>

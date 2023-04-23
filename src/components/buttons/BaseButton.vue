@@ -21,12 +21,12 @@ function onClick() {
 
 <template>
   <component
-      :is="type"
-      ref="button"
-      class="cursor-pointer"
-      v-bind="$attrs"
-      @blur="emit('blur')"
-      @click="onClick"
+          :is="type"
+          ref="button"
+          class="cursor-pointer hover:scale-110 focus:scale-110"
+          v-bind="$attrs"
+          @blur="emit('blur')"
+          @click="onClick"
   >
     <slot>Click Me</slot>
   </component>
