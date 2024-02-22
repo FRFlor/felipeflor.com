@@ -75,8 +75,8 @@ export class MediaCollection {
 
   public static get homepageBanner(): Media {
     return {
-      mainSource: MediaCollection.cloudinarySource('felipeflor.com/computer', 'image', 'f_auto,q_auto,c_crop,g_south_west,h_400,x_0,y_0'),
-      placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/computer', 'image', 't_media_lib_thumb'),
+      mainSource: MediaCollection.cloudinarySource('felipeflor.com/dog-computer', 'image', 'f_auto,q_auto,c_crop,g_south_west,h_400,x_0,y_0'),
+      placeHolderSource: MediaCollection.cloudinarySource('felipeflor.com/dog-computer', 'image', 't_media_lib_thumb'),
       alt: 'Mac and Keyboard slightly blurred'
     }
   }
